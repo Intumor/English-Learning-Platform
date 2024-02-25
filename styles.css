@@ -1,0 +1,115 @@
+:root {
+  --website-theme: rgb(0, 7, 68);
+  --schoolboard-color: rgb(0, 102, 0);
+}
+
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+header {
+  background-color: transparent;
+  padding: 1.5rem 0 1rem 8%;
+  position: fixed;
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: 'Roboto Mono', sans-serif;
+  color: white;
+}
+
+.section-one {
+  background-color: var(--website-theme);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+h2 {
+  font-size: 6rem;
+  color: white;
+  text-align: center;
+  margin: 0 1rem;
+}
+
+h3 {
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+  margin: 0 1rem;
+}
+
+button {
+  padding: 1rem 6rem;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: var(--website-theme);
+  cursor: pointer;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 1rem;
+}
+
+button:hover {
+  background-color: rgb(232, 239, 255);
+}
+
+button:active {
+  background-color: rgb(207, 213, 230);
+  transform: scale(0.99);
+  box-shadow: none;
+}
+
+@media only screen and (max-width: 730px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 2.8rem;
+  }
+
+  button {
+    padding: 1rem 3rem;
+    font-size: 2.4rem;
+    border-radius: 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+  }
+
+  button {
+    padding: 0.7rem 2rem;
+    font-size: 2rem;
+  }
+}
