@@ -50,6 +50,7 @@ h1 {
   align-items: center;
   gap: 3rem;
   margin-top: 18rem;
+  margin-bottom: 1rem;
 }
 
 h2 {
@@ -109,6 +110,10 @@ button:active {
 }
 
 @media only screen and (max-width: 480px) {
+  .content-box {
+    margin-top: 15rem;
+  }
+
   h1 {
     font-size: 2rem;
   }
