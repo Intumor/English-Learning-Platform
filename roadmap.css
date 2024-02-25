@@ -1,0 +1,58 @@
+header {
+  text-align: center;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-family: 'Roboto Mono', sans-serif;
+  color: white;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.map {
+  width: 98%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 800px;
+  gap: 2px;
+  background-color: var(--schoolboard-color);
+  color: white;
+  font-family: "Gaegu", sans-serif;
+  border-radius: 0.5rem;
+}
+
+.map-step-box {
+  display: flex;
+  border-bottom: 1px solid white;
+}
+
+.milestone {
+  padding: 1rem 2rem;
+  border-left: 1px solid white;
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+.number-of-step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  flex-shrink: 0;
+}
+
+.number {
+  font-size: 8rem;
+}
