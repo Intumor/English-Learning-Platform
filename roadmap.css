@@ -8,12 +8,15 @@ h1 {
   font-size: 4rem;
   font-family: 'Roboto Mono', sans-serif;
   color: white;
+  margin-bottom: 2rem;
 }
 
 main {
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .map {
@@ -27,6 +30,10 @@ main {
   color: white;
   font-family: "Gaegu", sans-serif;
   border-radius: 0.5rem;
+}
+
+.map-step-box.last{
+  border-bottom: none
 }
 
 .map-step-box {
@@ -55,4 +62,69 @@ h2 {
 
 .number {
   font-size: 8rem;
+}
+
+button {
+  padding: 0.7rem 2rem;
+  font-size: 2.4rem;
+  margin: 2rem auto;
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 0.6rem;
+  border: none;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: rgb(232, 239, 255);
+}
+
+button:active {
+  background-color: rgb(207, 213, 230);
+  transform: scale(0.99);
+  box-shadow: none;
+}
+
+
+@media only screen and (max-width: 840px) {
+  .map {
+    width: 95%;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .number {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .map {
+    width: 90%;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .number-of-step {
+    width: 6rem;
+  }
+
+  .number {
+    font-size: 3.4rem;
+  }
+
+  button {
+    font-size: 1.6rem;
+  }
+  
 }
