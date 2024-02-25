@@ -15,12 +15,17 @@ html {
 
 body {
   font-family: "Lato", sans-serif;
+  background-color: var(--website-theme);
 }
 
 header {
   background-color: transparent;
   padding: 1.5rem 0 1rem 8%;
+  background-color: var(--website-theme);
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 h1 {
@@ -31,12 +36,20 @@ h1 {
 
 .section-one {
   background-color: var(--website-theme);
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.content-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 3rem;
+  margin-top: 18rem;
 }
 
 h2 {
