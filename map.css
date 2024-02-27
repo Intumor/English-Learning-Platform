@@ -18,7 +18,7 @@ section {
   position: relative;
   background-color: rgb(255, 255, 255);
   height: 500px;
-  background-image: url(/images/map.png);
+  background-image: url(images/map.png);
   background-size: 600px 500px;
   width: 100%;
   margin: 0 1rem;
