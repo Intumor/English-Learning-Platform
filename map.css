@@ -8,7 +8,7 @@ h1 {
 
 section {
   max-width: 600px;
-  margin:  auto;
+  margin: auto;
   display: flex;
   overflow: hidden;
 }
@@ -21,7 +21,7 @@ section {
   background-image: url(./images/map.png);
   background-size: 600px 500px;
   width: 100%;
-  margin: 0 1rem;
+  margin: auto 1rem;
 }
 
 .circle {
@@ -136,7 +136,7 @@ section {
 
   .map {
     background-size: 300px 500px;
-    margin: 0.5rem auto 1rem;
+    margin: 5rem auto 1rem ;
   }
 
   .circle {
