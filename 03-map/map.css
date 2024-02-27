@@ -131,7 +131,7 @@ section {
   top: 0%;
   width: 80px;
   height: 80px;
-  background-color: var(--last-lesson);
-  box-shadow: 0 0 20px 10px rgba(255, 115, 0, 0.6);
+  /*background-color: var(--last-lesson);*/
+  /*box-shadow: 0 0 20px 10px rgba(255, 115, 0, 0.6);*/
   font-size: 3rem;
 }
