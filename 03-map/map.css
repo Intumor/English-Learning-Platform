@@ -45,7 +45,7 @@ section {
   align-items: center;
   color: white;
   font-size: 2rem;
-  background-color: var(--available-lesson);
+  background-color: var(--not-available);
 }
 
 .one {
