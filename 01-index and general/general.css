@@ -1,6 +1,8 @@
 :root {
   --website-theme: rgb(0, 7, 68);
   --schoolboard-color: rgb(0, 102, 0);
+  --available-lesson: rgb(5, 5, 177);
+  --last-lesson: rgb(255, 115, 0);
 }
 
 *, ::before, ::after {

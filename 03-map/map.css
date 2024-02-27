@@ -1,0 +1,137 @@
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-family: 'Roboto Mono', sans-serif;
+  color: white;
+  margin: 2rem auto;
+}
+
+section {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  overflow: hidden;
+}
+
+.map {
+  border: 1px solid black;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  height: 500px;
+  background-image: url(/images/map.png);
+  background-size: 600px 500px;
+  width: 100%;
+  margin: 0 1rem;
+}
+
+.map::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0); /* Adjust the alpha value (0.0 to 1.0) for transparency */
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  background-color: var(--available-lesson);
+}
+
+.one {
+  background-color: var(--available-lesson);
+  left: 2%;
+  top: 91%;
+}
+
+.two {
+  left: 19%;
+  top: 88%;
+}
+
+.three {
+  left: 35%;
+  top: 84%;
+}
+
+.four {
+  left: 55%;
+  top: 82%;
+}
+
+.five {
+  left: 65%;
+  top: 70%;
+}
+
+.six {
+  left: 48%;
+  top: 64%;
+}
+
+.seven {
+  left: 31%;
+  top: 58%;
+}
+
+.eight {
+  left: 43%;
+  top: 54%;
+}
+
+.nine {
+  left: 55%;
+  top: 50%;
+}
+
+.ten {
+  left: 63.5%;
+  top: 44%;
+}
+
+.eleven {
+  left: 52%;
+  top: 38%;
+}
+
+
+.twelve {
+  left: 34%;
+  top: 34%;
+}
+
+
+.thirteen {
+  left: 46%;
+  top: 29%;
+}
+
+.fourteen {
+  left: 56.5%;
+  top: 25%;
+}
+
+.fifteen {
+  left: 45%;
+  top: 17%;
+}
+
+.sixteen {
+  left: 52%;
+  top: 0%;
+  width: 80px;
+  height: 80px;
+  background-color: var(--last-lesson);
+  box-shadow: 0 0 20px 10px rgba(255, 115, 0, 0.6);
+  font-size: 3rem;
+}
