@@ -2,8 +2,10 @@
   --website-theme: rgb(0, 7, 68);
   --schoolboard-color: rgb(0, 102, 0);
   --available-lesson: rgb(5, 5, 177);
-  --last-lesson: rgb(255, 115, 0);
+  --complete-lesson: rgb(255, 115, 0);
   --not-available: grey;
+  --path-lessons: rgb(36, 42, 124);
+  --path-unavailable: rgb(112, 114, 141);
 }
 
 *, ::before, ::after {

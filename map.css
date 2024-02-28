@@ -17,9 +17,9 @@ section {
   border: 1px solid black;
   position: relative;
   background-color: rgb(255, 255, 255);
-  height: 500px;
+  height: 800px;
   background-image: url(./images/map.png);
-  background-size: 600px 500px;
+  background-size: 600px 800px;
   width: 100%;
   margin: auto 1rem;
 }
@@ -35,22 +35,23 @@ section {
   color: white;
   font-size: 2rem;
   background-color: var(--not-available);
+  cursor: pointer;
 }
 
 .one {
   background-color: var(--available-lesson);
   left: 2%;
-  top: 91%;
+  top: 94%;
 }
 
 .two {
   left: 19%;
-  top: 88%;
+  top: 91%;
 }
 
 .three {
   left: 35%;
-  top: 84%;
+  top: 87%;
 }
 
 .four {
@@ -60,27 +61,27 @@ section {
 
 .five {
   left: 65%;
-  top: 70%;
+  top: 74%;
 }
 
 .six {
   left: 48%;
-  top: 64%;
+  top: 65%;
 }
 
 .seven {
   left: 31%;
-  top: 58%;
+  top: 60%;
 }
 
 .eight {
   left: 43%;
-  top: 54%;
+  top: 56%;
 }
 
 .nine {
-  left: 55%;
-  top: 50%;
+  left: 58%;
+  top: 52%;
 }
 
 .ten {
@@ -89,20 +90,20 @@ section {
 }
 
 .eleven {
-  left: 52%;
-  top: 38%;
+  left: 49%;
+  top: 39%;
 }
 
 
 .twelve {
   left: 34%;
-  top: 34%;
+  top: 36%;
 }
 
 
 .thirteen {
   left: 46%;
-  top: 29%;
+  top: 32%;
 }
 
 .fourteen {
@@ -111,13 +112,13 @@ section {
 }
 
 .fifteen {
-  left: 45%;
-  top: 17%;
+  left: 43%;
+  top: 18%;
 }
 
 .sixteen {
-  left: 52%;
-  top: 0%;
+  left: 53%;
+  top: 3%;
   width: 80px;
   height: 80px;
   /*background-color: var(--last-lesson);*/
@@ -129,113 +130,126 @@ section {
   h1 {
     font-size: 3rem;
   }
+}
 
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+    margin: 1rem 1rem;
+  }
+
+  
   section {
     max-width: 300px;
+    height: 360vh;
   }
 
   .map {
     background-size: 300px 500px;
     margin: 5rem auto 1rem ;
+    background-image: none;
+    background-color: var(--website-theme);
+    border: none;
+    height: 300vh;
   }
 
   .circle {
-    width: 25px;
-    height: 25px;
-    font-size: 1rem;
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    left: 40%;
+  }
+
+  .circle::after {
+    content: "";
+    height: 20vh;
+    width: 8px;
+    border: 1px solid var(--path-lessons);
+    border-top: none;
+    background-color: var(--path-unavailable);
+    position: absolute;
+    top: 100%;
   }
 
   .one {
-    left: 2%;
-    top: 94%;
+    top: 0%;
+    background-color: var(--available-lesson);
+    box-shadow: 0 0 10px 10px rgb(5, 5, 177, 0.5)
+    /*background-color: var(--complete-lesson);
+    box-shadow: 0 0 20px 10px rgba(255, 115, 0, 0.6);*/
   }
   
   .two {
-    left: 19%;
-    top: 91%;
+    top: 7%;
   }
   
   .three {
-    left: 35%;
-    top: 87%;
+    top: 14%;
   }
   
   .four {
-    left: 55%;
-    top: 82%;
+    top: 21%;
   }
   
   .five {
-    left: 65%;
-    top: 74%;
+    top: 28%;
   }
   
   .six {
-    left: 46%;
-    top: 66%;
+    top: 35%;
   }
   
   .seven {
-    left: 33%;
-    top: 60%;
+    top: 42%;
   }
   
   .eight {
-    left: 43%;
-    top: 55.6%;
+    top: 49%;
   }
   
   .nine {
-    left: 55%;
-    top: 53%;
+    top: 56%;
   }
   
   .ten {
-    left: 63%;
-    top: 48%;
+    top: 63%
   }
   
   .eleven {
-    left: 52%;
-    top: 39.5%;
+    top: 70%;
   }
   
   
   .twelve {
-    left: 34%;
-    top: 36%;
+    top: 77%;
   }
   
   
   .thirteen {
-    left: 46%;
-    top: 32%;
+    top: 85%;
   }
   
   .fourteen {
-    left: 55%;
-    top: 26%;
+    top: 92%;
   }
   
   .fifteen {
-    left: 42%;
-    top: 19%;
+    top: 99%;
   }
   
   .sixteen {
-    left: 53%;
-    top: 2%;
-    width: 50px;
-    height: 50px;
+    left: 35.3%;
+    top: 107%;
+    width: 80px;
+    height: 80px;
     /*background-color: var(--last-lesson);*/
     /*box-shadow: 0 0 20px 10px rgba(255, 115, 0, 0.6);*/
-    font-size: 2rem;
+    font-size: 3rem;
   }
-}
 
-@media only screen and (max-width: 540px) {
-  h1 {
-    font-size: 2rem;
-    margin: 1rem 1rem;
+  .sixteen::after {
+    content: "";
+    border: 1px solid var(--website-theme);
+    background-color: var(--website-theme);
   }
 }
