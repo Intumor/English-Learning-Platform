@@ -112,3 +112,177 @@ button:active {
   flex-direction: column;
   justify-content: center;
 }
+
+.popup-header {
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 0.3rem;
+}
+
+.popup-text {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 3.5rem;
+}
+
+.swear-button {
+  font-size: 1.6rem;
+  margin: 2rem 1rem 2rem 1rem;
+}
+
+@media only screen and (max-width: 1260px) {
+  .popup-header {
+    font-size: 2.4rem;
+    margin: 1rem;
+  }
+
+  .popup-text {
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 2.3rem;
+  }
+
+  .swear-button {
+    font-size: 1.3rem;
+    margin: 2rem 1rem 2rem 1rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .message-box {
+    height: 70%;
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .message-box {
+    height: 76%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .message-box {
+    height: 85%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .message-box {
+    width: 70%;
+    height: 70%;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  h1 {
+    font-size: 3rem;
+    margin: 2rem auto;
+  }
+
+  section {
+    padding: 0rem 1rem;
+  }
+
+  h2 {
+    margin: 2rem 1rem 1.6rem 1.6rem;
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+  }
+
+  audio {
+    margin: 2.7rem 0 1rem 0;
+    width: 100%;
+  }
+
+  ul {
+    margin: 1rem 1rem 2rem 4.2rem;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+  
+  .caption-to-header {
+    margin: -1rem 0 0 2.2rem;
+  }
+  
+  .survey {
+    margin: 2rem 1rem 2rem 2rem;
+  }
+
+  label {
+    display: block;
+    font-size: 2.4rem;
+    margin: 2.3rem 0;
+  }
+
+  input {
+    padding: 0.8rem;
+    width: 90%;
+    font-size: 1.6rem;
+    border-radius: 5px;
+  }
+
+  button {
+    padding: 1rem 2.8rem;
+    margin: 2rem 0;
+    font-size: 1.4rem;
+  }
+
+  .message-box {
+    width: 85%;
+    height: 70%;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .message-box {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .popup-header {
+    font-size: 2rem;
+    margin: 0.8rem 0;
+  }
+
+  .popup-text {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+
+  .swear-button {
+    margin: 1.1rem 1rem 1rem 1rem;
+  }
+
+  .message-box {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .popup-header {
+    font-size: 1.8rem;
+    margin: 0.8rem 0;
+  }
+
+  .popup-text {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  .swear-button {
+    margin: 1.1rem 1rem 1rem 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .message-box {
+    width: 90%;
+    height: 90%;
+  }
+}
