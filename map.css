@@ -21,7 +21,23 @@ section {
   background-image: url(./images/map.png);
   background-size: 600px 800px;
   width: 100%;
-  margin: auto 1rem;
+  margin: 1rem 1rem;
+}
+
+.map img {
+  position: absolute;
+  width: 28px;
+  height: auto;
+  top: 13%;
+  opacity: 0.6;
+}
+
+.map span {
+  z-index: 1;
+}
+
+.last.img {
+  width: 52px;
 }
 
 .circle {
@@ -153,6 +169,19 @@ section {
     height: 300vh;
   }
 
+  .map img {
+    top: 18%;
+  }
+  
+  .map span {
+    z-index: 1;
+  }
+  
+  .last.img {
+    width: 52px;
+    top: 14%;
+  }
+
   .circle {
     width: 50px;
     height: 50px;
@@ -174,7 +203,7 @@ section {
   .one {
     top: 0%;
     background-color: var(--available-lesson);
-    box-shadow: 0 0 10px 10px rgb(5, 5, 177, 0.5)
+    box-shadow: 0 0 10px 10px rgb(5, 5, 177, 0.5);
     /*background-color: var(--complete-lesson);
     box-shadow: 0 0 20px 10px rgba(255, 115, 0, 0.6);*/
   }
