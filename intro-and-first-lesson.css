@@ -100,6 +100,7 @@ button:active {
 
 .popup-clicked {
   display: flex;
+  z-index: 100;
 }
 
 .message-box {
@@ -152,28 +153,22 @@ button:active {
 
 @media only screen and (max-width: 500px) {
   .message-box {
-    top: 5%;
+    top: 10%;
     left: 5%;
     right: 5%;
     bottom: 5%;
   }
 
-  .popup-header {
-    margin-top: 1rem;
-    font-size: 2rem;
+}
+
+@media only screen and (max-width: 425px) {
+  .message-box {
+    top: 3%;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
   }
 
-  .popup-text {
-    font-size: 1.5rem;
-    text-align: center;
-    line-height: 2rem;
-  }
-
-  .swear-button {
-    font-size: 1.3rem;
-    margin: 2rem auto 1rem;
-    padding: 0.5rem 2rem;
-  }
 }
 
 @media only screen and (max-width: 760px) {
