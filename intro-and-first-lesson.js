@@ -1,7 +1,7 @@
 const submitButton = document.querySelector('.submit-button');
 const textBar = document.querySelector('.text-bar');
 const popupMessage = document.querySelector('.pop-up-message');
-const messageBox = document.querySelector('.message-box')
+const messageBox = document.querySelector('.message-box');
 
 const hideMessage = () => {
   popupMessage.classList.remove('popup-clicked');
@@ -28,7 +28,6 @@ const showMessage = () => {
   swearButton.innerText = 'Pinky swear';
   swearButton.onclick = hideMessage;
   messageBox.appendChild(swearButton);
-
 }
 
-submitButton.addEventListener('click', showMessage)
+submitButton.addEventListener('click', showMessage);
