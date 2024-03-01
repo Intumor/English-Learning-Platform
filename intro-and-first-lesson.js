@@ -6,6 +6,7 @@ const messageBox = document.querySelector('.message-box')
 const hideMessage = () => {
   popupMessage.classList.remove('popup-clicked');
   messageBox.innerHTML = "";
+  textBar.value = "";
 }
 
 const showMessage = () => {
