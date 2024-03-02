@@ -54,12 +54,6 @@ const correct = document.querySelector('#correct');
 const incorrect = document.querySelector('#incorrect');
 let inputValue = "";
 
-const removeChecks = () => {
-  if (quizTextbar.value !== inputValue) {
-    correct.classList.remove('correct-shown');
-    incorrect.classList.remove('incorrect-shown');
-  }
-}
 
 const checkAnswer = () => {
   let answer = quizTextbar.value.toLowerCase();
@@ -81,13 +75,19 @@ quizTextbar.addEventListener('keydown', (event) => {
   }
 });
 
-quizTextbar.addEventListener('input', removeChecks);
+quizTextbar.addEventListener('input', () => {
+  if (quizTextbar.value !== inputValue) {
+    correct.classList.remove('correct-shown');
+    incorrect.classList.remove('incorrect-shown');
+  }
+});
 
 /*second answer*/
 const quizTextbar2 = document.querySelector('#quiz-textbar-2');
 const checkButton2 = document.querySelector('#submit-2');
 const correct2 = document.querySelector('#correct-2');
 const incorrect2 = document.querySelector('#incorrect-2');
+let inputValue2 = "";
 
 const checkAnswer2 = () => {
   let answer = quizTextbar2.value.toLowerCase();
@@ -98,6 +98,8 @@ const checkAnswer2 = () => {
   } else {
     incorrect2.classList.add('incorrect-shown');
   }
+
+  inputValue2 = answer;
 }
 
 checkButton2.addEventListener('click', checkAnswer2);
@@ -106,3 +108,112 @@ quizTextbar2.addEventListener('keydown', (event) => {
     checkAnswer2();
   }
 })
+
+quizTextbar2.addEventListener('input', () => {
+  if (quizTextbar2.value !== inputValue2) {
+    correct2.classList.remove('correct-shown');
+    incorrect2.classList.remove('incorrect-shown');
+  }
+});
+
+/*third answer */
+const quizTextbar3 = document.querySelector('#quiz-textbar-3');
+const checkButton3 = document.querySelector('#submit-3');
+const correct3 = document.querySelector('#correct-3');
+const incorrect3 = document.querySelector('#incorrect-3');
+let inputValue3 = "";
+
+const checkAnswer3 = () => {
+  let answer = quizTextbar3.value.toLowerCase();
+  correct3.classList.remove('correct-shown');
+  incorrect3.classList.remove('incorrect-shown');
+  if (answer === 'did you see' || answer === 'did you see?') {
+    correct3.classList.add('correct-shown');
+  } else {
+    incorrect3.classList.add('incorrect-shown');
+  }
+
+  inputValue3 = answer;
+}
+
+checkButton3.addEventListener('click', checkAnswer3);
+quizTextbar3.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    checkAnswer3();
+  }
+});
+
+quizTextbar3.addEventListener('input', () => {
+  if (quizTextbar3.value !== inputValue3) {
+    correct3.classList.remove('correct-shown');
+    incorrect3.classList.remove('incorrect-shown');
+  }
+});
+
+/*fourth answer */
+const quizTextbar4 = document.querySelector('#quiz-textbar-4');
+const checkButton4 = document.querySelector('#submit-4');
+const correct4 = document.querySelector('#correct-4');
+const incorrect4 = document.querySelector('#incorrect-4');
+let inputValue4 = "";
+
+const checkAnswer4 = () => {
+  let answer = quizTextbar4.value.toLowerCase();
+  correct4.classList.remove('correct-shown');
+  incorrect4.classList.remove('incorrect-shown');
+  if (answer === 'do you see' || answer === 'do you see?') {
+    correct4.classList.add('correct-shown');
+  } else {
+    incorrect4.classList.add('incorrect-shown');
+  }
+
+  inputValue4 = answer;
+}
+
+checkButton4.addEventListener('click', checkAnswer4);
+quizTextbar4.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    checkAnswer4();
+  }
+});
+
+quizTextbar4.addEventListener('input', () => {
+  if (quizTextbar4.value !== inputValue4) {
+    correct4.classList.remove('correct-shown');
+    incorrect4.classList.remove('incorrect-shown');
+  }
+});
+
+/*fifth answer */
+const quizTextbar5 = document.querySelector('#quiz-textbar-5');
+const checkButton5 = document.querySelector('#submit-5');
+const correct5 = document.querySelector('#correct-5');
+const incorrect5 = document.querySelector('#incorrect-5');
+let inputValue5 = "";
+
+const checkAnswer5 = () => {
+  let answer = quizTextbar5.value.toLowerCase();
+  correct5.classList.remove('correct-shown');
+  incorrect5.classList.remove('incorrect-shown');
+  if (answer === 'will you see' || answer === 'will you see?') {
+    correct5.classList.add('correct-shown');
+  } else {
+    incorrect5.classList.add('incorrect-shown');
+  }
+
+  inputValue5 = answer;
+}
+
+checkButton5.addEventListener('click', checkAnswer5);
+quizTextbar5.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    checkAnswer5();
+  }
+});
+
+quizTextbar5.addEventListener('input', () => {
+  if (quizTextbar5.value !== inputValue5) {
+    correct5.classList.remove('correct-shown');
+    incorrect5.classList.remove('incorrect-shown');
+  }
+});
