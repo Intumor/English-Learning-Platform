@@ -48,7 +48,7 @@
         <p class="caption-to-header">(This will only take a second)</p>
         <div class="survey">
           <label for="name">What is your name?</label>
-          <input class="text-bar" id="name" type="text" placeholder="Your name...">
+          <input class="text-bar" id="name" type="text" placeholder="Your name..." maxlength="35">
           <button class="submit-button">Submit</button>
           <div class="pop-up-message">
             <div class="message-box"></div>
@@ -82,21 +82,21 @@
           </thead>
           <tbody>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td class="ordinary-cell"></td>
+              <td class="ordinary-cell"></td>
+              <td class="ordinary-cell"></td>
               <td class="fourth-column">Future</td>
             </tr>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td class="ordinary-cell"></td>
+              <td class="ordinary-cell"></td>
+              <td class="ordinary-cell"></td>
               <td class="fourth-column">Present</td>
             </tr>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td class="ordinary-cell"></td>
+              <td class="ordinary-cell"></td>
+              <td class="ordinary-cell"></td>
               <td class="fourth-column">Past</td>
             </tr>
           </tbody>
@@ -124,33 +124,33 @@
           </thead>
           <tbody>
             <tr>
-              <td></td>
+              <td class="ordinary-cell"></td>
               <td class="ordinary-cell">
-                <p>I will love - Yo quero</p>
-                <p>You will love - Yo quero</p>
-                <p>We will love - Yo quero</p>
-                <p>They will love - Yo quero</p>
-                <p>He will love - Yo quero</p>
-                <p>She will love - Yo quero</p>
+                <p>I will love - Yo amaré</p>
+                <p>You will love - Tu amarás</p>
+                <p>We will love - Nosotros amaremos</p>
+                <p>They will love - Ellos amarán</p>
+                <p>He will love - El amará</p>
+                <p>She will love - Ella amará</p>
               </td>
-              <td></td>
+              <td class="ordinary-cell"></td>
               <td class="fourth-column">Future</td>
             </tr>
             <tr>
-              <td></td>
+              <td class="ordinary-cell"></td>
               <td class="ordinary-cell">
-                <p>I love - Yo quero</p>
-                <p>You love - Yo quero</p>
+                <p>I love - Yo amo</p>
+                <p>You love - Tu amas</p>
                 <p>We love - Yo quero</p>
                 <p>They love - Yo quero</p>
                 <p>He loves - Yo quero</p>
                 <p>She loves - Yo quero</p>
               </td>
-              <td></td>
+              <td class="ordinary-cell"></td>
               <td class="fourth-column">Present</td>
             </tr>
             <tr>
-              <td></td>
+              <td class="ordinary-cell" ></td>
               <td class="ordinary-cell">
                 <p>I loved - Yo quero</p>
                 <p>You loved - Yo quero</p>
@@ -159,18 +159,174 @@
                 <p>He loved - Yo quero</p>
                 <p>She loved - Yo quero</p>
               </td>
-              <td></td>
+              <td class="ordinary-cell"></td>
               <td class="fourth-column">Past</td>
             </tr>
           </tbody>
         </table>
         <div class="sum-up">
           <h3>To sum it up:</h3>
-          <p>For I, You, We, They - the verb stays as it is (love)</p>
-          <p>For He, She, It - we add "s" at the end (love + s = love<span class="highlighted">s</span>)</p>
-          <p>For the Future tense we add "will" to the pronoun and the verb after that (He + will + love)</p>
-          <p>For the Past tense we add "ed" at the end of the word (lov<span class="highlighted">ed</span>)</p>
+          <p>- For I, You, We, They - the verb stays as it is (love)</p>
+          <p>- For He, She, It - we add "s" at the end (love + s = love<span class="highlighted">s</span>)</p>
+          <p>- For the Future tense we add "will" to the pronoun and the verb after that (He + will + love)</p>
+          <p>- For the Past tense we add "ed" at the end of the word (lov<span class="highlighted">ed</span>)</p>
         </div>
+        <div class="quiz">
+          <h2 class="quiz-header">Try it!</h2>
+          <div class="question">
+            <label for="quiz-textbar">Como se dice "I will live"?</label>
+            <div class="answer-box">
+              <div class="input-box">
+                <input class="quiz-textbar" id="quiz-textbar" type="text" placeholder="Your answer...">
+              </div>
+              <div class="check-box">
+                <input class="submit" id="submit" type="submit" value="Check">
+                <div class="correct" id="correct"><img src="icons/icons8-correct.svg" alt="correct"></div>
+                <div class="incorrect" id="incorrect"><img src="icons/icons8-wrong.svg" alt="wrong">Try again!</div>
+              </div>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="question">
+            <label for="quiz-textbar-2">Como se dice "He will live"?</label>
+            <div class="answer-box">
+              <div class="input-box">
+                <input class="quiz-textbar" id="quiz-textbar-2" type="text" placeholder="Your answer...">
+              </div>
+              <div class="check-box">
+                <input class="submit" id="submit-2" type="submit" value="Check">
+                <div class="correct" id="correct-2"><img src="icons/icons8-correct.svg" alt="correct"></div>
+                <div class="incorrect" id="incorrect-2"><img src="icons/icons8-wrong.svg" alt="wrong">Try again</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="full-table">
+        <audio class="full-table-audio" controls>
+          <source src="" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Question</th>
+              <th>Positive</th>
+              <th>Negative</th>
+              <th class="fourth-column"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="ordinary-cell">
+                <p>will i love? - Yo amaré</p>
+                <p>will you love? - Tu amarás</p>
+                <p>will we love? - Nosotros amaremos</p>
+                <p>will they love? - Ellos amarán</p>
+                <p>will he love? - El amará</p>
+                <p>will she love? - Ella amará</p>
+              </td>
+              <td class="ordinary-cell">
+                <p>I will love - Yo amaré</p>
+                <p>You will love - Tu amarás</p>
+                <p>We will love - Nosotros amaremos</p>
+                <p>They will love - Ellos amarán</p>
+                <p>He will love - El amará</p>
+                <p>She will love - Ella amará</p>
+              </td>
+              <td class="ordinary-cell">
+                <p>I will not love - Yo amaré</p>
+                <p>You will not love - Tu amarás</p>
+                <p>We will not love - Nosotros amaremos</p>
+                <p>They will not love - Ellos amarán</p>
+                <p>He will not love - El amará</p>
+                <p>She will not love - Ella amará</p>
+              </td>
+              <td class="fourth-column">Future</td>
+            </tr>
+            <tr>
+              <td class="ordinary-cell">
+                <p>do i love? - Yo amo</p>
+                <p>do you love? - Tu amas</p>
+                <p>do we love? - Yo quero</p>
+                <p>do they love? - Yo quero</p>
+                <p>does he love? - Yo quero</p>
+                <p>does she love? - Yo quero</p>
+              </td>
+              <td class="ordinary-cell">
+                <p>I love - Yo amo</p>
+                <p>You love - Tu amas</p>
+                <p>We love - Yo quero</p>
+                <p>They love - Yo quero</p>
+                <p>He loves - Yo quero</p>
+                <p>She loves - Yo quero</p>
+              </td>
+              <td class="ordinary-cell">
+                <p>I don't love - Yo amo</p>
+                <p>You don't love - Tu amas</p>
+                <p>We don't love - Yo quero</p>
+                <p>They don't love - Yo quero</p>
+                <p>He doesn't love - Yo quero</p>
+                <p>She doesn't love - Yo quero</p>
+              </td>
+              <td class="fourth-column">Present</td>
+            </tr>
+            <tr>
+              <td class="ordinary-cell" >
+                <p>did i love? - Yo quero</p>
+                <p>did you love? - Yo quero</p>
+                <p>did we love? - Yo quero</p>
+                <p>did they love? - Yo quero</p>
+                <p>did he love? - Yo quero</p>
+                <p>did she love? - Yo quero</p>
+              </td>
+              <td class="ordinary-cell">
+                <p>I loved (saw) - Yo quero</p>
+                <p>You loved (saw) - Yo quero</p>
+                <p>We loved (saw) - Yo quero</p>
+                <p>They loved (saw) - Yo quero</p>
+                <p>He loved (saw) - Yo quero</p>
+                <p>She loved (saw) - Yo quero</p>
+              </td>
+              <td class="ordinary-cell">
+                <p>I didn't love - Yo quero</p>
+                <p>You didn't love - Yo quero</p>
+                <p>We didn't love - Yo quero</p>
+                <p>They didn't love - Yo quero</p>
+                <p>He didn't love - Yo quero</p>
+                <p>She didn't love - Yo quero</p>
+              </td>
+              <td class="fourth-column">Past</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <div class="sum-up">
+          <h3>To sum it up:</h3>
+          <p>- For I, You, We, They - the verb stays as it is (love)</p>
+          <p>- For He, She, It - we add "s" at the end (love + s = love<span class="highlighted">s</span>)</p>
+          <p>- For the Future tense we add "will" to the pronoun and the verb after that (He + will + love)</p>
+          <p>- For the Past tense we add "ed" at the end of the word (lov<span class="highlighted">ed</span>)</p>
+          <p>- If the verb is irregular we use its second form. For example: i see - yo veo / i saw - yo vi</p>
+          <p>- In order to ask a question in the future we a pronoun and "will" switch places (i will do - will i do?)</p>
+          <p>- To form a negatove sentence in the Future we add "not" to "will" (i wil do - i will not do)</p>
+          <p>- In order to ask a question in the Present we add "do" (For I, You, We, They) or does (For He, She, It) at the beggining of a sentence</p>
+          <p>- In order to deny something in the Present we use "don't" (For I, You, We, They) or doesn't (For He, She, It) (I don't love / She doesn't love)</p>
+          <p>- In order to ask a question in the Past we add "did" at the beggining of a sentence (did we love?)</p>
+          <p>- In order to deny something in the Past we use "didn't" (She didn't live)</p>
+        </div>
+      </section>
+      <section>
+        <h2 class="final-section-header">Let's learn some more words and test our knowledge!</h2>
+        <p class="new-words">
+          work - trabajar<br>
+          open - abrir<br>
+          close - cerrar<br>
+          see - ver
+        </p>
       </section>
     </main>
   </body>

@@ -85,6 +85,12 @@ button:active {
   background-color: rgb(167, 184, 231);
 }
 
+.disabled:hover {
+  background-color: rgb(193, 210, 255);
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
 .pop-up-message {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.7);
@@ -151,15 +157,13 @@ table {
 
 
 thead th {
-  border-bottom: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  border: 1px solid #ddd;
+  border: 3px solid #000000;
   padding: 1rem;
   font-size: 2.4rem;
 }
 
 th:not(thead th), td {
-  border: 1px solid #ddd;
+  border: 3px solid #000000;
   height: 24rem;
 }
 
@@ -171,9 +175,14 @@ th:not(thead th), td {
   font-size: 2.4rem;
 }
 
+.ordinary-cell {
+  background-color: var(--table-color);
+}
+
 .ordinary-cell p {
   font-size: 2rem;
   padding: 1rem 1rem 1rem 3rem;
+  color: black;
 }
 
 th {
@@ -209,6 +218,87 @@ h3 {
   font-size: 2.8rem;
   font-style: italic;
   text-decoration: underline;
+}
+
+.quiz {
+  margin: 8rem auto;
+  border: 6px dotted rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+
+.quiz-header {
+  margin: 0;
+}
+
+.quiz-textbar {
+  height: 50px;
+}
+
+.answer-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.check-box {
+  display: flex;
+}
+
+.correct-incorrect-box {
+  display: none;
+}
+
+.submit {
+  max-width: fit-content;
+  border-radius: 0.4rem;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.submit:active {
+  background-color: rgb(228, 228, 228);
+}
+
+.correct {
+  margin: 0 1rem;
+  display: none;
+  align-items: center;
+}
+
+.correct-shown {
+  display: flex;
+}
+
+.incorrect {
+  margin: 0 0 0 0.5rem;
+  display: none;
+  align-items: center;
+  font-size: 2rem;
+  color: #F44336;
+  font-weight: bold;
+}
+
+.incorrect-shown {
+  display: flex;
+}
+
+.divider {
+  border-bottom: 6px dashed white;
+  margin-top: 5rem;
+}
+
+.full-table {
+  max-width: 1250px;
+  text-align: center;
+}
+
+.full-table-audio {
+  max-width: 850px;
+}
+
+.final-section-header {
+  margin: 2rem 1rem 5rem 0rem;
+  font-size: 3.3rem;
 }
 
 @media only screen and (max-width: 950px) {
@@ -302,6 +392,19 @@ h3 {
   .ordinary-cell p {
     font-size: 1.5rem;
     padding: 0 0 0 0;
+  }
+
+  .question label {
+    font-size: 1.8rem;
+  }
+
+  .quiz-textbar {
+    height: 3.5rem;
+  }
+
+  .check-box img {
+    width: 3rem;
+    height: 3rem;
   }
 }
 
