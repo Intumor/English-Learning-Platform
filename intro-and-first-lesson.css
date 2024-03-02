@@ -235,6 +235,10 @@ h3 {
   height: 50px;
 }
 
+.question label {
+  font-style: italic;
+}
+
 .answer-box {
   display: flex;
   flex-direction: column;
