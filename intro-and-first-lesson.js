@@ -26,6 +26,7 @@ const showMessage = () => {
   messageHeader.classList.add('popup-header');
   if (textBar.value === "") {
     userName = "Anonymous";
+    localStorage.setItem('username', userName);
   }
 
   messageHeader.innerText = `Welcome aboard, ${userName}!`;
@@ -42,7 +43,6 @@ const showMessage = () => {
 }
 
 submitButton.addEventListener('click', () => {
-  console.log('ss')
   showMessage();
   localStorage.setItem('username', textBar.value);
 });
@@ -349,6 +349,12 @@ const congratulate = () => {
       return;
     }
   }
+
+  if (!userName) {
+    userName = 'Anonymous';
+    localStorage.setItem('username', userName);
+  }
+
   congratsPopup.classList.add('popup-congrats-isclicked');
   congratsText.textContent = `Congratualtions, ${userName}!`;
   const nextLessonButton = document.querySelector('.next-lesson-button');
