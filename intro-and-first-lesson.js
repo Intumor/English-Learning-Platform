@@ -300,7 +300,7 @@ questions.forEach(question => {
   let inputValue = "";
 
   const checkAnswer = () => {
-    let answer = quizTextbar.value.toLowerCase();
+    let answer = quizTextbar.value.toLowerCase().trim();
     correct.classList.remove('correct-shown');
     incorrect.classList.remove('incorrect-shown');
     if (answer === question.answer) {
