@@ -4,6 +4,7 @@ const popupMessage = document.querySelector('.pop-up-message');
 const messageBox = document.querySelector('.message-box');
 let storedUserName = localStorage.getItem('userName');
 
+
 if (storedUserName) {
   submitButton.disabled = true;
   submitButton.classList.add('disabled');
@@ -327,7 +328,11 @@ const congratsText = document.querySelector('.congrats-text')
 
 const congratulate = () => {
   congratsPopup.classList.add('popup-congrats-isclicked');
-  congratsText.textContent = `Congratualtions, ${storedUserName}!`
+  congratsText.textContent = `Congratualtions, ${storedUserName}!`;
+  const nextLessonButton = document.querySelector('.next-lesson-button');
+  nextLessonButton.addEventListener('click', () => {
+    localStorage.setItem('lessons', JSON.stringify({1: 'complete', 2: 'unlocked' }));
+  })
 }
 
 finishButton.addEventListener('click', congratulate);

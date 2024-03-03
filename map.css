@@ -32,6 +32,10 @@ section {
   opacity: 0.6;
 }
 
+.hidden-img {
+  display: none;
+}
+
 .map span {
   z-index: 1;
 }
@@ -60,7 +64,6 @@ section {
 }
 
 .one {
-  background-color: var(--available-lesson);
   left: 2%;
   top: 94%;
 }
@@ -147,6 +150,15 @@ section {
   font-size: 3rem;
 }
 
+.unlocked {
+  background-color: var(--available-lesson);
+}
+
+.complete {
+  background-color: var(--complete-lesson);
+  box-shadow: 0 0 20px 10px rgba(255, 115, 0, 0.6);
+}
+
 @media only screen and (max-width: 720px) {
   h1 {
     font-size: 3rem;
@@ -207,10 +219,6 @@ section {
 
   .one {
     top: 0%;
-    background-color: var(--available-lesson);
-    box-shadow: 0 0 10px 10px rgb(5, 5, 177, 0.5);
-    /*background-color: var(--complete-lesson);
-    box-shadow: 0 0 20px 10px rgba(255, 115, 0, 0.6);*/
   }
   
   .two {
