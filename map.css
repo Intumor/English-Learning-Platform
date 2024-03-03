@@ -64,6 +64,7 @@ section {
 }
 
 .one {
+  background-color: var(--available-lesson);
   left: 2%;
   top: 94%;
 }
