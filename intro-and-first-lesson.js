@@ -2,19 +2,20 @@ const submitButton = document.querySelector('.submit-button');
 const textBar = document.querySelector('.text-bar');
 const popupMessage = document.querySelector('.pop-up-message');
 const messageBox = document.querySelector('.message-box');
-let storedUserName = localStorage.getItem('userName');
+let userName = localStorage.getItem('username');
 
-
-if (storedUserName) {
+if (userName) {
   submitButton.disabled = true;
   submitButton.classList.add('disabled');
-  textBar.value = storedUserName;
+  textBar.value = userName;
+  console.log(userName)
 }
 
 const hideMessage = () => {
   popupMessage.classList.remove('popup-clicked');
   messageBox.innerHTML = "";
   textBar.value = "";
+  location.reload();
 }
 
 const showMessage = () => {
@@ -40,7 +41,13 @@ const showMessage = () => {
   messageBox.appendChild(swearButton);
 }
 
-submitButton.addEventListener('click', showMessage);
+submitButton.addEventListener('click', () => {
+  console.log('ss')
+  showMessage();
+  localStorage.setItem('username', textBar.value);
+});
+
+
 textBar.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
     showMessage;
@@ -219,70 +226,70 @@ quizTextbar5.addEventListener('input', () => {
 });
 
 const questions = [
-  { id: 6, answer: 'i work' },
-  { id: 7, answer: 'i will not work' },
-  { id: 8, answer: 'i open' },
-  { id: 9, answer: 'i will open', answer2: "i'll open" },
-  { id: 10, answer: 'i opened' },
-  { id: 11, answer: 'do you open', answer2: 'do you open?' },
-  { id: 12, answer: 'does she open', answer2: 'does she open?' },
-  { id: 13, answer: 'did you open', answer2: 'did you open?' },
-  { id: 14, answer: 'will you open', answer2: 'will you open?' },
-  { id: 15, answer: 'i will not open' },
-  { id: 16, answer: "we didn't open", answer2: 'we did not open'},
-  { id: 17, answer: 'i close' },
-  { id: 18, answer: 'i will close', answer2: "i'll close" },
-  { id: 19, answer: 'will you close', answer2: 'will you close?' },
-  { id: 20, answer: 'i will not close' },
-  { id: 21, answer: 'i closed' },
-  { id: 22, answer: "she didn't close", answer2: 'she did not close' },
-  { id: 23, answer: 'did you close', answer2: 'did you close?' },
-  { id: 24, answer: "i don't close", answer2: 'i do not close' },
-  { id: 25, answer: "he doesn't close", answer2: 'he does not close' },
-  { id: 26, answer: 'i will know', answer2: "i'll know" },
-  { id: 27, answer: 'do you know', answer2: "do you know?" },
-  { id: 28, answer: 'does he know', answer2: 'does he know?'},
-  { id: 29, answer: 'does she know', answer2: 'does she know?' },
-  { id: 30, answer: "i didn't know", answer2: 'i did not know' },
-  { id: 31, answer: 'i will not know' },
-  { id: 32, answer: 'he knew' },
-  { id: 33, answer: 'i see' },
-  { id: 34, answer: 'do you see', answer2: 'do you see?' },
-  { id: 35, answer: 'will you see', answer2: 'will you see?' },
-  { id: 36, answer: 'i saw' },
-  { id: 37, answer: "he didn't see", answer2: 'he did not see' },
-  { id: 38, answer: "he doesn't see", answer2: 'he does not see' },
-  { id: 39, answer: 'he will not see' },
-  { id: 40, answer: 'will you go', answer2: 'will you go?' },
-  { id: 41, answer: 'i will go', answer2: "i'll go" },
-  { id: 42, answer: 'he will not go' },
-  { id: 43, answer: 'did you go', answer2: 'did you go?' },
-  { id: 44, answer: 'i went' },
-  { id: 45, answer: "she didn't go", answer2: 'she did not go' },
-  { id: 46, answer: 'does he go', answer2: 'does he go?' },
-  { id: 47, answer: "he goes, she doesn't go", answer2: 'he goes, she does not go' },
-  { id: 48, answer: "we worked" },
-  { id: 49, answer: 'did you work', answer2: "did you work?" },
-  { id: 50, answer: "we didn't work", answer2: 'we did not work' },
-  { id: 51, answer: 'we will work', answer2: "we'll work" },
-  { id: 52, answer: 'will he work', answer2: 'will he work?' },
-  { id: 53, answer: 'did you see', answer2: 'did you see?' },
-  { id: 54, answer: "he will not work" },
-  { id: 55, answer: 'he will think', answer2: "he'll think" },
-  { id: 56, answer: "i will live", answer2: "i'll live" },
-  { id: 57, answer: "they will not live" },
-  { id: 58, answer: 'did you live', answer2: "did you live?" },
-  { id: 59, answer: "i lived" },
-  { id: 60, answer: 'does she live', answer2: "does she live?" },
-  { id: 61, answer: 'she lives' },
-  { id: 62, answer: 'will you live', answer2: 'will you live?' },
-  { id: 63, answer: "i finish" },
-  { id: 64, answer: "they don't finish", answer2: 'they do not finish' },
-  { id: 65, answer: 'did you finish', answer2: "did you finish?" },
-  { id: 66, answer: "we finished" },
-  { id: 67, answer: "they didn't finish", answer2: 'they did not finish' },
-  { id: 68, answer: 'does she finish', answer2: 'does she finish?' },
-  { id: 69, answer: "she doesn't finish", answer2: 'she does not finish' }
+  { id: 6, answer: 'i work', done: false },
+  { id: 7, answer: 'i will not work', done: false },
+  { id: 8, answer: 'i open', done: false },
+  { id: 9, answer: 'i will open', answer2: "i'll open", done: false },
+  { id: 10, answer: 'i opened', done: false },
+  { id: 11, answer: 'do you open', answer2: 'do you open?', done: false },
+  { id: 12, answer: 'does she open', answer2: 'does she open?', done: false },
+  { id: 13, answer: 'did you open', answer2: 'did you open?', done: false },
+  { id: 14, answer: 'will you open', answer2: 'will you open?', done: false },
+  { id: 15, answer: 'i will not open', done: false },
+  { id: 16, answer: "we didn't open", answer2: 'we did not open', done: false },
+  { id: 17, answer: 'i close', done: false },
+  { id: 18, answer: 'i will close', answer2: "i'll close", done: false },
+  { id: 19, answer: 'will you close', answer2: 'will you close?', done: false },
+  { id: 20, answer: 'i will not close', done: false },
+  { id: 21, answer: 'i closed', done: false },
+  { id: 22, answer: "she didn't close", answer2: 'she did not close', done: false },
+  { id: 23, answer: 'did you close', answer2: 'did you close?', done: false },
+  { id: 24, answer: "i don't close", answer2: 'i do not close', done: false },
+  { id: 25, answer: "he doesn't close", answer2: 'he does not close', done: false },
+  { id: 26, answer: 'i will know', answer2: "i'll know", done: false },
+  { id: 27, answer: 'do you know', answer2: "do you know?", done: false },
+  { id: 28, answer: 'does he know', answer2: 'does he know?', done: false},
+  { id: 29, answer: 'does she know', answer2: 'does she know?', done: false },
+  { id: 30, answer: "i didn't know", answer2: 'i did not know', done: false },
+  { id: 31, answer: 'i will not know', done: false },
+  { id: 32, answer: 'he knew', done: false },
+  { id: 33, answer: 'i see', done: false },
+  { id: 34, answer: 'do you see', answer2: 'do you see?', done: false },
+  { id: 35, answer: 'will you see', answer2: 'will you see?', done: false },
+  { id: 36, answer: 'i saw', done: false },
+  { id: 37, answer: "he didn't see", answer2: 'he did not see', done: false },
+  { id: 38, answer: "he doesn't see", answer2: 'he does not see', done: false },
+  { id: 39, answer: 'he will not see', done: false },
+  { id: 40, answer: 'will you go', answer2: 'will you go?', done: false },
+  { id: 41, answer: 'i will go', answer2: "i'll go", done: false },
+  { id: 42, answer: 'he will not go', done: false },
+  { id: 43, answer: 'did you go', answer2: 'did you go?', done: false },
+  { id: 44, answer: 'i went', done: false },
+  { id: 45, answer: "she didn't go", answer2: 'she did not go', done: false },
+  { id: 46, answer: 'does he go', answer2: 'does he go?', done: false },
+  { id: 47, answer: "he goes, she doesn't go", answer2: 'he goes, she does not go', done: false },
+  { id: 48, answer: "we worked", done: false },
+  { id: 49, answer: 'did you work', answer2: "did you work?", done: false },
+  { id: 50, answer: "we didn't work", answer2: 'we did not work', done: false },
+  { id: 51, answer: 'we will work', answer2: "we'll work", done: false },
+  { id: 52, answer: 'will he work', answer2: 'will he work?', done: false },
+  { id: 53, answer: 'did you see', answer2: 'did you see?', done: false },
+  { id: 54, answer: "he will not work", done: false },
+  { id: 55, answer: 'he will think', answer2: "he'll think", done: false },
+  { id: 56, answer: "i will live", answer2: "i'll live", done: false },
+  { id: 57, answer: "they will not live", done: false },
+  { id: 58, answer: 'did you live', answer2: "did you live?", done: false },
+  { id: 59, answer: "i lived", done: false },
+  { id: 60, answer: 'does she live', answer2: "does she live?", done: false },
+  { id: 61, answer: 'she lives', done: false },
+  { id: 62, answer: 'will you live', answer2: 'will you live?', done: false },
+  { id: 63, answer: "i finish", done: false },
+  { id: 64, answer: "they don't finish", answer2: 'they do not finish', done: false },
+  { id: 65, answer: 'did you finish', answer2: "did you finish?", done: false },
+  { id: 66, answer: "we finished", done: false },
+  { id: 67, answer: "they didn't finish", answer2: 'they did not finish', done: false },
+  { id: 68, answer: 'does she finish', answer2: 'does she finish?', done: false },
+  { id: 69, answer: "she doesn't finish", answer2: 'she does not finish', done: false }
 ]
 
 questions.forEach(question => {
@@ -304,6 +311,7 @@ questions.forEach(question => {
       incorrect.classList.add('incorrect-shown');
     }
 
+    question.done = true;
     inputValue = answer;
   }
 
@@ -325,10 +333,24 @@ const finishButton = document.querySelector('.finish-lesson-button');
 const congratsPopup = document.querySelector('.popup-congrats');
 const congratsBox = document.querySelector('.popup-box');
 const congratsText = document.querySelector('.congrats-text')
-
 const congratulate = () => {
+  for (let i = 6; i < questions.length; i++) {
+    if (questions[i].done === false) {
+      const errorMessage = document.querySelector('.error-message');
+      errorMessage.classList.add('error-shown');
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+      })
+
+      setTimeout(() => {
+        errorMessage.classList.remove('error-shown');
+      }, 3000);
+      return;
+    }
+  }
   congratsPopup.classList.add('popup-congrats-isclicked');
-  congratsText.textContent = `Congratualtions, ${storedUserName}!`;
+  congratsText.textContent = `Congratualtions, ${userName}!`;
   const nextLessonButton = document.querySelector('.next-lesson-button');
   nextLessonButton.addEventListener('click', () => {
     localStorage.setItem('lessons', JSON.stringify({1: 'complete', 2: 'unlocked' }));
