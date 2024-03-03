@@ -309,6 +309,49 @@ h3 {
   margin: -2rem auto 0;
 }
 
+.popup-congrats {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.popup-congrats-isclicked {
+  display: flex;
+}
+
+.popup-box {
+  height: fit-content;
+  background-color: var(--website-theme);
+  overflow-y: auto;
+  text-align: center;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  border-radius: 1rem;
+}
+
+.congrats-text {
+  margin: 2rem 1rem;
+}
+
+.nailed-it-text {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.popup-box a {
+  text-decoration: none;
+  color: var(--website-theme);
+}
+
 @media only screen and (max-width: 950px) {
   .message-box {
     top: 15%;
@@ -481,5 +524,24 @@ h3 {
 @media only screen and (max-width: 370px) {
   .ordinary-cell {
     padding: 0 0 0 0;
+  }
+  
+  .congrats-text {
+    margin: 1rem auto;
+    font-size: 2.2rem;
+  }
+  
+  .nailed-it-text {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .medal-icon {
+    width: 7rem;
+    height: auto;
+  }
+
+  .next-lesson-button {
+    padding: 0.8rem 1.5rem;
   }
 }

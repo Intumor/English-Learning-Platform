@@ -4,13 +4,10 @@ const popupMessage = document.querySelector('.pop-up-message');
 const messageBox = document.querySelector('.message-box');
 let storedUserName = localStorage.getItem('userName');
 
-if (storedUserName !== "") {
+if (storedUserName) {
   submitButton.disabled = true;
-  submitButton.classList.add('disabled')
-  userName = storedUserName;
+  submitButton.classList.add('disabled');
   textBar.value = storedUserName;
-} else {
-  userName = "";
 }
 
 const hideMessage = () => {
@@ -22,12 +19,13 @@ const hideMessage = () => {
 const showMessage = () => {
   popupMessage.classList.add('popup-clicked');
   let userName = textBar.value;
+
   const messageHeader = document.createElement('h2');
   messageHeader.classList.add('popup-header');
   if (textBar.value === "") {
     userName = "Anonymous";
   }
-  /*localStorage.setItem('userName', userName);*/
+
   messageHeader.innerText = `Welcome aboard, ${userName}!`;
   messageBox.appendChild(messageHeader);
   const messageText = document.createElement('p');
@@ -322,3 +320,14 @@ questions.forEach(question => {
   })
 })
 
+const finishButton = document.querySelector('.finish-lesson-button');
+const congratsPopup = document.querySelector('.popup-congrats');
+const congratsBox = document.querySelector('.popup-box');
+const congratsText = document.querySelector('.congrats-text')
+
+const congratulate = () => {
+  congratsPopup.classList.add('popup-congrats-isclicked');
+  congratsText.textContent = `Congratualtions, ${storedUserName}!`
+}
+
+finishButton.addEventListener('click', congratulate);
