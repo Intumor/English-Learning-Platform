@@ -222,7 +222,7 @@ h3 {
 
 .quiz {
   margin: 8rem auto;
-  border: 6px dotted rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
   padding: 1rem;
   border-radius: 0.4rem;
 }
@@ -287,7 +287,7 @@ h3 {
 }
 
 .divider {
-  border-bottom: 6px dashed white;
+  border-bottom: 2px dashed white;
   margin-top: 5rem;
 }
 
@@ -303,6 +303,10 @@ h3 {
 .final-section-header {
   margin: 2rem 1rem 5rem 0rem;
   font-size: 3.3rem;
+}
+
+.finish-lesson-button {
+  margin: -2rem auto 0;
 }
 
 @media only screen and (max-width: 950px) {
@@ -409,6 +413,10 @@ h3 {
   .check-box img {
     width: 3rem;
     height: 3rem;
+  }
+
+  .quiz {
+    margin: 8rem auto 4rem;
   }
 }
 

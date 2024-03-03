@@ -8,6 +8,7 @@ if (storedUserName !== "") {
   submitButton.disabled = true;
   submitButton.classList.add('disabled')
   userName = storedUserName;
+  textBar.value = storedUserName;
 } else {
   userName = "";
 }
@@ -48,37 +49,37 @@ textBar.addEventListener('keydown', (event) => {
 })
 
 /*first answer*/
-const quizTextbar = document.querySelector('#quiz-textbar');
-const checkButton = document.querySelector('#submit');
-const correct = document.querySelector('#correct');
-const incorrect = document.querySelector('#incorrect');
-let inputValue = "";
+const quizTextbar1 = document.querySelector('#quiz-textbar');
+const checkButton1 = document.querySelector('#submit');
+const correct1 = document.querySelector('#correct');
+const incorrect1 = document.querySelector('#incorrect');
+let inputValue1 = "";
 
 
-const checkAnswer = () => {
-  let answer = quizTextbar.value.toLowerCase();
-  correct.classList.remove('correct-shown');
-  incorrect.classList.remove('incorrect-shown');
+const checkAnswer1 = () => {
+  let answer = quizTextbar1.value.toLowerCase();
+  correct1.classList.remove('correct-shown');
+  incorrect1.classList.remove('incorrect-shown');
   if (answer === 'i will live' || answer === 'i will live.' || answer === "i'll live" || answer === "i'll live") {
-    correct.classList.add('correct-shown');
+    correct1.classList.add('correct-shown');
   } else {
-    incorrect.classList.add('incorrect-shown');
+    incorrect1.classList.add('incorrect-shown');
   }
 
-  inputValue = answer;
+  inputValue1 = answer;
 }
 
-checkButton.addEventListener('click', checkAnswer);
-quizTextbar.addEventListener('keydown', (event) => {
+checkButton1.addEventListener('click', checkAnswer1);
+quizTextbar1.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
-    checkAnswer();
+    checkAnswer1();
   }
 });
 
-quizTextbar.addEventListener('input', () => {
-  if (quizTextbar.value !== inputValue) {
-    correct.classList.remove('correct-shown');
-    incorrect.classList.remove('incorrect-shown');
+quizTextbar1.addEventListener('input', () => {
+  if (quizTextbar1.value !== inputValue1) {
+    correct1.classList.remove('correct-shown');
+    incorrect1.classList.remove('incorrect-shown');
   }
 });
 
@@ -217,3 +218,107 @@ quizTextbar5.addEventListener('input', () => {
     incorrect5.classList.remove('incorrect-shown');
   }
 });
+
+const questions = [
+  { id: 6, answer: 'i work' },
+  { id: 7, answer: 'i will not work' },
+  { id: 8, answer: 'i open' },
+  { id: 9, answer: 'i will open', answer2: "i'll open" },
+  { id: 10, answer: 'i opened' },
+  { id: 11, answer: 'do you open', answer2: 'do you open?' },
+  { id: 12, answer: 'does she open', answer2: 'does she open?' },
+  { id: 13, answer: 'did you open', answer2: 'did you open?' },
+  { id: 14, answer: 'will you open', answer2: 'will you open?' },
+  { id: 15, answer: 'i will not open' },
+  { id: 16, answer: "we didn't open", answer2: 'we did not open'},
+  { id: 17, answer: 'i close' },
+  { id: 18, answer: 'i will close', answer2: "i'll close" },
+  { id: 19, answer: 'will you close', answer2: 'will you close?' },
+  { id: 20, answer: 'i will not close' },
+  { id: 21, answer: 'i closed' },
+  { id: 22, answer: "she didn't close", answer2: 'she did not close' },
+  { id: 23, answer: 'did you close', answer2: 'did you close?' },
+  { id: 24, answer: "i don't close", answer2: 'i do not close' },
+  { id: 25, answer: "he doesn't close", answer2: 'he does not close' },
+  { id: 26, answer: 'i will know', answer2: "i'll know" },
+  { id: 27, answer: 'do you know', answer2: "do you know?" },
+  { id: 28, answer: 'does he know', answer2: 'does he know?'},
+  { id: 29, answer: 'does she know', answer2: 'does she know?' },
+  { id: 30, answer: "i didn't know", answer2: 'i did not know' },
+  { id: 31, answer: 'i will not know' },
+  { id: 32, answer: 'he knew' },
+  { id: 33, answer: 'i see' },
+  { id: 34, answer: 'do you see', answer2: 'do you see?' },
+  { id: 35, answer: 'will you see', answer2: 'will you see?' },
+  { id: 36, answer: 'i saw' },
+  { id: 37, answer: "he didn't see", answer2: 'he did not see' },
+  { id: 38, answer: "he doesn't see", answer2: 'he does not see' },
+  { id: 39, answer: 'he will not see' },
+  { id: 40, answer: 'will you go', answer2: 'will you go?' },
+  { id: 41, answer: 'i will go', answer2: "i'll go" },
+  { id: 42, answer: 'he will not go' },
+  { id: 43, answer: 'did you go', answer2: 'did you go?' },
+  { id: 44, answer: 'i went' },
+  { id: 45, answer: "she didn't go", answer2: 'she did not go' },
+  { id: 46, answer: 'does he go', answer2: 'does he go?' },
+  { id: 47, answer: "he goes, she doesn't go", answer2: 'he goes, she does not go' },
+  { id: 48, answer: "we worked" },
+  { id: 49, answer: 'did you work', answer2: "did you work?" },
+  { id: 50, answer: "we didn't work", answer2: 'we did not work' },
+  { id: 51, answer: 'we will work', answer2: "we'll work" },
+  { id: 52, answer: 'will he work', answer2: 'will he work?' },
+  { id: 53, answer: 'did you see', answer2: 'did you see?' },
+  { id: 54, answer: "he will not work" },
+  { id: 55, answer: 'he will think', answer2: "he'll think" },
+  { id: 56, answer: "i will live", answer2: "i'll live" },
+  { id: 57, answer: "they will not live" },
+  { id: 58, answer: 'did you live', answer2: "did you live?" },
+  { id: 59, answer: "i lived" },
+  { id: 60, answer: 'does she live', answer2: "does she live?" },
+  { id: 61, answer: 'she lives' },
+  { id: 62, answer: 'will you live', answer2: 'will you live?' },
+  { id: 63, answer: "i finish" },
+  { id: 64, answer: "they don't finish", answer2: 'they do not finish' },
+  { id: 65, answer: 'did you finish', answer2: "did you finish?" },
+  { id: 66, answer: "we finished" },
+  { id: 67, answer: "they didn't finish", answer2: 'they did not finish' },
+  { id: 68, answer: 'does she finish', answer2: 'does she finish?' },
+  { id: 69, answer: "she doesn't finish", answer2: 'she does not finish' }
+]
+
+questions.forEach(question => {
+  const quizTextbar = document.querySelector(`#quiz-textbar-${question.id}`);
+  const checkButton = document.querySelector(`#submit-${question.id}`);
+  const correct = document.querySelector(`#correct-${question.id}`);
+  const incorrect = document.querySelector(`#incorrect-${question.id}`);
+  let inputValue = "";
+
+  const checkAnswer = () => {
+    let answer = quizTextbar.value.toLowerCase();
+    correct.classList.remove('correct-shown');
+    incorrect.classList.remove('incorrect-shown');
+    if (answer === question.answer) {
+      correct.classList.add('correct-shown');
+    } else if (answer === question.answer2) {
+      correct.classList.add('correct-shown');
+    } else {
+      incorrect.classList.add('incorrect-shown');
+    }
+
+    inputValue = answer;
+  }
+
+  checkButton.addEventListener('click', checkAnswer);
+  quizTextbar.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      checkAnswer();
+    }
+  })
+  quizTextbar.addEventListener('input', () => {
+    if (quizTextbar.value !== inputValue) {
+      correct.classList.remove('correct-shown');
+      incorrect.classList.remove('incorrect-shown');
+    }
+  })
+})
+
