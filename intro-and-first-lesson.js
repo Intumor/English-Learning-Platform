@@ -63,7 +63,7 @@ let inputValue1 = "";
 
 
 const checkAnswer1 = () => {
-  let answer = quizTextbar1.value.toLowerCase();
+  let answer = quizTextbar1.value.toLowerCase().trim();
   correct1.classList.remove('correct-shown');
   incorrect1.classList.remove('incorrect-shown');
   if (answer === 'i will live' || answer === 'i will live.' || answer === "i'll live" || answer === "i'll live") {
@@ -97,7 +97,7 @@ const incorrect2 = document.querySelector('#incorrect-2');
 let inputValue2 = "";
 
 const checkAnswer2 = () => {
-  let answer = quizTextbar2.value.toLowerCase();
+  let answer = quizTextbar2.value.toLowerCase().trim();
   correct2.classList.remove('correct-shown');
   incorrect2.classList.remove('incorrect-shown');
   if (answer === 'he will live' || answer === 'he will live.' || answer === "he'll live" || answer === "he'll live") {
@@ -131,7 +131,7 @@ const incorrect3 = document.querySelector('#incorrect-3');
 let inputValue3 = "";
 
 const checkAnswer3 = () => {
-  let answer = quizTextbar3.value.toLowerCase();
+  let answer = quizTextbar3.value.toLowerCase().trim();
   correct3.classList.remove('correct-shown');
   incorrect3.classList.remove('incorrect-shown');
   if (answer === 'did you see' || answer === 'did you see?') {
@@ -165,7 +165,7 @@ const incorrect4 = document.querySelector('#incorrect-4');
 let inputValue4 = "";
 
 const checkAnswer4 = () => {
-  let answer = quizTextbar4.value.toLowerCase();
+  let answer = quizTextbar4.value.toLowerCase().trim();
   correct4.classList.remove('correct-shown');
   incorrect4.classList.remove('incorrect-shown');
   if (answer === 'do you see' || answer === 'do you see?') {
@@ -199,7 +199,7 @@ const incorrect5 = document.querySelector('#incorrect-5');
 let inputValue5 = "";
 
 const checkAnswer5 = () => {
-  let answer = quizTextbar5.value.toLowerCase();
+  let answer = quizTextbar5.value.toLowerCase().trim();
   correct5.classList.remove('correct-shown');
   incorrect5.classList.remove('incorrect-shown');
   if (answer === 'will you see' || answer === 'will you see?') {

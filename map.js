@@ -1,3 +1,11 @@
+let userName = localStorage.getItem('username');
+
+if (userName) {
+  const header = document.querySelector('h1');
+  header.textContent = "";
+  header.textContent = `Welcome back, ${userName}!`;
+}
+
 const completedLessons = {
   '1': 'unlocked',
   '2': 'locked',
@@ -38,7 +46,6 @@ const renderLessons = () => {
       link.appendChild(lesson);
       const map = document.querySelector('.map');
       map.appendChild(link)
-      console.log(map)
     }
 
     if (completedLessons[i] === 'complete') {
