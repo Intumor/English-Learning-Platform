@@ -228,56 +228,69 @@ section {
   
   .three {
     top: 14%;
+    z-index: 1;
   }
   
   .four {
     top: 21%;
+    z-index: 2;
   }
   
   .five {
     top: 28%;
+    z-index: 3;
   }
   
   .six {
     top: 35%;
+    z-index: 4;
   }
   
   .seven {
     top: 42%;
+    z-index: 5;
   }
   
   .eight {
     top: 49%;
+    z-index: 6;
   }
   
   .nine {
     top: 56%;
+    z-index: 7;
   }
   
   .ten {
-    top: 63%
+    top: 63%;
+    z-index: 8;
   }
   
   .eleven {
     top: 70%;
+    z-index: 9;
   }
   
   
   .twelve {
     top: 77%;
+    z-index: 10;
   }
   
   
   .thirteen {
     top: 85%;
+    z-index: 11;
   }
   
   .fourteen {
     top: 92%;
+    z-index: 12;
   }
   
   .fifteen {
     top: 99%;
+    z-index: 13;
   }
   
   .sixteen {
@@ -288,6 +301,7 @@ section {
     /*background-color: var(--last-lesson);*/
     /*box-shadow: 0 0 20px 10px rgba(255, 115, 0, 0.6);*/
     font-size: 3rem;
+    z-index: 14;
   }
 
   .sixteen::after {
