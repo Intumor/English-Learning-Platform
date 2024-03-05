@@ -1,3 +1,12 @@
+
+window.addEventListener('beforeunload', (event) => {
+  event.preventDefault();
+  event.returnValue = '';
+
+  return "";
+})
+
+
 const quiz = document.querySelector('.quiz');
 const quizHeader = document.querySelector('.quiz-header');
 
