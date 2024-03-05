@@ -10,7 +10,14 @@ if (userName) {
   textBar.value = userName;
   console.log(userName)
 }
+/*
+window.addEventListener('beforeunload', (event) => {
+  event.preventDefault();
+  event.returnValue = '';
 
+  return "";
+})
+*/
 const hideMessage = () => {
   popupMessage.classList.remove('popup-clicked');
   messageBox.innerHTML = "";
@@ -320,13 +327,41 @@ questions.forEach(question => {
     if (event.key === 'Enter') {
       checkAnswer();
     }
-  })
+  });
+
   quizTextbar.addEventListener('input', () => {
     if (quizTextbar.value !== inputValue) {
       correct.classList.remove('correct-shown');
       incorrect.classList.remove('incorrect-shown');
     }
-  })
+  });
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      const currentIndex = question.id;
+      const nextIndex = currentIndex + 1;
+      const nextTextBar = document.querySelector(`#quiz-textbar-${nextIndex}`);
+      if (nextTextBar === null) {
+        return;
+      }
+      nextTextBar.focus();
+    }
+
+    if (event.key === 'ArrowUp') {
+      event.preventDefault();
+      const currentIndex = question.id;
+      const previousIndex = currentIndex - 1;
+      const previousTextBar = document.querySelector(`#quiz-textbar-${previousIndex}`);
+      if (previousTextBar === null) {
+        return;
+      }
+      previousTextBar.focus()
+    }
+  }
+  
+  quizTextbar.addEventListener('keydown', handleKeyDown);
+  
 })
 
 const finishButton = document.querySelector('.finish-lesson-button');
@@ -345,7 +380,7 @@ const congratulate = () => {
 
       setTimeout(() => {
         errorMessage.classList.remove('error-shown');
-      }, 3000);
+      }, 5000);
       return;
     }
   }

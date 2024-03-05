@@ -7,6 +7,7 @@
   --path-lessons: rgb(36, 42, 124);
   --path-unavailable: rgb(112, 114, 141);
   --table-color: rgb(255, 255, 255);
+  --red-letters: rgb(255, 74, 74);
 }
 
 *, ::before, ::after {
