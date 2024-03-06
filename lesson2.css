@@ -69,6 +69,10 @@ h2 {
   margin-top: 3rem;
 }
 
+#section-one .quiz {
+  margin: 1.2rem auto;
+}
+
 .quiz-header {
   text-align: left;
 }
