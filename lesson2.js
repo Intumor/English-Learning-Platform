@@ -40,6 +40,30 @@ const wordsAndQuestions3 = [
   {id: 19, answer: "they will not give", done: false, textContent: "Como se dice 'Ellos no darán'?"}
 ]
 
+const wordsAndQuestions4 = [
+  {type: 'new-word', content: 'take (took) - tomar'},
+  {id: 17, answer: 'i will take', answer2: "i'll take", done: false, textContent: 'Como se dice "Tomaré"?', divider: 'remove'},
+  {id: 18, answer: 'i took', done: false, textContent: 'Como se dice "Tomé"?'},
+  {id: 19, answer: "will you take", answer2: "will you take?", done: false, textContent: "Como se dice '¿Tomarás?'?"},
+  {id: 19, answer: "i will not take", done: false, textContent: "Como se dice 'No tomaré'?"}
+]
+
+const wordsAndQuestions5 = [
+  {type: 'new-word', content: 'help - ayudar'},
+  {id: 17, answer: 'i will help', answer2: "i'll help", done: false, textContent: 'Como se dice "Ayudaré"?', divider: 'remove'},
+  {id: 18, answer: "he didn't help", answer2: "he did not help", done: false, textContent: 'Como se dice "Él no ayudó"?'},
+  {id: 19, answer: "he will help", answer2: "he'll help", done: false, textContent: "Como se dice 'Él ayudará'?"},
+  {id: 19, answer: "will you help", answer2: "will you help?", done: false, textContent: "Como se dice '¿Ayudarás?'?"}
+]
+
+const wordsAndQuestions6 = [
+  {type: 'new-word', content: 'hope - esperar'},
+  {id: 17, answer: 'i hope', done: false, textContent: 'Como se dice "Espero"?', divider: 'remove'},
+  {id: 18, answer: "he hopes", done: false, textContent: 'Como se dice "Él espera"?'},
+  {id: 19, answer: "do you hope", answer2: "do you hope?", done: false, textContent: "Como se dice '¿Tú esperas?'?"},
+  {id: 19, answer: "i didn't hope but i will hope", answer2: "i did not hope but i will hope", answer3: "i didn't hope but i'll hope", answer4: "i did not hope but i'll hope", done: false, textContent: "Como se dice '¿Ayudarás?'?"}
+]
+
 const createQuiz = (questionsArr, num) => {
   const quizHeader = document.querySelector('.quiz-header');
   const section = document.querySelector(`#section-${num}`);
@@ -194,4 +218,7 @@ createQuiz(questions, 'one');
 createQuiz(wordsAndQuestions, 'two');
 createQuiz(wordsAndQuestions2, 'two');
 createQuiz(wordsAndQuestions3, 'two');
+createQuiz(wordsAndQuestions4, 'two');
+createQuiz(wordsAndQuestions5, 'two');
+createQuiz(wordsAndQuestions6, 'two'); //if they put commas make sure to remove them
 
