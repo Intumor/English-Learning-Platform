@@ -42,10 +42,10 @@ const wordsAndQuestions3 = [
 
 const wordsAndQuestions4 = [
   {type: 'new-word', content: 'take (took) - tomar'},
-  {id: 17, answer: 'i will take', answer2: "i'll take", done: false, textContent: 'Como se dice "Tomaré"?', divider: 'remove'},
-  {id: 18, answer: 'i took', done: false, textContent: 'Como se dice "Tomé"?'},
-  {id: 19, answer: "will you take", answer2: "will you take?", done: false, textContent: "Como se dice '¿Tomarás?'?"},
-  {id: 19, answer: "i will not take", done: false, textContent: "Como se dice 'No tomaré'?"}
+  {id: 20, answer: 'i will take', answer2: "i'll take", done: false, textContent: 'Como se dice "Tomaré"?', divider: 'remove'},
+  {id: 21, answer: 'i took', done: false, textContent: 'Como se dice "Tomé"?'},
+  {id: 22, answer: "will you take", answer2: "will you take?", done: false, textContent: "Como se dice '¿Tomarás?'?"},
+  {id: 23, answer: "i will not take", done: false, textContent: "Como se dice 'No tomaré'?"}
 ]
 
 const wordsAndQuestions5 = [
@@ -61,7 +61,7 @@ const wordsAndQuestions6 = [
   {id: 17, answer: 'i hope', done: false, textContent: 'Como se dice "Espero"?', divider: 'remove'},
   {id: 18, answer: "he hopes", done: false, textContent: 'Como se dice "Él espera"?'},
   {id: 19, answer: "do you hope", answer2: "do you hope?", done: false, textContent: "Como se dice '¿Tú esperas?'?"},
-  {id: 19, answer: "i didn't hope but i will hope", answer2: "i did not hope but i will hope", answer3: "i didn't hope but i'll hope", answer4: "i did not hope but i'll hope", done: false, textContent: "Como se dice '¿Ayudarás?'?"}
+  {id: 19, answer: "i didn't hope but i will hope", answer2: "i did not hope but i will hope", answer3: "i didn't hope but i'll hope", answer4: "i did not hope but i'll hope", done: false, textContent: "Como se dice 'No esperaba, pero esperaré'?"}
 ]
 
 const createQuiz = (questionsArr, num) => {
@@ -156,7 +156,8 @@ const createQuiz = (questionsArr, num) => {
 
 
     const checkAnswer = () => {
-      let answer = quizTextBar.value.toLowerCase().trim();
+      let answer = quizTextBar.value.toLowerCase().trim().replace(/[.,]/g, '');
+      answer = answer.replace(/\s\s+/g, " ");
       correct.classList.remove('correct-shown');
       incorrect.classList.remove('incorrect-shown');
       if (answer === question.answer) {
