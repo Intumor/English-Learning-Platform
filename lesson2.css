@@ -24,15 +24,24 @@ section {
   padding: 2rem;
 }
 
-p {
+p:not(.incorrect p, .error-message, .schoolboard p) {
   font-size: 2rem;
   line-height: 3rem;
   letter-spacing: 0.1rem;
+  margin-bottom: 3rem;
+}
+
+.schoolboard p {
+  margin-bottom: 0;
 }
 
 audio {
   margin: 4rem 0;
   width: 100%;
+}
+
+.last-audio {
+  margin: 0 0 6rem 0;
 }
 
 h2 {
@@ -48,25 +57,28 @@ h2 {
   background-color: var(--schoolboard-color);
   margin: 5rem auto;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .explanation {
   font-size: 2.3rem;
-  margin: 0 0 2rem 0;
+  margin: 0 0 0 0;
 }
 
 .example {
-  margin: 1rem 0 1rem 2rem;
+  margin: 0 0 0 2rem;
 }
 
 .for-example {
   font-size: 2.2rem;
   font-weight: 700;
-  margin: 2rem 0;
+  margin: 0;
 }
 
 .schoolboard p:last-child {
-  margin-top: 3rem;
+  margin-top: 0;
 }
 
 #section-one .quiz {
@@ -75,4 +87,13 @@ h2 {
 
 .quiz-header {
   text-align: left;
+}
+
+.bold-red { 
+  font-weight: bolder;
+  color: rgb(255, 97, 97);
+}
+
+.finish-lesson-button-2 {
+  margin: 2rem auto 0;
 }

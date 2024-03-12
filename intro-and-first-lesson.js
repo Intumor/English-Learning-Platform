@@ -3,6 +3,8 @@ const textBar = document.querySelector('.text-bar');
 const popupMessage = document.querySelector('.pop-up-message');
 const messageBox = document.querySelector('.message-box');
 let userName = localStorage.getItem('username');
+let lessonIsDone = localStorage.getItem('lessonStatus');
+console.log(lessonIsDone);
 
 if (userName) {
   submitButton.disabled = true;
@@ -376,11 +378,7 @@ const congratulate = () => {
       window.scrollTo({
         top: document.body.scrollHeight,
         behavior: 'smooth'
-      })
-
-      setTimeout(() => {
-        errorMessage.classList.remove('error-shown');
-      }, 5000);
+      });
       return;
     }
   }
@@ -394,8 +392,14 @@ const congratulate = () => {
   congratsText.textContent = `Congratualtions, ${userName}!`;
   const nextLessonButton = document.querySelector('.next-lesson-button');
   nextLessonButton.addEventListener('click', () => {
-    localStorage.setItem('lessons', JSON.stringify({1: 'complete', 2: 'unlocked' }));
-  })
+    if (lessonIsDone) {
+      return;
+    } else {
+      lessonIsDone = true;
+      localStorage.setItem('lessons', JSON.stringify({1: 'complete', 2: 'unlocked' }));
+      localStorage.setItem('lessonStatus', lessonIsDone);
+    }
+  });
 }
 
 finishButton.addEventListener('click', congratulate);

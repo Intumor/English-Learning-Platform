@@ -60,11 +60,11 @@ input {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-input:focus {
+.quiz-textbar:focus {
   outline: none;
 }
 
-input:focus {
+.quiz-textbar:focus {
   box-shadow: 0 0 0 4px rgb(196, 1, 255);
 }
 
@@ -181,17 +181,25 @@ th:not(thead th), td {
 
 .ordinary-cell {
   background-color: var(--table-color);
+  padding: 1rem;
+  vertical-align: text-top;
+  text-align: left;
 }
 
 .ordinary-cell p {
   font-size: 2rem;
-  padding: 1rem 1rem 1rem 3rem;
   color: black;
+  margin-bottom: 2rem;
+  line-height: 2rem;
 }
 
 th {
   background-color: var(--schoolboard-color);
   color: white;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 .new-words {
@@ -320,7 +328,8 @@ h3 {
 
 .error-message {
   text-align: center;
-  margin: 2rem auto 0;
+  margin: 3rem auto 0 auto;
+  margin-bottom: 0;
   color: red;
   font-size: 2.4rem;
   font-weight: bolder;

@@ -51,6 +51,11 @@ const renderLessons = () => {
     if (completedLessons[i] === 'complete') {
       lesson.classList.add('complete');
     }
+
+    if (completedLessons[i] === 'complete' && lesson.id !== 'lesson1') {
+      const img = document.querySelector(`#icon${i}`);
+      img.classList.add('hidden-img');
+    }
   }
 }
 

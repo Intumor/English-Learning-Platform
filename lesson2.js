@@ -6,6 +6,9 @@
   return "";
 })*/
 
+let lessonIsDone = localStorage.getItem('lesson2Status');
+let userName = localStorage.getItem('username');
+
 const questions = [
   {id: 1, answer: 'revolution', done: false, textContent: 'Como se dice "revolution"?'},
   {id: 2, answer: 'information', done: false, textContent: 'Como se dice "information"?'},
@@ -23,7 +26,7 @@ const questions = [
 const wordsAndQuestions = [
   {type: 'new-word', content: 'ask - preguntar'},
   {id: 12, answer: 'i will ask', answer2: "i'll ask", done: false, textContent: 'Como se dice "Yo preguntaré"?', divider: 'remove'},
-  {id: 13, answer: 'did you ask', asnwer2: "did you ask?", done: false, textContent: 'Como se dice "¿Preguntaste?"?'}
+  {id: 13, answer: 'did you ask', answer2: "did you ask?", done: false, textContent: 'Como se dice "¿Preguntaste?"?'}
 ]
 
 const wordsAndQuestions2 = [
@@ -50,18 +53,49 @@ const wordsAndQuestions4 = [
 
 const wordsAndQuestions5 = [
   {type: 'new-word', content: 'help - ayudar'},
-  {id: 17, answer: 'i will help', answer2: "i'll help", done: false, textContent: 'Como se dice "Ayudaré"?', divider: 'remove'},
-  {id: 18, answer: "he didn't help", answer2: "he did not help", done: false, textContent: 'Como se dice "Él no ayudó"?'},
-  {id: 19, answer: "he will help", answer2: "he'll help", done: false, textContent: "Como se dice 'Él ayudará'?"},
-  {id: 19, answer: "will you help", answer2: "will you help?", done: false, textContent: "Como se dice '¿Ayudarás?'?"}
+  {id: 24, answer: 'i will help', answer2: "i'll help", done: false, textContent: 'Como se dice "Ayudaré"?', divider: 'remove'},
+  {id: 25, answer: "he didn't help", answer2: "he did not help", done: false, textContent: 'Como se dice "Él no ayudó"?'},
+  {id: 26, answer: "he will help", answer2: "he'll help", done: false, textContent: "Como se dice 'Él ayudará'?"},
+  {id: 27, answer: "will you help", answer2: "will you help?", done: false, textContent: "Como se dice '¿Ayudarás?'?"}
 ]
 
 const wordsAndQuestions6 = [
   {type: 'new-word', content: 'hope - esperar'},
-  {id: 17, answer: 'i hope', done: false, textContent: 'Como se dice "Espero"?', divider: 'remove'},
-  {id: 18, answer: "he hopes", done: false, textContent: 'Como se dice "Él espera"?'},
-  {id: 19, answer: "do you hope", answer2: "do you hope?", done: false, textContent: "Como se dice '¿Tú esperas?'?"},
-  {id: 19, answer: "i didn't hope but i will hope", answer2: "i did not hope but i will hope", answer3: "i didn't hope but i'll hope", answer4: "i did not hope but i'll hope", done: false, textContent: "Como se dice 'No esperaba, pero esperaré'?"}
+  {id: 28, answer: 'i hope', done: false, textContent: 'Como se dice "Espero"?', divider: 'remove'},
+  {id: 29, answer: "he hopes", done: false, textContent: 'Como se dice "Él espera"?'},
+  {id: 30, answer: "do you hope", answer2: "do you hope?", done: false, textContent: "Como se dice '¿Tú esperas?'?"},
+  {id: 31, answer: "i did not hope but i will hope", answer3: "i didn't hope but i'll hope", answer4: "i did not hope but i'll hope", done: false, textContent: "Como se dice 'No esperaba, pero esperaré'?"}
+]
+
+const wordsAndQuestions7 = [
+  {type: 'new-word', content: 'speak (spoke) - hablar'},
+  {id: 32, answer: 'we will speak', asnwer2: "we'll speak", done: false, textContent: 'Como se dice "hablaremos"?', divider: 'remove'},
+  {id: 33, answer: "will you speak", asnwer2: "will you speak?", done: false, textContent: 'Como se dice "¿Hablarás?"?'},
+  {id: 34, answer: "we spoke", done: false, textContent: "Como se dice 'hablamos'?"},
+  {id: 35, answer: "They didn't speak", answer2: "They did not speak", done: false, textContent: "Como se dice 'No esperaba, pero esperaré'?"}
+]
+
+const wordsAndQuestions8 = [
+  {type: 'new-word', content: 'travel - viajar'},
+  {id: 36, answer: 'did you travel', asnwer2: "did you travel?", done: false, textContent: 'Como se dice "¿Viajaste?"?', divider: 'remove'},
+  {id: 37, answer: "will you travel", asnwer2: "will you travel?", done: false, textContent: 'Como se dice "¿Viajarás?"?'},
+  {id: 38, answer: "i did not travel but i will travel", done: false, textContent: "Como se dice 'No viajé, pero viajaré'?"},
+  {id: 39, answer: "does he travel", answer2: "does he travel?", done: false, textContent: "Como se dice '¿Viaja él?'?"},
+  {id: 40, answer: "he travels", done: false, textContent: "Como se dice 'Él viaja'?"}
+]
+
+const wordsAndQuestions9 = [
+  {id: 41, answer: 'i see you', done: false, textContent: 'Como se dice "Te veo"?', divider: 'remove'},
+  {id: 42, answer: "you see me", done: false, textContent: 'Como se dice "Me ves"?'},
+  {id: 43, answer: "he sees her", done: false, textContent: "Como se dice 'Él la ve'?"},
+  {id: 44, answer: "she does not see him", done: false, textContent: "Como se dice 'Ella no lo ve'?"},
+  {id: 45, answer: "we saw them", done: false, textContent: "Como se dice 'Nosotros los vimos'?"},
+  {id: 46, answer: "they did not see us", done: false, textContent: "Como se dice 'Ellos no nos vieron'?"},
+  {id: 47, answer: 'i know you', done: false, textContent: 'Como se dice "Te conozco"?', divider: 'remove'},
+  {id: 48, answer: "but you do not know me", done: false, textContent: 'Como se dice "Pero tú no me conoces"?'},
+  {id: 49, answer: "he knows her", done: false, textContent: "Como se dice 'Él la conoce'?"},
+  {id: 50, answer: "she did not know him", done: false, textContent: "Como se dice 'Ella no lo conocía'?"},
+  {id: 51, answer: "she will know him", done: false, textContent: "Como se dice 'Ella lo conocerá'?"}
 ]
 
 const createQuiz = (questionsArr, num) => {
@@ -72,7 +106,6 @@ const createQuiz = (questionsArr, num) => {
 
 
   questionsArr.forEach((question, index) => {
-    console.log(question)
     if (question.type === 'new-word') {
       const newWords = document.createElement('p');
       newWords.className = 'new-words';
@@ -125,6 +158,10 @@ const createQuiz = (questionsArr, num) => {
     incorrect.className = 'incorrect';
     incorrect.id = `incorrect-${question.id}`;
 
+    const tryAgainText = document.createElement('p');
+    tryAgainText.textContent = "Try again!";
+
+
 
     const incorrectIcon = document.createElement('img');
     incorrectIcon.src = "icons/icons8-wrong.svg"
@@ -149,6 +186,7 @@ const createQuiz = (questionsArr, num) => {
     checkBox.appendChild(incorrect);
     correct.appendChild(correctIcon);
     incorrect.appendChild(incorrectIcon);
+    incorrect.appendChild(tryAgainText);
 
     if (index === 0 || question.divider === 'remove') {
       quiz.removeChild(divider)
@@ -158,8 +196,55 @@ const createQuiz = (questionsArr, num) => {
     const checkAnswer = () => {
       let answer = quizTextBar.value.toLowerCase().trim().replace(/[.,]/g, '');
       answer = answer.replace(/\s\s+/g, " ");
+      const wordsArr = []
+      let word = ""
+      for (let i = 0; i < answer.length; i++) {
+        if (answer[i] !== " ") {
+          word += answer[i];
+        } else {
+          wordsArr.push(word)
+          word = "";
+        }
+      }
+
+      wordsArr.push(word)
+      const corrected = wordsArr.map((word) => {
+        if (word === "didn't") {
+          word = "did not";
+          return word;
+        } else if (word === "doesn't") {
+          word = "does not";
+          return word;
+        } else if (word === "i'll") {
+          word = "i will";
+          return word;
+        } else if (word === "you'll") {
+          word = "you will";
+          return word;
+        } else if (word === "we'll") {
+          word = "we will";
+          return word;
+        } else if (word === "they'll") {
+          word = "they will";
+          return word;
+        } else if (word === "he'll") {
+          word = "he will";
+          return word;
+        } else if (word === "she'll") {
+          word = "she will";
+          return word;
+        } else if (word === "it'll") {
+          word = "it will";
+          return word;
+        } else {
+          return word;
+        }
+      })
+      answer = corrected;
+      answer = answer.join(' ');
       correct.classList.remove('correct-shown');
       incorrect.classList.remove('incorrect-shown');
+
       if (answer === question.answer) {
         correct.classList.add('correct-shown');
       } else if (answer === question.answer2) {
@@ -221,5 +306,41 @@ createQuiz(wordsAndQuestions2, 'two');
 createQuiz(wordsAndQuestions3, 'two');
 createQuiz(wordsAndQuestions4, 'two');
 createQuiz(wordsAndQuestions5, 'two');
-createQuiz(wordsAndQuestions6, 'two'); //if they put commas make sure to remove them
+createQuiz(wordsAndQuestions6, 'two');
+createQuiz(wordsAndQuestions7, 'two');
+createQuiz(wordsAndQuestions8, 'two');
+createQuiz(wordsAndQuestions9, 'three');
+
+const finishButton = document.querySelector('.finish-lesson-button-2');
+const congratsPopup = document.querySelector('.popup-congrats');
+const congratsBox = document.querySelector('.popup-box');
+const congratsText = document.querySelector('.congrats-text')
+const congratulate = () => {
+  for (let i = 6; i < questions.length; i++) {
+    if (questions[i].done === false) {
+      const errorMessage = document.querySelector('.error-message');
+      errorMessage.classList.add('error-shown');
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+      });
+      return;
+    }
+  }
+
+  congratsPopup.classList.add('popup-congrats-isclicked');
+  congratsText.textContent = `Congratualtions, ${userName}!`;
+  const nextLessonButton = document.querySelector('.next-lesson-button');
+  nextLessonButton.addEventListener('click', () => {
+    if (lessonIsDone) {
+      return;
+    } else {
+      lessonIsDone = true;
+      localStorage.setItem('lessons', JSON.stringify({1: 'complete', 2: 'complete', 3: 'unlocked' }));
+      localStorage.setItem('lesson2Status', lessonIsDone);
+    }
+  })
+}
+
+finishButton.addEventListener('click', congratulate);
 
