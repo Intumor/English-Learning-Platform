@@ -1,10 +1,10 @@
 
-/*window.addEventListener('beforeunload', (event) => {
+window.addEventListener('beforeunload', (event) => {
   event.preventDefault();
   event.returnValue = '';
 
   return "";
-})*/
+})
 
 let lessonIsDone = localStorage.getItem('lesson2Status');
 let userName = localStorage.getItem('username');
@@ -316,7 +316,7 @@ const congratsPopup = document.querySelector('.popup-congrats');
 const congratsBox = document.querySelector('.popup-box');
 const congratsText = document.querySelector('.congrats-text')
 const congratulate = () => {
-  for (let i = 6; i < questions.length; i++) {
+  for (let i = 1; i < questions.length; i++) {
     if (questions[i].done === false) {
       const errorMessage = document.querySelector('.error-message');
       errorMessage.classList.add('error-shown');
