@@ -1,6 +1,13 @@
+window.addEventListener('beforeunload', (event) => {
+  event.preventDefault();
+  event.returnValue = '';
+
+  return "";
+})
+
+
 let lessonIsDone = localStorage.getItem('lesson3Status');
 let userName = localStorage.getItem('username');
-console.log(lessonIsDone)
 
 const questions = [
   {id: 1, answer: 'i will talk to you', done: false, textContent: 'Como se dice "Hablaré contigo"?'},
