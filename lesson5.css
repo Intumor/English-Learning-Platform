@@ -1,0 +1,657 @@
+h2 {
+  margin: 2rem 1rem 2rem 1rem;
+  font-size: 3.3rem;
+  text-align: center;
+}
+
+.example-no-board {
+  margin: 2.5rem 0 2.5rem 3rem;
+  font-size: 2.8rem;
+  background-color: rgb(219, 219, 219);
+  color: black;
+  width: fit-content;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  line-height: 4rem;
+}
+
+.margin-pusher {
+  margin-top: 9rem;
+}
+
+.new-words {
+  font-size: 2rem;
+}
+
+.adj-quiz-box {
+  padding: 1rem;
+}
+
+.adjective {
+  margin: 1rem 1.4rem;
+  font-size: 2.6rem;
+}
+
+.adj-quiz {
+  display: inline-block;
+  max-width: 20rem;
+  margin: 0 1rem;
+}
+
+.adj-quiz:focus {
+  outline: none;
+}
+
+
+body {
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem auto;
+  font-size: 3.6rem;
+}
+
+section {
+  max-width: 850px;
+  margin: 1rem auto;
+  padding: 2rem;
+}
+
+p {
+  font-size: 2rem;
+  line-height: 3rem;
+  letter-spacing: 0.1rem;
+}
+
+audio {
+  margin: 4rem 0;
+  width: 100%;
+}
+
+h2 {
+  margin: 2rem 1rem 2rem 1rem;
+  font-size: 3.3rem;
+}
+
+ul {
+  margin: 3rem 1rem 2rem 6rem;
+  font-size: 2.7rem;
+  line-height: 4.3rem;
+}
+
+.caption-to-header {
+  margin: -1rem 0 0 3.2rem;
+}
+
+.survey {
+  margin: 3rem 1rem 2rem 4.5rem;
+}
+
+label {
+  display: block;
+  font-size: 3rem;
+  margin: 3rem 0;
+}
+
+input {
+  padding: 1rem;
+  width: 70%;
+  border: none;
+  font-size: 2rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.quiz-textbar:focus {
+  outline: none;
+}
+
+.quiz-textbar:focus {
+  box-shadow: 0 0 0 4px rgb(196, 1, 255);
+}
+
+button {
+  display: block;
+  padding: 1.2rem 2.6rem;
+  margin: 3rem 0;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.9rem;
+  cursor: pointer;
+  color: var(--website-theme);
+  font-weight: 700;
+  font-family: 'Roboto Mono', sans-serif;
+}
+
+button:hover {
+  background-color: rgb(193, 210, 255);
+}
+
+button:active {
+  background-color: rgb(167, 184, 231);
+}
+
+.disabled:hover {
+  background-color: rgb(193, 210, 255);
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.pop-up-message {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.popup-clicked {
+  display: flex;
+  z-index: 100;
+}
+
+.message-box {
+  position: absolute;
+  height: fit-content;
+  top: 15%;
+  left: 20%;
+  right: 20%;
+  bottom: 0%;
+  background-color: var(--website-theme);
+  overflow-y: auto;
+  text-align: center;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-header {
+  margin-top: 3rem;
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 0.3rem;
+}
+
+.popup-text {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 3.5rem;
+}
+
+.swear-button {
+  font-size: 1.6rem;
+  margin: 1rem auto;
+}
+
+.lesson-header {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+table {
+  width: fit-content;
+  height: fit-content;
+  border-collapse: collapse;
+  margin: 2rem 2rem;
+}
+
+
+thead th {
+  border: 2px solid #000000;
+  padding: 1rem;
+  font-size: 2.4rem;
+}
+
+th:not(thead th), td {
+  border: 2px solid #000000;
+  height: 24rem;
+}
+
+.fourth-column {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  background-color: var(--schoolboard-color);
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+.ordinary-cell {
+  background-color: var(--table-color);
+  padding: 2rem 2rem 0 2rem;
+  vertical-align: text-top;
+  text-align: left;
+  height: fit-content;
+  width: 20.5rem;
+}
+
+.ordinary-cell p {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 2rem;
+  line-height: 2rem;
+}
+
+.ordinary-cell.prep {
+  text-align: center;
+  vertical-align: middle;
+  width: 8rem;
+}
+
+th {
+  background-color: var(--schoolboard-color);
+  color: white;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.new-words {
+  margin: 2rem;
+  background-color: rgb(197, 197, 197);
+  color: black;
+  width: fit-content;
+  padding: 2.5rem 5rem 2.5rem 2.5rem;
+  border-radius: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.highlighted {
+  color: var(--red-letters);
+}
+
+.sum-up {
+  border: 3px solid rgb(255, 255, 255);
+  padding: 1rem;
+}
+
+.sum-up p {
+  font-style: italic;
+}
+
+h3 {
+  font-size: 2.8rem;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.warning-p {
+  margin-top: 1rem;
+  color: var(--red-letters);
+}
+
+.quiz {
+  margin: 8rem auto 4rem;/*it was 8rem*/
+  border: 1px solid rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+
+.quiz-header {
+  margin: 0;
+}
+
+.quiz-textbar {
+  height: 50px;
+}
+
+.question label {
+  font-style: italic;
+}
+
+.answer-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.check-box {
+  display: flex;
+}
+
+.correct-incorrect-box {
+  display: none;
+}
+
+.submit {
+  max-width: fit-content;
+  border-radius: 0.4rem;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.submit:active {
+  background-color: rgb(228, 228, 228);
+}
+
+.correct {
+  margin: 0 1rem;
+  display: none;
+  align-items: center;
+}
+
+.correct-shown {
+  display: flex;
+}
+
+.incorrect {
+  margin: 0 0 0 0.5rem;
+  display: none;
+  align-items: center;
+  font-size: 2rem;
+  color: #F44336;
+  font-weight: bold;
+}
+
+.incorrect-shown {
+  display: flex;
+}
+
+.divider {
+  border-bottom: 2px dashed white;
+  margin-top: 5rem;
+}
+
+.full-table {
+  max-width: 1250px;
+  text-align: center;
+}
+
+.full-table-audio {
+  max-width: 850px;
+}
+
+.final-section-header {
+  margin: 2rem 1rem 5rem 0rem;
+  font-size: 3.3rem;
+}
+
+.finish-lesson-button {
+  margin: -2rem auto 0;
+}
+
+.error-message {
+  text-align: center;
+  margin: 3rem auto 0 auto;
+  margin-bottom: 0;
+  color: red;
+  font-size: 2.4rem;
+  font-weight: bolder;
+  background-color: rgb(255, 255, 255);
+  width: fit-content;
+  border-radius: 1rem;
+  padding: 0.4rem 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  display: none;
+}
+
+.error-shown {
+  display: flex;
+}
+
+.popup-congrats {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.popup-congrats-isclicked {
+  display: flex;
+}
+
+.popup-box {
+  height: fit-content;
+  background-color: var(--website-theme);
+  overflow-y: auto;
+  text-align: center;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  border-radius: 1rem;
+}
+
+.congrats-text {
+  margin: 2rem 1rem;
+}
+
+.nailed-it-text {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.popup-box a {
+  text-decoration: none;
+  color: var(--website-theme);
+}
+
+.margined {
+  margin: 5rem 2rem;
+}
+
+.marge {
+  margin-left: 2rem;
+}
+
+.seconds {
+  margin-bottom: 5rem;
+}
+
+.finish-lesson-button-2 {
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 950px) {
+  .message-box {
+    top: 15%;
+    left: 10%;
+    right: 10%;
+    bottom: 0%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  th:not(thead th), td {
+    height: 25vw;
+  }
+
+  .fourth-column {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  h1 {
+    font-size: 3rem;
+    margin: 2rem auto;
+  }
+
+  section {
+    padding: 0rem 1rem;
+  }
+
+  h2 {
+    margin: 2rem 1rem 1.6rem 1.6rem;
+    font-size: 2.5rem;
+  }
+
+  p, .error-message {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+  }
+
+  audio {
+    margin: 2.7rem 0 2.7rem 0;
+    width: 100%;
+  }
+
+  ul {
+    margin: 1rem 1rem 2rem 4.2rem;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+  
+  .caption-to-header {
+    margin: -1rem 0 0 2.2rem;
+  }
+  
+  .survey {
+    margin: 2rem 1rem 2rem 2rem;
+  }
+
+  label {
+    display: block;
+    font-size: 2.4rem;
+    margin: 2.3rem 0;
+  }
+
+  input {
+    padding: 0.8rem;
+    width: 90%;
+    font-size: 1.6rem;
+    border-radius: 5px;
+  }
+
+  button {
+    padding: 1rem 2.8rem;
+    margin: 2rem 0;
+    font-size: 1.4rem;
+  }
+
+  .new-words {
+    margin: 1.8rem;
+    padding: 1.5rem 5rem 1.5rem 1.5rem;
+    border-radius: 1.2rem;
+    font-size: 1.8rem;
+  }
+
+  .ordinary-cell {
+    padding: 0 0 0 2rem;
+  }
+
+  .ordinary-cell p {
+    font-size: 1.5rem;
+    padding: 0 0 0 0;
+  }
+
+  .question label {
+    font-size: 1.8rem;
+  }
+
+  .quiz-textbar {
+    height: 3.5rem;
+  }
+
+  .check-box img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .quiz {
+    margin: 8rem auto 4rem;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .message-box {
+    top: 10%;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+  }
+
+  .fourth-column {
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .message-box {
+    top: 10%;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+  }
+
+  .new-words {
+    margin: 1.6rem;
+    padding: 1rem 5rem 1rem 1rem;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+  }
+
+  .ordinary-cell p {
+    font-size: 1rem;
+    padding: 0 0 0 0;
+    line-height: 1.5rem;
+  }
+
+}
+
+@media only screen and (max-width: 425px) {
+  .message-box {
+    top: 3%;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+  }
+
+  thead th {
+    font-size: 1.5rem;
+  }
+
+  .fourth-column {
+    font-size: 0.8rem;
+  }
+
+  audio {
+    margin: 1.8rem 0 1.8rem 0;
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 370px) {
+  .ordinary-cell {
+    padding: 0 0 0 0;
+  }
+  
+  .congrats-text {
+    margin: 1rem auto;
+    font-size: 2.2rem;
+  }
+  
+  .nailed-it-text {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .medal-icon {
+    width: 7rem;
+    height: auto;
+  }
+
+  .next-lesson-button {
+    padding: 0.8rem 1.5rem;
+  }
+}
