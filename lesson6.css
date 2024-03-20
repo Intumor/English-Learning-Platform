@@ -182,3 +182,16 @@ hr {
   line-height: 2.4rem;
   list-style-type: "—  ";
 }
+
+.p-sub-header {
+  font-size: 2.8rem;
+  margin: 2rem 0;
+}
+
+.margined-down {
+  margin-bottom: -3rem;
+}
+
+.finish-lesson-button-2 {
+  margin: 0 auto;
+}

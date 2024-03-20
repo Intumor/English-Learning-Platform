@@ -1,3 +1,6 @@
+let lessonIsDone = localStorage.getItem('lesson6Status');
+let userName = localStorage.getItem('username');
+
 const startButton = document.querySelector('.start-recording');
 const deleteButton = document.querySelector('.delete-recording');
 const audioBar = document.querySelector('.self-recording');
@@ -111,6 +114,128 @@ const questions = [
   {id: 10, answer: 'you want me to help', done: false, textContent: 'Como se dice "Quieres que te ayude"?'}
 ]
 
+const questions2 = [
+  {type: 'subheader', title: 'Everybody'},
+  {type: 'explanation', text: '"everybody" means "todos" or "todo el mundo", as simple as that'},
+  {id: 29, answer: 'he knows everybody', done: false, textContent: 'Como se dice "Él conoce a todo el mundo"?', divider: 'remove'}
+]
+
+const questions3 = [
+  {type: 'subheader', title: 'Somebody'},
+  {type: 'explanation', text: '"somebody" means "alguien"'},
+  {id: 30, answer: 'somebody sees me', done: false, textContent: 'Como se dice "Alguien me ve"?', divider: 'remove'}
+]
+
+const questions4 = [
+  {type: 'subheader', title: 'Nobody'},
+  {type: 'explanation', text: '"nobody" means "nadie"'},
+  {id: 31, answer: 'nobody will help you', done: false, textContent: 'Como se dice "Nadie te ayudará"?', divider: 'remove'},
+  {id: 32, answer: 'nobody does it', done: false, textContent: 'Como se dice "Nadie lo hace"?'},
+  {id: 33, answer: 'nobody helped him', done: false, textContent: 'Como se dice "Nadie lo ayudó"?'},
+  {id: 34, answer: 'nobody loves them', done: false, textContent: 'Como se dice "Nadie los ama"?'},
+]
+
+const questions5 = [
+  {type: 'subheader', title: 'Anybody'},
+  {type: 'explanation', text: '"anybody" means "cualquiera"'},
+  {id: 35, answer: 'will anybody help me', done: false, textContent: 'Como se dice "¿Cualquiera me ayudará?"?', divider: 'remove'},
+]
+
+const questions6 = [
+  {type: 'subheader', title: 'Everything'},
+  {type: 'explanation', text: '"everything" means "todo"'},
+  {id: 36, answer: 'i know everything about you', done: false, textContent: 'Como se dice "Sé todo sobre ti"?', divider: 'remove'},
+]
+
+const questions7 = [
+  {type: 'subheader', title: 'Something'},
+  {type: 'explanation', text: '"something" means "algo"'},
+  {id: 37, answer: 'i will tell you something', done: false, textContent: 'Como se dice "Te diré algo"?', divider: 'remove'},
+  {id: 38, answer: 'give me something to eat', done: false, textContent: 'Como se dice "Dame algo de comer"?'},
+  {id: 39, answer: 'give me something to drink', done: false, textContent: 'Como se dice "Dame algo de beber"?'},
+  {id: 40, answer: 'do you want something to drink', answer2: "do you want something to drink?", done: false, textContent: 'Como se dice "¿Quieres algo de beber?"?'},
+]
+
+const questions8 = [
+  {type: 'subheader', title: 'Nothing'},
+  {type: 'explanation', text: '"nothing" means "nada". Ok, here we have one really imprtant thing to cover. When we use the word "nada" in Spanish we use double negative "i do not know anything", but in English we cannot do that, so when we say "i do not know anything" we will only use a single negative. Like this "i know nothing" which literally translates to "(spanish)". It might seem strange at first but you will get more used to it as you will inevitably encounter this structure all the time, but for now you will just have to commit that to memory'},
+  {id: 41, answer: 'i know nothing about it', done: false, textContent: 'Como se dice "No sé nada al respecto"?', divider: 'remove'},
+  {id: 42, answer: 'i have nothing to hide', done: false, textContent: 'Como se dice "No tengo nada que ocultar"?'},
+  {id: 43, answer: 'i see nothing', done: false, textContent: 'Como se dice "No veo nada"?'}
+]
+
+const questions9 = [
+  {type: 'subheader', title: 'Anything'},
+  {type: 'explanation', text: '"anything" means "cualquier cosa"'},
+  {id: 44, answer: 'i will eat anything', done: false, textContent: 'Como se dice "Comeré cualquier cosa"?', divider: 'remove'},
+  {id: 45, answer: 'he will do anything', done: false, textContent: 'Como se dice "Él hará cualquier cosa"?'}
+]
+
+const questions10 = [
+  {type: 'subheader', title: 'Everywhere'},
+  {type: 'explanation', text: '"everywhere" means "en todas partes"'},
+  {id: 46, answer: 'they are everywhere', done: false, textContent: 'Como se dice "Ellos están en todas partes"?', divider: 'remove'},
+  {id: 47, answer: 'i see him everywhere', done: false, textContent: 'Como se dice "Lo veo en todas partes"?'}
+]
+
+const questions11 = [
+  {type: 'subheader', title: 'Somewhere'},
+  {type: 'explanation', text: '"somewhere" means "en algún lugar"'},
+  {id: 48, answer: 'he went somewhere', done: false, textContent: 'Como se dice "Ellos están en todas partes"?', divider: 'remove'},
+]
+
+const questions12 = [
+  {type: 'subheader', title: 'Nowhere'},
+  {type: 'explanation', text: '"nowhere" means "ningún lugar"'},
+  {id: 49, answer: 'i have no where to go', done: false, textContent: 'Como se dice "No tengo adónde ir"?', divider: 'remove'},
+  {id: 50, answer: 'it goes nowhere', done: false, textContent: 'Como se dice "No lleva a ningún lado"?'}
+]
+
+const questions13 = [
+  {type: 'subheader', title: 'Anywhere'},
+  {type: 'explanation', text: '"anywhere" means "en cualquier lugar"'},
+  {id: 51, answer: 'it can be anywhere', done: false, textContent: 'Como se dice "Puede ser en cualquier lugar"?', divider: 'remove'},
+  {id: 52, answer: 'i will go anywhere you want', done: false, textContent: 'Como se dice "Iría a cualquier lugar que quieras"?'}
+]
+
+const questions14 = [
+  {type: 'subheader', title: 'Always'},
+  {type: 'explanation', text: '"always" means "siempre"'},
+  {id: 53, answer: 'he always does it', done: false, textContent: 'Como se dice "Él siempre lo hace"?', divider: 'remove'},
+  {id: 54, answer: 'we always go there', done: false, textContent: 'Como se dice "Siempre vamos allí"?'}
+]
+
+const questions15 = [
+  {type: 'subheader', title: 'Sometimes'},
+  {type: 'explanation', text: '"sometimes" means "a veces"'},
+  {id: 55, answer: 'sometimes i do it', done: false, textContent: 'Como se dice "A veces lo hago"?', divider: 'remove'},
+  {id: 56, answer: 'sometimes we drink', done: false, textContent: 'Como se dice "A veces bebemos"?'}
+]
+
+const questions16 = [
+  {type: 'subheader', title: 'Never'},
+  {type: 'explanation', text: '"never" means "nunca"'},
+  {id: 57, answer: 'i never do it', done: false, textContent: 'Como se dice "Nunca lo hago"?', divider: 'remove'},
+  {id: 58, answer: 'i will never see you', done: false, textContent: 'Como se dice "Nunca te veré"?'}
+]
+
+const questions17 = [
+  {type: 'subheader', title: 'Anytime'},
+  {type: 'explanation', text: '"anytime" means "en cualquier momento"'},
+  {id: 59, answer: 'come here anytime', done: false, textContent: 'Como se dice "Ven aquí en cualquier momento"?', divider: 'remove'},
+  {id: 60, answer: 'i can see you anytime', done: false, textContent: 'Como se dice "Puedo verte en cualquier momento"?'},
+  {id: 61, answer: 'we can do it anytime', done: false, textContent: 'Como se dice "Podemos hacerlo en cualquier momento"?'}
+]
+
+const questions18 = [
+  {id: 62, answer: 'i like to drink', done: false, textContent: 'Como se dice "Me gusta beber"?', divider: 'remove'},
+  {id: 63, answer: 'i like to see', done: false, textContent: 'Como se dice "Me gusta ver"?'},
+  {id: 64, answer: 'i want to go', done: false, textContent: 'Como se dice "Quiero ir"?'},
+  {id: 65, answer: 'i need to eat', done: false, textContent: 'Como se dice "Necesito comer"?'},
+  {id: 66, answer: 'i want to sleep', done: false, textContent: 'Como se dice "Quiero dormir"?'},
+  {id: 67, answer: 'i want to think', done: false, textContent: 'Como se dice "Quiero pensar"?'}
+]
+
 
 const createQuiz = (questionsArr, num) => {
   const quizHeader = document.querySelector('.quiz-header');
@@ -125,6 +250,22 @@ const createQuiz = (questionsArr, num) => {
       newWords.className = 'new-words';
       newWords.textContent = question.content;
       section.appendChild(newWords);
+      return;
+    }
+
+    if (question.type === 'explanation') {
+      const explanation = document.createElement('p');
+      explanation.className = "margined-down"
+      explanation.textContent = question.text;
+      section.appendChild(explanation);
+      return;
+    }
+
+    if (question.type === 'subheader') {
+      const subheader = document.createElement('p');
+      subheader.className = "p-sub-header";
+      subheader.textContent = question.title;
+      section.appendChild(subheader);
       return;
     }
 
@@ -502,3 +643,42 @@ createQuiz(questions, "two");
 createFillInBlanksQuiz(fillInQuiz, "three");
 createFillInBlanksQuiz(fillInQuiz2, "five");
 createFillInBlanksQuiz(fillInQuiz3, "five")
+createQuiz(questions2, "six");
+createQuiz(questions3, "six");
+createQuiz(questions4, "six");
+createQuiz(questions5, "six");
+createQuiz(questions6, "six");
+createQuiz(questions7, "six");
+createQuiz(questions8, "six");
+createQuiz(questions9, "six");
+createQuiz(questions10, "six");
+createQuiz(questions11, "six");
+createQuiz(questions12, "six");
+createQuiz(questions13, "six");
+createQuiz(questions14, "six");
+createQuiz(questions15, "six");
+createQuiz(questions16, "six");
+createQuiz(questions17, "six");
+createQuiz(questions18, "seven");
+
+
+const finishButton = document.querySelector('.finish-lesson-button-2');
+const congratsPopup = document.querySelector('.popup-congrats');
+const congratsBox = document.querySelector('.popup-box');
+const congratsText = document.querySelector('.congrats-text')
+const congratulate = () => {
+  congratsPopup.classList.add('popup-congrats-isclicked');
+  congratsText.textContent = `Congratualtions, ${userName}!`;
+  const nextLessonButton = document.querySelector('.next-lesson-button');
+  nextLessonButton.addEventListener('click', () => {
+    if (lessonIsDone) {
+      return;
+    } else {
+      lessonIsDone = true;
+      localStorage.setItem('lessons', JSON.stringify({1: 'complete', 2: 'complete', 3: 'complete', 4: 'complete', 5: 'complete', 6: "complete", 7: "unlocked"}));
+      localStorage.setItem('lesson6Status', lessonIsDone);
+    }
+  })
+}
+
+finishButton.addEventListener('click', congratulate);
