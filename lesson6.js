@@ -360,6 +360,22 @@ const fillInQuiz = [
   {id: 19, options: {option1: "How much", option2: "How many"}, answer: "How much", done: false, textContent: "sugar do we have?"},
 ]
 
+const fillInQuiz2 = [
+  {id: 20, options: {option1: "little", option2: "few"}, answer: "little", done: false, textContent: "sugar", divider: 'remove', beforeInput: "There is"},
+  {id: 21, options: {option1: "little", option2: "few"}, answer: "few", done: false, textContent: "friends in her new school", beforeInput: "She has"},
+  {id: 22, options: {option1: "little", option2: "few"}, answer: "little", done: false, textContent: "time to finish the project", beforeInput: "We have"},
+  {id: 23, options: {option1: "little", option2: "few"}, answer: "little", done: false, textContent: "money to buy the tickets", beforeInput: "He has"},
+  {id: 24, options: {option1: "little", option2: "few"}, answer: "few", done: false, textContent: "people at work yesterday", beforeInput: "I saw"}
+]
+
+const fillInQuiz3 = [
+  {id: 25, options: {option1: "little", option2: "small"}, answer: "little", done: false, textContent: "baby", divider: 'remove', beforeInput: "She has a"},
+  {id: 26, options: {option1: "little", option2: "small"}, answer: "small", done: false, textContent: "house", beforeInput: "He lives in a"},
+  {id: 27, options: {option1: "little", option2: "small"}, answer: "small", done: false, textContent: "toy", beforeInput: "A baby had a"},
+  {id: 28, options: {option1: "little", option2: "small"}, answer: "little", done: false, textContent: "dog is a puppy", beforeInput: "A"},
+  {id: 29, options: {option1: "little", option2: "small"}, answer: "small", done: false, textContent: "", beforeInput: "Rooms in the house were"}
+]
+
 
 const createFillInBlanksQuiz = (questionsArr, num) => {
   const quizHeader = document.querySelector('.quiz-header');
@@ -369,6 +385,7 @@ const createFillInBlanksQuiz = (questionsArr, num) => {
   quiz.classList.add('fill-in-quiz');
 
   questionsArr.forEach((question) => {
+
     const divider = document.createElement('hr');
 
     const quizBox = document.createElement('div');
@@ -428,6 +445,14 @@ const createFillInBlanksQuiz = (questionsArr, num) => {
     incorrectIcon.src = "icons/icons8-wrong.svg"
     incorrectIcon.alt = "wrong";
 
+    if (question.beforeInput) {
+      const beforeLabel = document.createElement('label');
+      beforeLabel.className = "fill-in-blanks-label";
+      beforeLabel.setAttribute("for", `drop-down-${question.id}`);
+      beforeLabel.textContent = question.beforeInput;
+      quizContainer.appendChild(beforeLabel);
+    }
+
     section.appendChild(quiz);
     quiz.appendChild(divider);
     quiz.appendChild(quizBox);
@@ -474,4 +499,6 @@ const createFillInBlanksQuiz = (questionsArr, num) => {
 }
 
 createQuiz(questions, "two");
-createFillInBlanksQuiz(fillInQuiz, "three")
+createFillInBlanksQuiz(fillInQuiz, "three");
+createFillInBlanksQuiz(fillInQuiz2, "five");
+createFillInBlanksQuiz(fillInQuiz3, "five")
