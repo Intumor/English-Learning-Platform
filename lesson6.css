@@ -137,3 +137,48 @@ li {
 .schoolboard p:last-child {
   margin-top: 0;
 }
+
+.quiz.fill-in-quiz {
+  padding: 2rem 1rem 0;
+}
+
+.quiz-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.drop-down {
+  padding: 1rem;
+  font-size: 2rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: none;
+}
+
+.fill-in-blanks-label {
+  margin: 1rem 0;
+}
+
+.submit-fill-in {
+  max-width: fit-content;
+  border-radius: 0.4rem;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.submit-fill-in {
+  background-color: rgb(228, 228, 228);
+}
+
+hr {
+  margin: 2rem 0;
+}
+
+.example-list {
+  margin: 3rem 1rem 2rem 6rem;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  list-style-type: "—  ";
+}

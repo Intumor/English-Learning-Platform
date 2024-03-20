@@ -347,4 +347,131 @@ const createQuiz = (questionsArr, num) => {
   });
 }
 
-createQuiz(questions, "two")
+const fillInQuiz = [
+  {id: 11, options: {option1: "How much", option2: "How many"}, answer: "How many", done: false, textContent: "apples do you have?", divider: 'remove'},
+  {id: 12, options: {option1: "How much", option2: "How many"}, answer: "How much", done: false, textContent: "water do you need?"},
+  {id: 13, options: {option1: "How much", option2: "How many"}, answer: "How many", done: false, textContent: "books did you read last month?"},
+  {id: 14, options: {option1: "How much", option2: "How many"}, answer: "How many", done: false, textContent: "pencils are in your pencil case?"},
+  {id: 15, options: {option1: "How much", option2: "How many"}, answer: "How much", done: false, textContent: "time do we have?"},
+  {id: 16, options: {option1: "How much", option2: "How many"}, answer: "How many", done: false, textContent: "chairs are in the room?"},
+  {id: 17, options: {option1: "How much", option2: "How many"}, answer: "How many", done: false, textContent: "people were at the concert?"},
+  {id: 18, options: {option1: "How much", option2: "How many"}, answer: "How much", done: false, textContent: "milk did you drink this morning?"},
+  {id: 19, options: {option1: "How much", option2: "How many"}, answer: "How much", done: false, textContent: "rice do we need to cook for dinner?"},
+  {id: 19, options: {option1: "How much", option2: "How many"}, answer: "How much", done: false, textContent: "sugar do we have?"},
+]
+
+
+const createFillInBlanksQuiz = (questionsArr, num) => {
+  const quizHeader = document.querySelector('.quiz-header');
+  const section = document.querySelector(`#section-${num}`);
+  const quiz = document.createElement('div');
+  quiz.className = 'quiz';
+  quiz.classList.add('fill-in-quiz');
+
+  questionsArr.forEach((question) => {
+    const divider = document.createElement('hr');
+
+    const quizBox = document.createElement('div');
+    quizBox.className = "quiz-box";
+
+    const quizContainer = document.createElement('div');
+    quizContainer.className = "quiz-container";
+
+    const dropDown = document.createElement('select');
+    dropDown.className = "drop-down";
+    dropDown.name = "drop-down";
+    dropDown.id = `drop-down-${question.id}`;
+
+    const option = document.createElement('option');
+    option.value = "";
+    option.textContent = "Select an option";
+
+    const option1 = document.createElement('option');
+    option1.textContent = question.options.option1;
+    option1.value = question.options.option1;
+    
+    const option2 = document.createElement('option');
+    option2.textContent = question.options.option2;
+    option2.value = question.options.option2;
+
+    const label = document.createElement('label');
+    label.className = "fill-in-blanks-label";
+    label.setAttribute("for", `drop-down-${question.id}`);
+    label.textContent = question.textContent;
+
+
+    const checkBox = document.createElement('div');
+    checkBox.className = 'check-box';
+
+    const submitButton = document.createElement('input');
+    submitButton.className = 'submit-fill-in';
+    submitButton.id = `submit-${question.id}`;
+    submitButton.type = 'submit';
+    submitButton.value = 'Check';
+
+    const correct = document.createElement('div');
+    correct.className = 'correct';
+    correct.id = `correct-${question.id}`;
+
+    const correctIcon = document.createElement('img');
+    correctIcon.src = "icons/icons8-correct.svg"
+    correctIcon.alt = "correct";
+
+    const incorrect = document.createElement('div');
+    incorrect.className = 'incorrect';
+    incorrect.id = `incorrect-${question.id}`;
+
+    const tryAgainText = document.createElement('p');
+    tryAgainText.textContent = "Try again!";
+
+    const incorrectIcon = document.createElement('img');
+    incorrectIcon.src = "icons/icons8-wrong.svg"
+    incorrectIcon.alt = "wrong";
+
+    section.appendChild(quiz);
+    quiz.appendChild(divider);
+    quiz.appendChild(quizBox);
+    quizBox.appendChild(quizContainer);
+    quizBox.appendChild(checkBox);
+    checkBox.appendChild(submitButton);
+    checkBox.appendChild(correct);
+    correct.appendChild(correctIcon);
+    checkBox.appendChild(incorrect);
+    incorrect.appendChild(incorrectIcon);
+    incorrect.appendChild(tryAgainText);
+    quizContainer.appendChild(dropDown);
+    dropDown.appendChild(option);
+    dropDown.appendChild(option1);
+    dropDown.appendChild(option2);
+    quizContainer.appendChild(label);
+
+    if (question.divider === 'remove') {
+      quiz.removeChild(divider)
+    }
+
+    const checkAnswer = () => {
+      let answer = dropDown.value;
+
+      correct.classList.remove('correct-shown');
+      incorrect.classList.remove('incorrect-shown');
+
+      if (answer === question.answer) {
+        correct.classList.add('correct-shown');
+      } else {
+        incorrect.classList.add('incorrect-shown');
+      }
+  
+      question.done = true;
+    }
+
+    submitButton.addEventListener('click', checkAnswer);
+
+    dropDown.addEventListener('change', () => {
+      correct.classList.remove('correct-shown');
+      incorrect.classList.remove('incorrect-shown');
+    });
+  });
+}
+
+createQuiz(questions, "two");
+createFillInBlanksQuiz(fillInQuiz, "three")
