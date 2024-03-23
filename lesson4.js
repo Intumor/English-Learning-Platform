@@ -180,8 +180,6 @@ const createFlashQuiz = (flashQuestions) => {
     }
   }
 
-  /*checkFlashAnswer(flashQuestions[index].answer, option2.textContent, option2)*/
-
   option1.addEventListener('click', () => {
     checkFlashAnswer(flashQuestions[index].answer, option1.textContent, option1)
   });
