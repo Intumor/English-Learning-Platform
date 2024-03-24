@@ -1,112 +1,117 @@
-window.addEventListener('beforeunload', (event) => {
+/*window.addEventListener('beforeunload', (event) => {
   event.preventDefault();
   event.returnValue = '';
 
   return "";
-})
+})*/
 
 let lessonIsDone = localStorage.getItem('lesson4Status');
 let userName = localStorage.getItem('username');
 
-const startButton = document.querySelector('.start-recording');
-const deleteButton = document.querySelector('.delete-recording');
-const audioBar = document.querySelector('.self-recording');
-
-let mediaRecorder;
-let chunks = [];
-let audioURL;
-let timeInterval;
-let timerIsSet = false;
-const timerBox = document.querySelector('.timer');
-let secondsOne = 0;
-let secondsTwo = 0;
-let minutesOne = 0;
-let minutesTwo = 0;
-timerBox.textContent = `${minutesTwo}${minutesOne} : ${secondsTwo}${secondsOne}`;
-
-const startRecording = () => {
-  navigator.mediaDevices.getUserMedia({ audio: true })
-  .then(stream => {
-      mediaRecorder = new MediaRecorder(stream);
-      mediaRecorder.ondataavailable = event => {
-          chunks.push(event.data);
-      };
-      mediaRecorder.onstop = () => {
-          const blob = new Blob(chunks, { type: 'audio/ogg; codecs=opus' });
-          const audioURL = URL.createObjectURL(blob);
-          const audio = document.querySelector('audio');
-          audio.src = audioURL;
-      };
-      mediaRecorder.start();
-  })
-  .catch(error => {
-      console.error('Error accessing microphone:', error);
-  });
-
-  if (startButton.textContent === "Start Recording") {
-    startButton.textContent = "Stop Recording";
-    startButton.classList.add("stopped")
-  } else if (startButton.textContent === "Stop Recording") {
-    stopRecording();
-    startButton.classList.remove("stopped");
-    audioBar.classList.add('displayed');
-    startButton.textContent = "New Recording";
-    startButton.classList.remove("stopped");
-  } else if (startButton.textContent === "New Recording") {
-    audioBar.classList.remove('displayed');
-    let secondsOne = 0;
-    let secondsTwo = 0;
-    let minutesOne = 0;
-    let minutesTwo = 0;
-    timerBox.textContent = `${minutesTwo}${minutesOne} : ${secondsTwo}${secondsOne}`;
-    startButton.textContent = "Start Recording";
-  }
-
-  if (!timerIsSet) {
-    startTimer();
-    timerIsSet = true;
-  } else {
-    clearInterval(timeInterval);
-  }
-
-};
-
-const stopRecording = () => {
-    mediaRecorder.stop();
-};
-
-const deleteRecording = () => {
-  chunks = [];
-  const audio = document.querySelector('audio');
-  audio.src = '';
-  URL.revokeObjectURL(audioURL);
-};
-
-
-const startTimer = () => {
-  timeInterval = setInterval(() => {
-    secondsOne++;
-    if (secondsOne === 10) {
+const recordAnswer = (id) => {
+  const startButton = document.querySelector(`#start-recording-${id}`);
+  const deleteButton = document.querySelector(`#delete-recording-${id}`);
+  const audioBar = document.querySelector(`#self-recording-${id}`);
+  
+  let mediaRecorder;
+  let chunks = [];
+  let audioURL;
+  let timeInterval;
+  let timerIsSet = false;
+  const timerBox = document.querySelector(`#timer-${id}`);
+  let secondsOne = 0;
+  let secondsTwo = 0;
+  let minutesOne = 0;
+  let minutesTwo = 0;
+  timerBox.textContent = `${minutesTwo}${minutesOne} : ${secondsTwo}${secondsOne}`;
+  
+  const startRecording = () => {
+    navigator.mediaDevices.getUserMedia({ audio: true })
+    .then(stream => {
+        mediaRecorder = new MediaRecorder(stream);
+        mediaRecorder.ondataavailable = event => {
+          console.log(audioBar)
+            chunks.push(event.data);
+        };
+        mediaRecorder.onstop = () => {
+            const blob = new Blob(chunks, { type: 'audio/ogg; codecs=opus' });
+            const audioURL = URL.createObjectURL(blob);
+            audioBar.src = audioURL;
+        };
+        mediaRecorder.start();
+    })
+    .catch(error => {
+        console.error('Error accessing microphone:', error);
+    });
+  
+    if (startButton.textContent === "Start Recording") {
+      startButton.textContent = "Stop Recording";
+      startButton.classList.add("stopped")
+    } else if (startButton.textContent === "Stop Recording") {
+      stopRecording();
+      startButton.classList.remove("stopped");
+      audioBar.classList.add('displayed');
+      startButton.textContent = "New Recording";
+      startButton.classList.remove("stopped");
+    } else if (startButton.textContent === "New Recording") {
+      audioBar.classList.remove('displayed');
       secondsOne = 0;
-      secondsTwo++;
-    }
-
-    if (secondsTwo === 6) {
       secondsTwo = 0;
-      minutesOne++;
-    }
-
-    if (minutesOne === 10) {
       minutesOne = 0;
-      minutesTwo++;
+      minutesTwo = 0;
+      timerBox.textContent = `${minutesTwo}${minutesOne} : ${secondsTwo}${secondsOne}`;
+      startButton.textContent = "Start Recording";
+      deleteRecording();
+      timerIsSet = false;
+      return;
     }
-
-    timerBox.textContent = `${minutesTwo}${minutesOne} : ${secondsTwo}${secondsOne}`;
-  }, 1000)
+  
+    if (!timerIsSet) {
+      startTimer();
+      timerIsSet = true;
+    } else {
+      clearInterval(timeInterval);
+    }
+  
+  };
+  
+  const stopRecording = () => {
+      mediaRecorder.stop();
+  };
+  
+  const deleteRecording = () => {
+    chunks = [];
+    audioBar.src = '';
+    URL.revokeObjectURL(audioURL);
+  };
+  
+  
+  const startTimer = () => {
+    timeInterval = setInterval(() => {
+      secondsOne++;
+      if (secondsOne === 10) {
+        secondsOne = 0;
+        secondsTwo++;
+      }
+  
+      if (secondsTwo === 6) {
+        secondsTwo = 0;
+        minutesOne++;
+      }
+  
+      if (minutesOne === 10) {
+        minutesOne = 0;
+        minutesTwo++;
+      }
+  
+      timerBox.textContent = `${minutesTwo}${minutesOne} : ${secondsTwo}${secondsOne}`;
+    }, 1000)
+  }
+  
+  startButton.addEventListener('click', startRecording);
 }
 
-startButton.addEventListener('click', startRecording);
-/*deleteButton.addEventListener('click', deleteRecording);*/
+recordAnswer(1)
 
 const flashQuiz = [
   {index: 0, imgUrl: "./images/hello.jpg", option1: "Hello", option2: "Excuse me", option3: "Goodbye", option4: "Good night", answer: "Hello"},
@@ -173,6 +178,10 @@ const createFlashQuiz = (flashQuestions) => {
       setTimeout(() => {
         FlashCardQuizBox.innerHTML = "";
         index++;
+        if (index === 19) {
+          flashQuizCongratulate();
+          return;
+        }
         createFlashQuiz(flashQuestions);
       }, 500)
     } else {
@@ -195,6 +204,21 @@ const createFlashQuiz = (flashQuestions) => {
   option4.addEventListener('click', () => {
     checkFlashAnswer(flashQuestions[index].answer, option4.textContent, option4)
   });
+
+  const flashQuizCongratulate = () => {
+    const congrats = document.createElement('h2');
+    congrats.className = "flash-congrats-message";
+    congrats.textContent = "Great job!";
+    const tryAgain = document.createElement('button')
+    tryAgain.textContent = "take the quiz again"
+    tryAgain.addEventListener('click', () => {
+      FlashCardQuizBox.innerHTML = "";
+      index = 0;
+      createFlashQuiz(flashQuestions);
+    })
+    FlashCardQuizBox.appendChild(congrats)
+    FlashCardQuizBox.appendChild(tryAgain)
+  }
 }
 
 createFlashQuiz(flashQuiz);

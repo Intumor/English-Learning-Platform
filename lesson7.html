@@ -50,16 +50,16 @@
             <li>Do you take your friends with you?</li>
             <li>Do you to talk on the phone?</li>
             <li>How much time do you talk with your friends?</li>
-            <li>Tell me about your best friend</li>
+            <li>Tell me about your bestf riend</li>
             <li>What do you like to talk about?</li>
             <li>Tell me about the weather in your city</li>
           </ol>
           <div class="recording-box">
             <p>Press "Start Recording" button when you're ready</p>
-            <div class="timer"></div>
-            <audio controls class="self-recording"></audio>
+            <div class="timer" id="timer-1"></div>
+            <audio controls class="self-recording" id="self-recording-1"></audio>
             <div class="recorder-buttons">
-              <button class="start-recording">Start Recording</button>
+              <button class="start-recording" id="start-recording-1">Start Recording</button>
             </div>
           </div>
         </div>
@@ -115,11 +115,22 @@
           </ol>
           <div class="recording-box">
             <p>Press "Start Recording" button when you're ready</p>
-            <div class="timer"></div>
-            <audio controls class="self-recording"></audio>
+            <div class="timer" id="timer-2"></div>
+            <audio controls class="self-recording" id="self-recording-2"></audio>
             <div class="recorder-buttons">
-              <button class="start-recording">Start Recording</button>
+              <button class="start-recording" id="start-recording-2">Start Recording</button>
             </div>
+          </div>
+        </div>
+        <button class="finish-lesson-button-2">Complete lesson</button>
+        <p class="error-message">Make sure to complete all the exercises!</p>
+
+        <div class="popup-congrats">
+          <div class="popup-box">
+            <h2 class="congrats-text"></h2>
+            <p class="nailed-it-text">You nailed it!</p>
+            <img class="medal-icon" src="./icons/icons8-prize-96.png" alt="an image of a cup">
+            <a href="map.html"><button class="next-lesson-button">Next lesson</button></a>
           </div>
         </div>
       </section>
