@@ -75,6 +75,10 @@ h2 {
   width: fit-content;
 }
 
+.from-box {
+  margin-bottom: -1rem;
+}
+
 .prep {
   font-size: 2.5rem;
 }
@@ -124,4 +128,76 @@ h2 {
 
 .schoolboard p:last-child {
   margin-top: 0;
+}
+
+
+.flashcard-quiz {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quiz-header {
+  margin-top: 3rem;
+}
+
+.sentence-header {
+  font-size: 2.8rem;
+  margin: 1.5rem auto -0.5rem;
+}
+
+.flashcard {
+  width: 40%;
+  margin: 3rem 1rem 5rem;
+}
+
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.option {
+  font-size: 2rem;
+  background-color: white;
+  color: var(--website-theme);
+  border-radius: 0.6rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--flash-quiz-color);
+}
+
+.option:hover {
+  background-color: rgb(195, 199, 224);
+}
+
+.turn-green {
+  background-color: rgb(61, 255, 61);
+  box-shadow: 0 0 5px 3px rgba(162, 255, 133, 0.2);
+}
+
+.turn-green:hover {
+  background-color: rgb(61, 255, 61);
+  box-shadow: 0 0 5px 3px rgba(162, 255, 133, 0.2);
+}
+
+.turn-red {
+  background-color: rgb(255, 61, 61);
+  box-shadow: 0 0 5px 3px rgba(255, 133, 133, 0.2);
+}
+
+.turn-red:hover {
+  background-color: rgb(255, 61, 61);
+  box-shadow: 0 0 5px 3px rgba(255, 133, 133, 0.2);
+}
+
+.flashcard-quiz {
+  padding: 3rem 0 0 0;
+  border: 1px solid rgb(74, 63, 155);
+  padding-bottom: 4rem;
+  margin-top: 4rem;
+  border-radius: 1rem;
+  background-color: var(--flash-quiz-color);
 }
