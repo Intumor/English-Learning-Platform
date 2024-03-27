@@ -201,3 +201,155 @@ h2 {
   border-radius: 1rem;
   background-color: var(--flash-quiz-color);
 }
+
+.bold {
+  font-size: 2.5rem;
+}
+
+
+.quiz-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.drop-down {
+  padding: 1rem;
+  font-size: 2rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: none;
+}
+
+.fill-in-blanks-label {
+  margin: 1rem 0;
+}
+
+.submit-fill-in {
+  max-width: fit-content;
+  border-radius: 0.4rem;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.submit-fill-in {
+  background-color: rgb(228, 228, 228);
+}
+
+hr {
+  margin: 2rem 0;
+}
+
+
+.video {
+  display: flex;
+  justify-content: center;
+  margin: 5rem auto;
+}
+
+.centered {
+  text-align: center;
+  font-size: 2.7rem;
+}
+
+.dialogue-window {
+  margin: 4rem;
+}
+
+.dialogue-window p:not(.aside, .bigger-font) {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+ol {
+  margin: 0 0 6rem 2.7rem;
+}
+
+li {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.aside {
+  line-height: 2.5rem;
+  margin: 0 0 0 1rem;
+  margin-bottom: 5rem;
+}
+
+.self-recording {
+  margin: 2rem 0 5rem;
+  max-width: 80%;
+  display: none;
+}
+
+.displayed {
+  display: inline;
+}
+
+.recording-box {
+  text-align: center;
+}
+
+.recording-box p {
+  color: rgb(213, 168, 255);
+}
+
+.recorder-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.start-recording, .stop-recording, .delete-recording {
+  margin: 0;
+  border-radius: 50rem;
+  color: rgba(255, 255, 255, 0.795);
+}
+
+.start-recording {
+  background-color: rgb(116, 0, 224);
+  width: 50%;
+  margin: 0 auto;
+}
+
+.start-recording:hover {
+  background-color: rgb(132, 0, 255);
+}
+
+.stopped {
+  background-color: rgb(182, 0, 0);
+  transition: background-color 0.1s;
+}
+
+.stopped:hover {
+  background-color: rgb(206, 0, 0);
+}
+
+.delete-recording {
+  background-color: rgb(71, 71, 71);
+}
+
+.delete-recording:hover {
+  background-color: rgb(85, 85, 85);
+}
+
+.delete-recording:active {
+  background-color: rgb(105, 105, 105);
+}
+
+.timer {
+  margin: 0 auto;
+  width: fit-content;
+  font-size: 7rem;
+  margin-bottom: 1.5rem;
+}
+
+p.bigger-font {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0 0 2rem 0;
+}
+
+.finish-lesson-button-2 {
+  margin: 0 auto;
+}

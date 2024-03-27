@@ -28,7 +28,7 @@ const questions = [
 ]
 
 const explanation = 
-"These verb below are all regular but there is one thing that you should know about. Some verbs change in funny way when you spell them. It will still follow th rules from before: \"When a verb is regular we add \"ed\" to the end of it\". So it will still be the case with a verb like \"try\", when you hear it will sound exactly how you expect it to sound with a \"d\" at the end, but spelling will change slightly. It will look like this \"tried\". Mostly it only affects verbs that end with \"y\", but not all of them, for example the verb \"play\" wil be \"played\".<br>" +
+"These verb below are all regular but there is one thing that you should know about. Some verbs change in funny way when you spell them. It will still follow th rules from before: \"When a verb is regular we add \"ed\" to the end of it\". So it will still be the case with a verb like \"try\", when you hear it will sound exactly how you expect it to sound with a \"d\" at the end, but spelling will change slightly. It will look like this \"tried\". Mostly it only affects verbs that end with \"y\", but not all of them, for example the verb \"play\" wil be \"played\".<br><br>" +
 "Don't worry too much about it for now, we will gradualy go over them, and you will keep coming across them later on as well, so you'll memorize them with time. I just didn't want you to wrack your brain trying to figure out where it came from";
 
 const newWordsContent2 = 
@@ -141,7 +141,7 @@ const createQuiz = (questionsArr, num) => {
     if (question.type === 'explanation') {
       const explanation = document.createElement('p');
       explanation.className = "margined-down"
-      explanation.textContent = question.text;
+      explanation.innerHTML = question.text;
       section.appendChild(explanation);
       return;
     }

@@ -494,6 +494,8 @@ const createQuiz = (questionsArr, num) => {
   });
 }
 
+
+
 const fillInQuiz = [
   {id: 11, options: {option1: "How much", option2: "How many"}, answer: "How many", done: false, textContent: "apples do you have?", divider: 'remove'},
   {id: 12, options: {option1: "How much", option2: "How many"}, answer: "How much", done: false, textContent: "water do you need?"},
