@@ -13,12 +13,12 @@ if (userName) {
   console.log(userName)
 }
 
-/*window.addEventListener('beforeunload', (event) => {
+window.addEventListener('beforeunload', (event) => {
   event.preventDefault();
   event.returnValue = '';
 
   return "";
-})*/
+})
 
 const hideMessage = () => {
   popupMessage.classList.remove('popup-clicked');

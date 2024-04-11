@@ -1,26 +1,26 @@
 
-window.addEventListener('beforeunload', (event) => {
+/*window.addEventListener('beforeunload', (event) => {
   event.preventDefault();
   event.returnValue = '';
 
   return "";
-})
+})*/
 
 let lessonIsDone = localStorage.getItem('lesson2Status');
 let userName = localStorage.getItem('username');
 
 const questions = [
-  {id: 1, answer: 'revolution', done: false, textContent: 'Como se dice "revolution"?'},
-  {id: 2, answer: 'information', done: false, textContent: 'Como se dice "information"?'},
-  {id: 3, answer: 'nation', done: false, textContent: 'Como se dice "nation"?'},
-  {id: 4, answer: 'innovation', done: false, textContent: 'Como se dice "innovation"?'},
-  {id: 5, answer: 'modernization', done: false, textContent: 'Como se dice "modernization"?'},
-  {id: 6, answer: 'stragnation', done: false, textContent: 'Como se dice "stragnation"?'},
-  {id: 7, answer: 'provocation', done: false, textContent: 'Como se dice "provocation"?'},
-  {id: 8, answer: 'meditation', done: false, textContent: 'Como se dice "meditation"?'},
-  {id: 9, answer: 'computerization', done: false, textContent: 'Como se dice "computerization"?'},
-  {id: 10, answer: 'profession', done: false, textContent: 'Como se dice "profession"?'},
-  {id: 11, answer: 'demonstration', done: false, textContent: 'Como se dice "demonstration"?'},
+  {id: 1, answer: 'revolution', done: false, textContent: 'Como se dice "revolution"'},
+  {id: 2, answer: 'information', done: false, textContent: 'Como se dice "information"'},
+  {id: 3, answer: 'nation', done: false, textContent: 'Como se dice "nation"'},
+  {id: 4, answer: 'innovation', done: false, textContent: 'Como se dice "innovation"'},
+  {id: 5, answer: 'modernization', done: false, textContent: 'Como se dice "modernization"'},
+  {id: 6, answer: 'stragnation', done: false, textContent: 'Como se dice "stragnation"'},
+  {id: 7, answer: 'provocation', done: false, textContent: 'Como se dice "provocation"'},
+  {id: 8, answer: 'meditation', done: false, textContent: 'Como se dice "meditation"'},
+  {id: 9, answer: 'computerization', done: false, textContent: 'Como se dice "computerization"'},
+  {id: 10, answer: 'profession', done: false, textContent: 'Como se dice "profession"'},
+  {id: 11, answer: 'demonstration', done: false, textContent: 'Como se dice "demonstration"'},
 ]
 
 const wordsAndQuestions = [
