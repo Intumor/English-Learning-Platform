@@ -143,9 +143,9 @@ const fillInQuiz2 = [
   {id: 22, options: {option1: "hear", option2: "listen"}, answer: "listen", done: false, textContent: "to the teacher", beforeInput: "Please"},
   {id: 23, options: {option1: "hear", option2: "listen"}, answer: "hear", done: false, textContent: "what she said?", beforeInput: "Did you"},
   {id: 24, options: {option1: "hear", option2: "listen"}, answer: "hear", done: false, textContent: "the birds twittering at my window every morning", beforeInput: "I"},
-  {id: 25, options: {option1: "hear", option2: "hear"}, answer: "listen", done: false, textContent: "to the instructor", beforeInput: "You need to"},
+  {id: 25, options: {option1: "hear", option2: "listen"}, answer: "listen", done: false, textContent: "to the instructor", beforeInput: "You need to"},
   {id: 26, options: {option1: "heard", option2: "listened"}, answer: "heard", done: false, textContent: "a strange noise from the kitchen", beforeInput: "I"},
-  {id: 27, options: {option1: "hear", option2: "hear"}, answer: "hear", done: false, textContent: "anything with all this noise", beforeInput: "He doesn't"},
+  {id: 27, options: {option1: "hear", option2: "listen"}, answer: "hear", done: false, textContent: "anything with all this noise", beforeInput: "He doesn't"},
   {id: 28, options: {option1: "hearing", option2: "listening"}, answer: "listening", done: false, textContent: "to me? I need your attention!", beforeInput: "Are you"},
   {id: 29, options: {option1: "heard", option2: "listened"}, answer: "heard", done: false, textContent: "a great song yesterday", beforeInput: "I"},
 ]
@@ -175,7 +175,7 @@ const createFillInBlanksQuiz = (questionsArr, num) => {
 
     const option = document.createElement('option');
     option.value = "";
-    option.textContent = "Select an option";
+    option.textContent = "";
 
     const option1 = document.createElement('option');
     option1.textContent = question.options.option1;
@@ -394,14 +394,14 @@ recordAnswer(2);
 
 
 const questions = [
-  {id: 30, answer: 'i will go to them with you', done: false, textContent: 'Como se dice "Voy a ir con ellos contigo"?', divider: 'remove'},
-  {id: 31, answer: 'he made this shirt for me', done: false, textContent: 'Como se dice "Él hizo esta camisa para mí"?'},
-  {id: 32, answer: 'i do not want to talk about it with him', done: false, textContent: 'Como se dice "No quiero hablar sobre eso con él"?'},
-  {id: 33, answer: 'what you will tell me will be between us', done: false, textContent: 'Como se dice "Lo que me digas será entre nosotros"?'},
-  {id: 34, answer: 'museum is far from me', done: false, textContent: 'Como se dice "El museo está lejos de mí"?'},
-  {id: 35, answer: 'he wanted to talk about it with me', done: false, textContent: 'Como se dice "Él quería hablar sobre eso conmigo"?'},
-  {id: 36, answer: 'i hope you will do it for me', done: false, textContent: 'Como se dice "Espero que lo hagas por mí"?'},
-  {id: 37, answer: 'think about it', done: false, textContent: 'Como se dice "Piénsalo"?'}
+  {id: 30, answer: 'i will go to them with you', done: false, textContent: 'Como se dice "Voy a ir con ellos contigo"', divider: 'remove'},
+  {id: 31, answer: 'he made this shirt for me', done: false, textContent: 'Como se dice "Él hizo esta camisa para mí"'},
+  {id: 32, answer: 'i do not want to talk about it with him', done: false, textContent: 'Como se dice "No quiero hablar sobre eso con él"'},
+  {id: 33, answer: 'what you will tell me will be between us', done: false, textContent: 'Como se dice "Lo que me digas será entre nosotros"'},
+  {id: 34, answer: 'museum is far from me', done: false, textContent: 'Como se dice "El museo está lejos de mí"'},
+  {id: 35, answer: 'he wanted to talk about it with me', done: false, textContent: 'Como se dice "Él quería hablar sobre eso conmigo"'},
+  {id: 36, answer: 'i hope you will do it for me', done: false, textContent: 'Como se dice "Espero que lo hagas por mí"'},
+  {id: 37, answer: 'think about it', done: false, textContent: 'Como se dice "Piénsalo"'}
 ]
 
 

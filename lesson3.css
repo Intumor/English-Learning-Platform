@@ -4,35 +4,12 @@ h2 {
   text-align: center;
 }
 
-.schoolboard {
-  border: 4px solid rgb(114, 53, 13);
-  border-radius: 0.5rem;
-  max-width: 60rem;
-  background-color: var(--schoolboard-color);
-  margin: 5rem auto;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
+.margin-down {
+  margin-bottom: -3rem;
 }
 
-.explanation {
-  font-size: 2.3rem;
-  margin: 0 0 0 0;
-}
-
-.example {
-  margin: 0 0 0 2rem;
-}
-
-.for-example {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin: 0;
-}
-
-.schoolboard p:last-child {
-  margin-top: 0;
+#section-two, #section-five, #section-six, #section-seven {
+  margin-top: -5rem;
 }
 
 .finish-lesson-button-2 {

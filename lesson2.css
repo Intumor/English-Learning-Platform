@@ -35,15 +35,6 @@ p:not(.incorrect p, .error-message, .schoolboard p) {
   margin-bottom: 0;
 }
 
-audio {
-  margin: 4rem 0;
-  width: 100%;
-}
-
-.last-audio {
-  margin: 0 0 6rem 0;
-}
-
 h2 {
   margin: 2rem 1rem 2rem 1rem;
   font-size: 3.3rem;
@@ -55,11 +46,11 @@ h2 {
   border-radius: 0.5rem;
   max-width: 60rem;
   background-color: var(--schoolboard-color);
-  margin: 5rem auto;
+  margin: 5rem auto 6.5rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .explanation {
@@ -67,8 +58,15 @@ h2 {
   margin: 0 0 0 0;
 }
 
+p {
+  font-size: 2rem;
+  line-height: 3rem;
+  letter-spacing: 0.1rem;
+}
+
 .example {
   margin: 0 0 0 2rem;
+  font-size: 2rem;
 }
 
 .for-example {
@@ -96,4 +94,8 @@ h2 {
 
 .finish-lesson-button-2 {
   margin: 2rem auto 0;
+}
+
+#section-three {
+  margin-top: -5rem;
 }

@@ -24,4 +24,490 @@ html {
 body {
   font-family: "Lato", sans-serif;
   background-color: var(--website-theme);
+  color: white;
+}
+
+h1:not(.intro-header) {
+  text-align: center;
+  margin: 2rem auto;
+  font-size: 3.6rem;
+}
+
+h2:not(.intro-header) {
+  margin: 2rem 1rem 2rem 1rem;
+  font-size: 3.3rem;
+  text-align: center;
+}
+
+section {
+  max-width: 850px;
+  margin: -1.8rem auto 1rem;
+  padding: 2rem;
+}
+
+p {
+  font-size: 2rem;
+  line-height: 3rem;
+  letter-spacing: 0.1rem;
+}
+
+.quiz {
+  margin: 8rem auto 8rem;/*it was 8rem*/
+  border: 1px solid rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+
+.quiz-header {
+  margin: 0;
+  text-align: left;
+}
+
+
+.quiz-textbar {
+  height: 50px;
+}
+
+.question label {
+  font-style: italic;
+}
+
+.answer-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.check-box {
+  display: flex;
+}
+
+.correct-incorrect-box {
+  display: none;
+}
+
+.submit {
+  max-width: fit-content;
+  border-radius: 0.4rem;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.submit:active {
+  background-color: rgb(228, 228, 228);
+}
+
+.correct {
+  margin: 0 1rem;
+  display: none;
+  align-items: center;
+}
+
+.correct-shown {
+  display: flex;
+}
+
+.incorrect {
+  margin: 0 0 0 0.5rem;
+  display: none;
+  align-items: center;
+  font-size: 2rem;
+  color: #F44336;
+  font-weight: bold;
+}
+
+.incorrect-shown {
+  display: flex;
+}
+
+.divider {
+  border-bottom: 2px dashed white;
+  margin-top: 5rem;
+}
+
+
+label {
+  display: block;
+  font-size: 3rem;
+  margin: 3rem 0;
+}
+
+input {
+  padding: 1rem;
+  width: 70%;
+  border: none;
+  font-size: 2rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.quiz-textbar:focus {
+  outline: none;
+}
+
+.quiz-textbar:focus {
+  box-shadow: 0 0 0 3px rgb(0, 89, 255);
+}
+
+button {
+  display: block;
+  padding: 1.2rem 2.6rem;
+  margin: 3rem 0;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.9rem;
+  cursor: pointer;
+  color: var(--website-theme);
+  font-weight: 700;
+  font-family: 'Roboto Mono', sans-serif;
+}
+
+button:hover {
+  background-color: rgb(193, 210, 255);
+}
+
+button:active {
+  background-color: rgb(167, 184, 231);
+}
+
+.new-words {
+  margin: 4rem 2rem;
+  background-color: rgb(197, 197, 197);
+  color: black;
+  width: fit-content;
+  padding: 2.5rem 5rem 2.5rem 2.5rem;
+  border-radius: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.error-message {
+  text-align: center;
+  margin: 3rem auto 0 auto;
+  margin-bottom: 0;
+  color: red;
+  font-size: 2.4rem;
+  font-weight: bolder;
+  background-color: rgb(255, 255, 255);
+  width: fit-content;
+  border-radius: 1rem;
+  padding: 0.4rem 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  display: none;
+}
+
+.error-shown {
+  display: flex;
+}
+
+.popup-congrats {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.popup-congrats-isclicked {
+  display: flex;
+}
+
+.popup-box {
+  height: fit-content;
+  background-color: var(--website-theme);
+  overflow-y: auto;
+  text-align: center;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  border-radius: 1rem;
+}
+
+.congrats-text {
+  margin: 2rem 1rem;
+}
+
+.nailed-it-text {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.popup-box a {
+  text-decoration: none;
+  color: var(--website-theme);
+}
+
+/*table*/
+
+table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  margin: 3rem auto 2.4rem;
+}
+
+
+thead th {
+  border: 3px solid #000000;
+  padding: 1rem;
+  font-size: 2.4rem;
+}
+
+th:not(thead th), td {
+  border: 3px solid #000000;
+  height: 24rem;
+}
+
+.fourth-column {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  background-color: var(--schoolboard-color);
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+.ordinary-cell {
+  background-color: var(--table-color);
+  padding: 1rem;
+  vertical-align: text-top;
+  text-align: left;
+}
+
+.ordinary-cell p {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 2rem;
+  line-height: 2rem;
+}
+
+th {
+  background-color: var(--schoolboard-color);
+  color: white;
+}
+
+/*sum up*/
+
+.sum-up {
+  border: 3px solid rgb(255, 255, 255);
+  padding: 1rem;
+}
+
+.sum-up p {
+  font-style: italic;
+}
+
+h3 {
+  font-size: 2.8rem;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+
+/*full table*/
+
+.full-table {
+  max-width: 1250px;
+  text-align: center;
+  margin-bottom: -3.9rem;
+}
+
+.finish-lesson-button-2 {
+  margin: 0 auto;
+}
+
+.margin-fixed-5 {
+  margin-top: -5rem;
+}
+
+.margin-top-5 {
+  margin-top: 3rem;
+}
+
+/*video and speaking task*/
+
+.video {
+  display: flex;
+  justify-content: center;
+  margin: 5rem auto;
+}
+
+.centered {
+  text-align: center;
+  font-size: 2.7rem;
+}
+
+.dialogue-window {
+  margin: 4rem;
+}
+
+.dialogue-window p:not(.aside) {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+ol {
+  margin: 0 0 6rem 2.7rem;
+}
+
+li {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.aside {
+  line-height: 2.5rem;
+  margin: 0 0 0 1rem;
+  margin-bottom: 5rem;
+}
+
+.self-recording {
+  margin: 2rem 0 5rem;
+  max-width: 80%;
+  display: none;
+}
+
+.displayed {
+  display: inline;
+}
+
+.recording-box {
+  text-align: center;
+}
+
+.recording-box p {
+  color: rgb(213, 168, 255);
+}
+
+.recorder-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.start-recording, .stop-recording, .delete-recording {
+  margin: 0;
+  border-radius: 50rem;
+  color: rgba(255, 255, 255, 0.795);
+}
+
+.start-recording {
+  background-color: rgb(116, 0, 224);
+  width: 50%;
+  margin: 0 auto;
+}
+
+.start-recording:hover {
+  background-color: rgb(132, 0, 255);
+}
+
+.stopped {
+  background-color: rgb(182, 0, 0);
+  transition: background-color 0.1s;
+}
+
+.stopped:hover {
+  background-color: rgb(206, 0, 0);
+}
+
+.delete-recording {
+  background-color: rgb(71, 71, 71);
+}
+
+.delete-recording:hover {
+  background-color: rgb(85, 85, 85);
+}
+
+.delete-recording:active {
+  background-color: rgb(105, 105, 105);
+}
+
+.timer {
+  margin: 0 auto;
+  width: fit-content;
+  font-size: 7rem;
+  margin-bottom: 1.5rem;
+}
+
+
+/*schoolboard*/
+
+.schoolboard {
+  border: 4px solid rgb(114, 53, 13);
+  border-radius: 0.5rem;
+  max-width: 60rem;
+  background-color: var(--schoolboard-color);
+  margin: 5rem auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.explanation {
+  font-size: 2.3rem;
+  margin: 0 0 0 0;
+}
+
+.example {
+  margin: 0 0 0 2rem;
+}
+
+.for-example {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.schoolboard p:last-child {
+  margin-top: 0;
+}
+
+/**/
+
+.example-no-board {
+  margin: 3rem 0 3rem 3rem;
+  font-size: 2.8rem;
+  background-color: rgb(219, 219, 219);
+  color: black;
+  width: fit-content;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  line-height: 4rem;
+}
+
+/*fill in quiz*/
+
+.quiz-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.drop-down {
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: none;
+}
+
+.fill-in-blanks-label {
+  margin: 1rem 0;
+}
+
+.submit-fill-in {
+  max-width: fit-content;
+  border-radius: 0.4rem;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.submit-fill-in {
+  background-color: rgb(228, 228, 228);
 }

@@ -10,21 +10,21 @@ const newWordsContent =
 
 const questions = [
   {type: 'new-word', content: newWordsContent},
-  {id: 1, answer: 'i will buy coffee', done: false, textContent: 'Como se dice "Compraré café"?', divider: 'remove'},
-  {id: 2, answer: 'he buys green tea', done: false, textContent: 'Como se dice "Él compra té verde"?'},
-  {id: 3, answer: 'we bought a car', done: false, textContent: 'Como se dice "Compramos un coche"?'},
-  {id: 4, answer: 'she will sell her phone', done: false, textContent: 'Como se dice "Ella venderá su teléfono"?'},
-  {id: 5, answer: 'we sell our house', done: false, textContent: 'Como se dice "Nosotros vendemos nuestra casa"?'},
-  {id: 6, answer: 'i sold my car', done: false, textContent: 'Como se dice "Vendí mi coche"?'},
-  {id: 7, answer: 'i made you tea', done: false, textContent: 'Como se dice "Te hice té"?'},
-  {id: 8, answer: 'we made it', done: false, textContent: 'Como se dice "Lo hicimos"?'},
-  {id: 9, answer: 'he will make me a coffee', done: false, textContent: 'Como se dice "Él me hará un café"?'},
-  {id: 10, answer: 'i choose you', done: false, textContent: 'Como se dice "Te elijo a ti"?'},
-  {id: 11, answer: 'you will not choose him', done: false, textContent: 'Como se dice "No lo elegirás a él"?'},
-  {id: 12, answer: 'we chose her', done: false, textContent: 'Como se dice "La elegimos a ella"?'},
-  {id: 13, answer: 'i thought about it', done: false, textContent: 'Como se dice "Lo pensé"?'},
+  {id: 1, answer: 'i will buy coffee', done: false, textContent: 'Como se dice "Compraré café"', divider: 'remove'},
+  {id: 2, answer: 'he buys green tea', done: false, textContent: 'Como se dice "Él compra té verde"'},
+  {id: 3, answer: 'we bought a car', done: false, textContent: 'Como se dice "Compramos un coche"'},
+  {id: 4, answer: 'she will sell her phone', done: false, textContent: 'Como se dice "Ella venderá su teléfono"'},
+  {id: 5, answer: 'we sell our house', done: false, textContent: 'Como se dice "Nosotros vendemos nuestra casa"'},
+  {id: 6, answer: 'i sold my car', done: false, textContent: 'Como se dice "Vendí mi coche"'},
+  {id: 7, answer: 'i made you tea', done: false, textContent: 'Como se dice "Te hice té"'},
+  {id: 8, answer: 'we made it', done: false, textContent: 'Como se dice "Lo hicimos"'},
+  {id: 9, answer: 'he will make me a coffee', done: false, textContent: 'Como se dice "Él me hará un café"'},
+  {id: 10, answer: 'i choose you', done: false, textContent: 'Como se dice "Te elijo a ti"'},
+  {id: 11, answer: 'you will not choose him', done: false, textContent: 'Como se dice "No lo elegirás a él"'},
+  {id: 12, answer: 'we chose her', done: false, textContent: 'Como se dice "La elegimos a ella"'},
+  {id: 13, answer: 'i thought about it', done: false, textContent: 'Como se dice "Lo pensé"'},
   {id: 14, answer: 'she will not think about you', done: false, textContent: 'Como se dice "Ella no pensará en ti"?'},
-  {id: 15, answer: 'she will think about me', done: false, textContent: 'Como se dice "Ella pensará en mí"?'}
+  {id: 15, answer: 'she will think about me', done: false, textContent: 'Como se dice "Ella pensará en mí"'}
 ]
 
 const explanation = 
@@ -42,21 +42,21 @@ const newWordsContent2 =
 const questions2 = [
   {type: "explanation", text: explanation},
   {type: 'new-word', content: newWordsContent2},
-  {id: 16, answer: 'i paid for it', done: false, textContent: 'Como se dice "Me gusta beber"?', divider: 'remove'},
-  {id: 17, answer: 'she did not pay me', done: false, textContent: 'Como se dice "Me gusta ver"?'},
-  {id: 18, answer: 'we will pay him', done: false, textContent: 'Como se dice "Quiero ir"?'},
-  {id: 19, answer: 'i will try it', done: false, textContent: 'Como se dice "Voy a intentarlo"?'},
-  {id: 20, answer: 'i tried it yesterday', done: false, textContent: 'Como se dice "Lo intenté ayer"?'},
-  {id: 21, answer: 'he will try it tomorrow', done: false, textContent: 'Como se dice "Él lo intentará mañana"?'},
-  {id: 22, answer: 'i changed', done: false, textContent: 'Como se dice "Cambié"?'},
-  {id: 23, answer: 'he wants to change it', done: false, textContent: 'Como se dice "Él quiere cambiarlo"?'},
-  {id: 24, answer: 'we did not change him', done: false, textContent: 'Como se dice "No lo cambiamos"?'},
-  {id: 25, answer: 'they showed you something', done: false, textContent: 'Como se dice "Te mostraron algo"?'},
-  {id: 26, answer: 'he will show his car', done: false, textContent: 'Como se dice "Él mostrará su coche"?'},
-  {id: 27, answer: 'you do not show', done: false, textContent: 'Como se dice "No muestras"?'},
-  {id: 28, answer: 'we played two days ago', answer2: "we played 2 days ago", done: false, textContent: 'Como se dice "Jugamos hace dos días"?'},
-  {id: 29, answer: 'they will play in one week', answer2: "they will play in a week", done: false, textContent: 'Como se dice "Ellos jugarán en una semana"?'},
-  {id: 30, answer: 'i want to play', done: false, textContent: 'Como se dice "Quiero jugar"?'}
+  {id: 16, answer: 'i paid for it', done: false, textContent: 'Como se dice "Me gusta beber"', divider: 'remove'},
+  {id: 17, answer: 'she did not pay me', done: false, textContent: 'Como se dice "Me gusta ver"'},
+  {id: 18, answer: 'we will pay him', done: false, textContent: 'Como se dice "Quiero ir"'},
+  {id: 19, answer: 'i will try it', done: false, textContent: 'Como se dice "Voy a intentarlo"'},
+  {id: 20, answer: 'i tried it yesterday', done: false, textContent: 'Como se dice "Lo intenté ayer"'},
+  {id: 21, answer: 'he will try it tomorrow', done: false, textContent: 'Como se dice "Él lo intentará mañana"'},
+  {id: 22, answer: 'i changed', done: false, textContent: 'Como se dice "Cambié"'},
+  {id: 23, answer: 'he wants to change it', done: false, textContent: 'Como se dice "Él quiere cambiarlo"'},
+  {id: 24, answer: 'we did not change him', done: false, textContent: 'Como se dice "No lo cambiamos"'},
+  {id: 25, answer: 'they showed you something', done: false, textContent: 'Como se dice "Te mostraron algo"'},
+  {id: 26, answer: 'he will show his car', done: false, textContent: 'Como se dice "Él mostrará su coche"'},
+  {id: 27, answer: 'you do not show', done: false, textContent: 'Como se dice "No muestras"'},
+  {id: 28, answer: 'we played two days ago', answer2: "we played 2 days ago", done: false, textContent: 'Como se dice "Jugamos hace dos días"'},
+  {id: 29, answer: 'they will play in one week', answer2: "they will play in a week", done: false, textContent: 'Como se dice "Ellos jugarán en una semana"'},
+  {id: 30, answer: 'i want to play', done: false, textContent: 'Como se dice "Quiero jugar"'}
 ]
 
 const newWordsContent3 = 
@@ -65,16 +65,16 @@ const newWordsContent3 =
 
 const questions3 = [
   {type: 'new-word', content: newWordsContent3},
-  {id: 31, answer: 'i am important', done: false, textContent: 'Como se dice "Yo soy importante"?', divider: 'remove'},
-  {id: 32, answer: 'they will not be important', done: false, textContent: 'Como se dice "Ellos no serán importantes"?'},
-  {id: 33, answer: 'are we important', answer2: "are we important?", done: false, textContent: 'Como se dice "¿Somos importantes?"?'},
-  {id: 34, answer: 'he is not important', done: false, textContent: 'Como se dice "Él no es importante"?'},
-  {id: 35, answer: 'you were important', done: false, textContent: 'Como se dice "Tú eras importante"?'},
-  {id: 36, answer: 'he was tired', done: false, textContent: 'Como se dice "Él estaba cansado"?'},
-  {id: 38, answer: 'am i tired', answer2: "am i tired?", done: false, textContent: 'Como se dice "¿Estoy cansado?"?'},
-  {id: 39, answer: 'you will not be tired', done: false, textContent: 'Como se dice "No estarás cansado"?'},
-  {id: 40, answer: 'they are not tired', done: false, textContent: 'Como se dice "Ellos no están cansados"?'},
-  {id: 41, answer: 'was she tired', answer2: "was she tired?", done: false, textContent: 'Como se dice "¿Estaba cansada ella?"?'}
+  {id: 31, answer: 'i am important', done: false, textContent: 'Como se dice "Yo soy importante"', divider: 'remove'},
+  {id: 32, answer: 'they will not be important', done: false, textContent: 'Como se dice "Ellos no serán importantes"'},
+  {id: 33, answer: 'are we important', answer2: "are we important?", done: false, textContent: 'Como se dice "¿Somos importantes?"'},
+  {id: 34, answer: 'he is not important', done: false, textContent: 'Como se dice "Él no es importante"'},
+  {id: 35, answer: 'you were important', done: false, textContent: 'Como se dice "Tú eras importante"'},
+  {id: 36, answer: 'he was tired', done: false, textContent: 'Como se dice "Él estaba cansado"'},
+  {id: 38, answer: 'am i tired', answer2: "am i tired?", done: false, textContent: 'Como se dice "¿Estoy cansado?"'},
+  {id: 39, answer: 'you will not be tired', done: false, textContent: 'Como se dice "No estarás cansado"'},
+  {id: 40, answer: 'they are not tired', done: false, textContent: 'Como se dice "Ellos no están cansados"'},
+  {id: 41, answer: 'was she tired', answer2: "was she tired?", done: false, textContent: 'Como se dice "¿Estaba cansada ella?"'}
 ]
 
 const newWordsContent4 = 
@@ -85,14 +85,14 @@ const newWordsContent4 =
 
 const questions4 = [
   {type: 'new-word', content: newWordsContent4},
-  {id: 42, answer: 'when you drive drive slowly', done: false, textContent: 'Como se dice "Cuando conduzcas, conduce lentamente"?', divider: 'remove'},
-  {id: 43, answer: 'when she sees him she smiles', done: false, textContent: 'Como se dice "Cuando ella lo ve, sonríe"?'},
-  {id: 44, answer: 'when i am here i am with you', done: false, textContent: 'Como se dice "Cuando estoy aquí, estoy contigo"?'},
-  {id: 45, answer: 'when do you go home', answer2: "when do you go home?", done: false, textContent: 'Como se dice "¿Cuándo te vas a casa?"?'},
-  {id: 46, answer: 'if she sees me i will hide', done: false, textContent: 'Como se dice "Si ella me ve, me esconderé"?'},
-  {id: 47, answer: 'if we are with you we are strong', done: false, textContent: 'Como se dice "Si estamos contigo, somos fuertes"?'},
-  {id: 48, answer: 'if you come knock', done: false, textContent: 'Como se dice "Si vienes, toca"?'},
-  {id: 49, answer: 'if they play with me i will be happy', done: false, textContent: 'Como se dice "Si juegan conmigo, estaré feliz"?'},
+  {id: 42, answer: 'when you drive drive slowly', done: false, textContent: 'Como se dice "Cuando conduzcas, conduce lentamente"', divider: 'remove'},
+  {id: 43, answer: 'when she sees him she smiles', done: false, textContent: 'Como se dice "Cuando ella lo ve, sonríe"'},
+  {id: 44, answer: 'when i am here i am with you', done: false, textContent: 'Como se dice "Cuando estoy aquí, estoy contigo"'},
+  {id: 45, answer: 'when do you go home', answer2: "when do you go home?", done: false, textContent: 'Como se dice "¿Cuándo te vas a casa?"'},
+  {id: 46, answer: 'if she sees me i will hide', done: false, textContent: 'Como se dice "Si ella me ve, me esconderé"'},
+  {id: 47, answer: 'if we are with you we are strong', done: false, textContent: 'Como se dice "Si estamos contigo, somos fuertes"'},
+  {id: 48, answer: 'if you come knock', done: false, textContent: 'Como se dice "Si vienes, toca"'},
+  {id: 49, answer: 'if they play with me i will be happy', done: false, textContent: 'Como se dice "Si juegan conmigo, estaré feliz"'},
 ]
 
 const newWordsContent5 = 
@@ -106,20 +106,20 @@ const newWordsContent5 =
 const questions5 = [
   {type: 'new-word', content: newWordsContent5},
   {id: 50, answer: 'go', done: false, textContent: 'Como se dice "Ve"?', divider: 'remove'},
-  {id: 51, answer: 'do not go', done: false, textContent: 'Como se dice "No te vayas"?'},
-  {id: 52, answer: 'let us go', done: false, textContent: 'Como se dice "Vamos"?'},
-  {id: 53, answer: 'do not talk to me', done: false, textContent: 'Como se dice "No me hables"?'},
-  {id: 54, answer: 'do not watch this movie', done: false, textContent: 'Como se dice "No veas esta película"?'},
-  {id: 55, answer: 'come', done: false, textContent: 'Como se dice "Ven"?'},
-  {id: 56, answer: 'let us play', done: false, textContent: 'Como se dice "Juguemos"?'},
-  {id: 57, answer: 'let us be happy', done: false, textContent: 'Como se dice "Seamos felices"?'},
-  {id: 58, answer: 'let us go home', done: false, textContent: 'Como se dice "Vamos a casa"?'},
-  {id: 59, answer: 'let us cook', done: false, textContent: 'Como se dice "Cocinemos"?'},
-  {id: 60, answer: 'drink water', done: false, textContent: 'Como se dice "Bebe agua"?'},
-  {id: 61, answer: 'do not eat hot dog', done: false, textContent: 'Como se dice "No comas hot dog"?'},
-  {id: 62, answer: 'find a car', done: false, textContent: 'Como se dice "Encuentra un coche"?'},
-  {id: 63, answer: 'do not cook this steak', done: false, textContent: 'Como se dice "No cocines este bistec"?'},
-  {id: 64, answer: 'do not talk to me like that', done: false, textContent: 'Como se dice "No me hables así"?'},
+  {id: 51, answer: 'do not go', done: false, textContent: 'Como se dice "No te vayas"'},
+  {id: 52, answer: 'let us go', done: false, textContent: 'Como se dice "Vamos"'},
+  {id: 53, answer: 'do not talk to me', done: false, textContent: 'Como se dice "No me hables"'},
+  {id: 54, answer: 'do not watch this movie', done: false, textContent: 'Como se dice "No veas esta película"'},
+  {id: 55, answer: 'come', done: false, textContent: 'Como se dice "Ven"'},
+  {id: 56, answer: 'let us play', done: false, textContent: 'Como se dice "Juguemos"'},
+  {id: 57, answer: 'let us be happy', done: false, textContent: 'Como se dice "Seamos felices"'},
+  {id: 58, answer: 'let us go home', done: false, textContent: 'Como se dice "Vamos a casa"'},
+  {id: 59, answer: 'let us cook', done: false, textContent: 'Como se dice "Cocinemos"'},
+  {id: 60, answer: 'drink water', done: false, textContent: 'Como se dice "Bebe agua"'},
+  {id: 61, answer: 'do not eat hot dog', done: false, textContent: 'Como se dice "No comas hot dog"'},
+  {id: 62, answer: 'find a car', done: false, textContent: 'Como se dice "Encuentra un coche"'},
+  {id: 63, answer: 'do not cook this steak', done: false, textContent: 'Como se dice "No cocines este bistec"'},
+  {id: 64, answer: 'do not talk to me like that', done: false, textContent: 'Como se dice "No me hables así"'},
 ]
 
 const createQuiz = (questionsArr, num) => {
@@ -376,7 +376,7 @@ const createQuiz = (questionsArr, num) => {
   });
 }
 
-const title = 'Write three forms of adjectives like so: <br> <span class="exampleAdj">big - bigger - the biggest</span>'
+const title = 'Write three forms of adjectives like so: <br> <span class="exampleAdj example-no-board">big - bigger - the biggest</span>'
 
 const adjquestions = [
   {type: "subheader", title: title},

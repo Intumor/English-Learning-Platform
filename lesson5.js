@@ -2,39 +2,39 @@ let lessonIsDone = localStorage.getItem('lesson5Status');
 let userName = localStorage.getItem('username');
 
 const questions = [
-  {id: 1, answer: 'he is older than you', done: false, textContent: 'Como se dice "Él es mayor que tú"?', divider: 'remove'},
-  {id: 2, answer: 'she is yonger than me', done: false, textContent: 'Como se dice "Ella es más joven que yo"?'},
-  {id: 3, answer: 'my car is faster than your car', done: false, textContent: 'Como se dice "Mi coche es más rápido que tu coche"?'},
-  {id: 4, answer: 'your car is slower than my car', done: false, textContent: 'Como se dice "Tu coche es más lento que mi coche"?'},
-  {id: 5, answer: 'my son is yonger than your me', done: false, textContent: 'Como se dice "Mi hijo es más joven que tu hijo"?'},
-  {id: 6, answer: 'my grandparents are older than thier children', done: false, textContent: 'Como se dice "Mis abuelos son mayores que sus hijos"?'},
-  {id: 7, answer: 'they are faster than us', done: false, textContent: 'Como se dice "Ellos son más rápidos que nosotros"?'},
-  {id: 8, answer: 'you are slower than her', done: false, textContent: 'Como se dice "Tú eres más lento que ella"?'},
+  {id: 1, answer: 'he is older than you', done: false, textContent: 'Como se dice "Él es mayor que tú"', divider: 'remove'},
+  {id: 2, answer: 'she is yonger than me', done: false, textContent: 'Como se dice "Ella es más joven que yo"'},
+  {id: 3, answer: 'my car is faster than your car', done: false, textContent: 'Como se dice "Mi coche es más rápido que tu coche"'},
+  {id: 4, answer: 'your car is slower than my car', done: false, textContent: 'Como se dice "Tu coche es más lento que mi coche"'},
+  {id: 5, answer: 'my son is yonger than your me', done: false, textContent: 'Como se dice "Mi hijo es más joven que tu hijo"'},
+  {id: 6, answer: 'my grandparents are older than thier children', done: false, textContent: 'Como se dice "Mis abuelos son mayores que sus hijos"'},
+  {id: 7, answer: 'they are faster than us', done: false, textContent: 'Como se dice "Ellos son más rápidos que nosotros"'},
+  {id: 8, answer: 'you are slower than her', done: false, textContent: 'Como se dice "Tú eres más lento que ella"'},
 ]
 
 const questions2 = [
-  {id: 9, answer: 'i will come in three days', done: false, textContent: 'Como se dice "Voy a venir en tres días"?'},
-  {id: 10, answer: 'he left three days ago', done: false, textContent: 'Como se dice "Él se fue hace tres días"?'},
-  {id: 11, answer: 'i will see you in one week', answer2: 'i will see you in one week', done: false, textContent: 'Como se dice "Te veré en una semana"?'},
-  {id: 12, answer: 'i saw him two weeks ago', done: false, textContent: 'Como se dice "Lo vi hace dos semanas"?'},
-  {id: 13, answer: 'yesterday i did not work but tomorrow i will work', done: false, textContent: 'Como se dice "Ayer no trabajé, pero mañana trabajaré"?'},
-  {id: 14, answer: 'i will go to new york', done: false, textContent: 'Como se dice "Voy a ir a Nueva York"?'},
-  {id: 15, answer: 'in one hour we will go home', answer2: 'in an hour we will go home', done: false, textContent: 'Como se dice "Te veré en una semana"?'},
-  {id: 16, answer: 'i was here yesterday', done: false, textContent: 'Como se dice "Estuve aquí ayer"?'},
-  {id: 17, answer: 'i will be here tomorrow', done: false, textContent: 'Como se dice "Estaré aquí mañana"?'}
+  {id: 9, answer: 'i will come in three days', done: false, textContent: 'Como se dice "Voy a venir en tres días"'},
+  {id: 10, answer: 'he left three days ago', done: false, textContent: 'Como se dice "Él se fue hace tres días"'},
+  {id: 11, answer: 'i will see you in one week', answer2: 'i will see you in one week', done: false, textContent: 'Como se dice "Te veré en una semana"'},
+  {id: 12, answer: 'i saw him two weeks ago', done: false, textContent: 'Como se dice "Lo vi hace dos semanas"'},
+  {id: 13, answer: 'yesterday i did not work but tomorrow i will work', done: false, textContent: 'Como se dice "Ayer no trabajé, pero mañana trabajaré"'},
+  {id: 14, answer: 'i will go to new york', done: false, textContent: 'Como se dice "Voy a ir a Nueva York"'},
+  {id: 15, answer: 'in one hour we will go home', answer2: 'in an hour we will go home', done: false, textContent: 'Como se dice "Te veré en una semana"'},
+  {id: 16, answer: 'i was here yesterday', done: false, textContent: 'Como se dice "Estuve aquí ayer"'},
+  {id: 17, answer: 'i will be here tomorrow', done: false, textContent: 'Como se dice "Estaré aquí mañana"'}
 ]
 
 const questions3 = [
-  {id: 18, answer: 'i will come on monday', done: false, textContent: 'Como se dice "Voy a venir el lunes"?'},
-  {id: 19, answer: 'i am yonger than him', done: false, textContent: 'Como se dice "Soy más joven que él"?'},
-  {id: 20, answer: 'today i speak better than yesterday', done: false, textContent: 'Como se dice "Hoy hablo mejor que ayer"?'},
-  {id: 21, answer: 'yesterday i spoke worse than today', done: false, textContent: 'Como se dice "Ayer hablé peor que hoy"?'},
-  {id: 22, answer: 'today i am more interesting than yesterday', done: false, textContent: 'Como se dice "Hoy soy más interesante que ayer"?'},
-  {id: 23, answer: 'november is shorter than october', done: false, textContent: 'Como se dice "Noviembre es más corto que octubre"?'},
-  {id: 24, answer: 'february is the shortest month', done: false, textContent: 'Como se dice "Febrero es el mes más corto"?'},
-  {id: 25, answer: 'texas is bigger than florida', done: false, textContent: 'Como se dice "Texas es más grande que Florida"?'},
-  {id: 26, answer: 'i am the best student', done: false, textContent: 'Como se dice "Soy el mejor estudiante"?'},
-  {id: 27, answer: 'i like summer more than winter', done: false, textContent: 'Como se dice "Me gusta más el verano que el invierno"?'}
+  {id: 18, answer: 'i will come on monday', done: false, textContent: 'Como se dice "Voy a venir el lunes"'},
+  {id: 19, answer: 'i am yonger than him', done: false, textContent: 'Como se dice "Soy más joven que él"'},
+  {id: 20, answer: 'today i speak better than yesterday', done: false, textContent: 'Como se dice "Hoy hablo mejor que ayer"'},
+  {id: 21, answer: 'yesterday i spoke worse than today', done: false, textContent: 'Como se dice "Ayer hablé peor que hoy"'},
+  {id: 22, answer: 'today i am more interesting than yesterday', done: false, textContent: 'Como se dice "Hoy soy más interesante que ayer"'},
+  {id: 23, answer: 'november is shorter than october', done: false, textContent: 'Como se dice "Noviembre es más corto que octubre"'},
+  {id: 24, answer: 'february is the shortest month', done: false, textContent: 'Como se dice "Febrero es el mes más corto"'},
+  {id: 25, answer: 'texas is bigger than florida', done: false, textContent: 'Como se dice "Texas es más grande que Florida"'},
+  {id: 26, answer: 'i am the best student', done: false, textContent: 'Como se dice "Soy el mejor estudiante"'},
+  {id: 27, answer: 'i like summer more than winter', done: false, textContent: 'Como se dice "Me gusta más el verano que el invierno"'}
 ]
 
 

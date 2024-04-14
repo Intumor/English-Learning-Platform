@@ -25,77 +25,77 @@ const questions = [
 
 const wordsAndQuestions = [
   {type: 'new-word', content: 'ask - preguntar'},
-  {id: 12, answer: 'i will ask', answer2: "i'll ask", done: false, textContent: 'Como se dice "Yo preguntaré"?', divider: 'remove'},
-  {id: 13, answer: 'did you ask', answer2: "did you ask?", done: false, textContent: 'Como se dice "¿Preguntaste?"?'}
+  {id: 12, answer: 'i will ask', answer2: "i'll ask", done: false, textContent: 'Como se dice "Yo preguntaré"', divider: 'remove'},
+  {id: 13, answer: 'did you ask', answer2: "did you ask?", done: false, textContent: 'Como se dice "¿Preguntaste?"'}
 ]
 
 const wordsAndQuestions2 = [
   {type: 'new-word', content: 'answer - responder'},
-  {id: 14, answer: 'i will not answer', done: false, textContent: 'Como se dice "No responderé"?', divider: 'remove'},
-  {id: 15, answer: 'i answered', done: false, textContent: 'Como se dice "Respondí"?'},
-  {id: 16, answer: "he doesn't answer", answer2: 'he does not answer', done: false, textContent: "Como se dice 'Él no responde'?"}
+  {id: 14, answer: 'i will not answer', done: false, textContent: 'Como se dice "No responderé"', divider: 'remove'},
+  {id: 15, answer: 'i answered', done: false, textContent: 'Como se dice "Respondí"'},
+  {id: 16, answer: "he doesn't answer", answer2: 'he does not answer', done: false, textContent: 'Como se dice "Él no responde"'}
 ]
 
 const wordsAndQuestions3 = [
   {type: 'new-word', content: 'give (gave) - dar'},
-  {id: 17, answer: 'we gave', done: false, textContent: 'Como se dice "Nosotros dimos"?', divider: 'remove'},
-  {id: 18, answer: 'will you give', answer2: 'will you give?', done: false, textContent: 'Como se dice "¿Darás?"?'},
-  {id: 19, answer: "they will not give", done: false, textContent: "Como se dice 'Ellos no darán'?"}
+  {id: 17, answer: 'we gave', done: false, textContent: 'Como se dice "Nosotros dimos"', divider: 'remove'},
+  {id: 18, answer: 'will you give', answer2: 'will you give?', done: false, textContent: 'Como se dice "¿Darás?"'},
+  {id: 19, answer: "they will not give", done: false, textContent: 'Como se dice "Ellos no darán"'}
 ]
 
 const wordsAndQuestions4 = [
   {type: 'new-word', content: 'take (took) - tomar'},
-  {id: 20, answer: 'i will take', answer2: "i'll take", done: false, textContent: 'Como se dice "Tomaré"?', divider: 'remove'},
-  {id: 21, answer: 'i took', done: false, textContent: 'Como se dice "Tomé"?'},
-  {id: 22, answer: "will you take", answer2: "will you take?", done: false, textContent: "Como se dice '¿Tomarás?'?"},
-  {id: 23, answer: "i will not take", done: false, textContent: "Como se dice 'No tomaré'?"}
+  {id: 20, answer: 'i will take', answer2: "i'll take", done: false, textContent: 'Como se dice "Tomaré"', divider: 'remove'},
+  {id: 21, answer: 'i took', done: false, textContent: 'Como se dice "Tomé"'},
+  {id: 22, answer: "will you take", answer2: "will you take?", done: false, textContent: 'Como se dice "¿Tomarás?"'},
+  {id: 23, answer: "i will not take", done: false, textContent: 'Como se dice "No tomaré"'}
 ]
 
 const wordsAndQuestions5 = [
   {type: 'new-word', content: 'help - ayudar'},
-  {id: 24, answer: 'i will help', answer2: "i'll help", done: false, textContent: 'Como se dice "Ayudaré"?', divider: 'remove'},
-  {id: 25, answer: "he didn't help", answer2: "he did not help", done: false, textContent: 'Como se dice "Él no ayudó"?'},
-  {id: 26, answer: "he will help", answer2: "he'll help", done: false, textContent: "Como se dice 'Él ayudará'?"},
-  {id: 27, answer: "will you help", answer2: "will you help?", done: false, textContent: "Como se dice '¿Ayudarás?'?"}
+  {id: 24, answer: 'i will help', answer2: "i'll help", done: false, textContent: 'Como se dice "Ayudaré"', divider: 'remove'},
+  {id: 25, answer: "he didn't help", answer2: "he did not help", done: false, textContent: 'Como se dice "Él no ayudó"'},
+  {id: 26, answer: "he will help", answer2: "he'll help", done: false, textContent: 'Como se dice "Él ayudará"'},
+  {id: 27, answer: "will you help", answer2: "will you help?", done: false, textContent: 'Como se dice "¿Ayudarás?"'}
 ]
 
 const wordsAndQuestions6 = [
   {type: 'new-word', content: 'hope - esperar'},
-  {id: 28, answer: 'i hope', done: false, textContent: 'Como se dice "Espero"?', divider: 'remove'},
-  {id: 29, answer: "he hopes", done: false, textContent: 'Como se dice "Él espera"?'},
-  {id: 30, answer: "do you hope", answer2: "do you hope?", done: false, textContent: "Como se dice '¿Tú esperas?'?"},
-  {id: 31, answer: "i did not hope but i will hope", answer3: "i didn't hope but i'll hope", answer4: "i did not hope but i'll hope", done: false, textContent: "Como se dice 'No esperaba, pero esperaré'?"}
+  {id: 28, answer: 'i hope', done: false, textContent: 'Como se dice "Espero"', divider: 'remove'},
+  {id: 29, answer: "he hopes", done: false, textContent: 'Como se dice "Él espera"'},
+  {id: 30, answer: "do you hope", answer2: "do you hope?", done: false, textContent: 'Como se dice "¿Tú esperas?"'},
+  {id: 31, answer: "i did not hope but i will hope", answer3: "i didn't hope but i'll hope", answer4: "i did not hope but i'll hope", done: false, textContent: 'Como se dice "No esperaba, pero esperaré"'}
 ]
 
 const wordsAndQuestions7 = [
   {type: 'new-word', content: 'speak (spoke) - hablar'},
-  {id: 32, answer: 'we will speak', asnwer2: "we'll speak", done: false, textContent: 'Como se dice "hablaremos"?', divider: 'remove'},
-  {id: 33, answer: "will you speak", asnwer2: "will you speak?", done: false, textContent: 'Como se dice "¿Hablarás?"?'},
-  {id: 34, answer: "we spoke", done: false, textContent: "Como se dice 'hablamos'?"},
-  {id: 35, answer: "They didn't speak", answer2: "They did not speak", done: false, textContent: "Como se dice 'No esperaba, pero esperaré'?"}
+  {id: 32, answer: 'we will speak', asnwer2: "we'll speak", done: false, textContent: 'Como se dice "hablaremos"', divider: 'remove'},
+  {id: 33, answer: "will you speak", asnwer2: "will you speak?", done: false, textContent: 'Como se dice "¿Hablarás?"'},
+  {id: 34, answer: "we spoke", done: false, textContent: 'Como se dice "hablamos"'},
+  {id: 35, answer: "They didn't speak", answer2: "They did not speak", done: false, textContent: 'Como se dice "No esperaba, pero esperaré"'}
 ]
 
 const wordsAndQuestions8 = [
   {type: 'new-word', content: 'travel - viajar'},
-  {id: 36, answer: 'did you travel', asnwer2: "did you travel?", done: false, textContent: 'Como se dice "¿Viajaste?"?', divider: 'remove'},
-  {id: 37, answer: "will you travel", asnwer2: "will you travel?", done: false, textContent: 'Como se dice "¿Viajarás?"?'},
-  {id: 38, answer: "i did not travel but i will travel", done: false, textContent: "Como se dice 'No viajé, pero viajaré'?"},
-  {id: 39, answer: "does he travel", answer2: "does he travel?", done: false, textContent: "Como se dice '¿Viaja él?'?"},
-  {id: 40, answer: "he travels", done: false, textContent: "Como se dice 'Él viaja'?"}
+  {id: 36, answer: 'did you travel', asnwer2: "did you travel?", done: false, textContent: 'Como se dice "¿Viajaste?"', divider: 'remove'},
+  {id: 37, answer: "will you travel", asnwer2: "will you travel?", done: false, textContent: 'Como se dice "¿Viajarás?"'},
+  {id: 38, answer: "i did not travel but i will travel", done: false, textContent: 'Como se dice "No viajé, pero viajaré"'},
+  {id: 39, answer: "does he travel", answer2: "does he travel?", done: false, textContent: 'Como se dice "¿Viaja él?"'},
+  {id: 40, answer: "he travels", done: false, textContent: 'Como se dice "Él viaja"'}
 ]
 
 const wordsAndQuestions9 = [
-  {id: 41, answer: 'i see you', done: false, textContent: 'Como se dice "Te veo"?', divider: 'remove'},
-  {id: 42, answer: "you see me", done: false, textContent: 'Como se dice "Me ves"?'},
-  {id: 43, answer: "he sees her", done: false, textContent: "Como se dice 'Él la ve'?"},
-  {id: 44, answer: "she does not see him", done: false, textContent: "Como se dice 'Ella no lo ve'?"},
-  {id: 45, answer: "we saw them", done: false, textContent: "Como se dice 'Nosotros los vimos'?"},
-  {id: 46, answer: "they did not see us", done: false, textContent: "Como se dice 'Ellos no nos vieron'?"},
-  {id: 47, answer: 'i know you', done: false, textContent: 'Como se dice "Te conozco"?', divider: 'remove'},
-  {id: 48, answer: "but you do not know me", done: false, textContent: 'Como se dice "Pero tú no me conoces"?'},
-  {id: 49, answer: "he knows her", done: false, textContent: "Como se dice 'Él la conoce'?"},
-  {id: 50, answer: "she did not know him", done: false, textContent: "Como se dice 'Ella no lo conocía'?"},
-  {id: 51, answer: "she will know him", done: false, textContent: "Como se dice 'Ella lo conocerá'?"}
+  {id: 41, answer: 'i see you', done: false, textContent: 'Como se dice "Te veo"', divider: 'remove'},
+  {id: 42, answer: "you see me", done: false, textContent: 'Como se dice "Me ves"'},
+  {id: 43, answer: "he sees her", done: false, textContent: 'Como se dice "Él la ve"'},
+  {id: 44, answer: "she does not see him", done: false, textContent: 'Como se dice "Ella no lo ve"'},
+  {id: 45, answer: "we saw them", done: false, textContent: 'Como se dice "Nosotros los vimos"'},
+  {id: 46, answer: "they did not see us", done: false, textContent: 'Como se dice "Ellos no nos vieron"'},
+  {id: 47, answer: 'i know you', done: false, textContent: 'Como se dice "Te conozco"', divider: 'remove'},
+  {id: 48, answer: "but you do not know me", done: false, textContent: 'Como se dice "Pero tú no me conoces"'},
+  {id: 49, answer: "he knows her", done: false, textContent: 'Como se dice "Él la conoce"'},
+  {id: 50, answer: "she did not know him", done: false, textContent: 'Como se dice "Ella no lo conocía"'},
+  {id: 51, answer: "she will know him", done: false, textContent: 'Como se dice "Ella lo conocerá"'}
 ]
 
 const createQuiz = (questionsArr, num) => {

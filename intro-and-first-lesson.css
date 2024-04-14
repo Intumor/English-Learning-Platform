@@ -30,6 +30,10 @@ h2 {
   font-size: 3.3rem;
 }
 
+.removed-margin {
+  margin-bottom: -1rem;
+}
+
 ul {
   margin: 3rem 1rem 2rem 6rem;
   font-size: 2.7rem;
@@ -207,9 +211,17 @@ th {
   max-width: 81rem;
   margin: 0 auto;
 }
+.margin-up {
+  margin-top: -4rem;
+}
 
 .example {
   padding: 1.5rem 2rem;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  margin: 1rem auto;
+  border-radius: 1rem;
+  font-weight: 700;
 }
 
 .new-words {
