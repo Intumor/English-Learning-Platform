@@ -521,3 +521,26 @@ const recordAnswer = (id) => {
 }
 
 recordAnswer(1);
+
+const fullscreenButton = document.querySelector(".fullscreen-icon")
+const imageHolder = document.querySelector(".image-holder")
+const taskText = document.querySelector(".task-text")
+const rectangleBathroom = document.querySelector(".rectangle-bathroom")
+
+const toggleFullscreen = () => {
+  imageHolder.classList.toggle("widened")
+  taskText.classList.toggle("smaller-task-text")
+  fullscreenButton.classList.toggle("fullscreen-icon")
+  fullscreenButton.classList.toggle("exit-sull-screen")
+  rectangleBathroom.classList.toggle("rectangle-bathroom-fullscreen")
+}
+
+const changeObjectColor = (event) => {
+  const rectangle = event.target
+  rectangle.classList.toggle("rectangle-clicked")
+}
+
+fullscreenButton.addEventListener("click", toggleFullscreen)
+rectangleBathroom.addEventListener("click", (event) => {
+  changeObjectColor(event)
+})

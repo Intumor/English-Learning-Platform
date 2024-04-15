@@ -48,3 +48,124 @@ hr {
 #section-two {
   margin-top: -5rem;
 }
+
+#section-four {
+  min-width: 100%;
+  margin: 0;
+}
+
+.find-objects-quiz {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  margin: 5rem auto;
+  align-items: center;
+}
+
+.image-holder {
+  width: 65rem;
+  height: 100%;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.widened {
+  width: 100rem;
+}
+
+.apartment-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.task-assigner {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: var(--flash-quiz-color);
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+}
+
+.task-text {
+  font-size: 3rem;
+}
+
+.smaller-task-text {
+  font-size: 2rem;
+}
+
+.fullscreen-icon {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  width: 3rem;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.fullscreen-icon:hover {
+  transform: scale(1.08);
+}
+
+.exit-sull-screen {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  width: 3.2rem;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.exit-sull-screen:hover {
+  transform: scale(0.92);
+}
+
+
+.next-button {
+  width: 10rem;
+  margin: 0 auto;
+  background-color: rgb(128, 24, 226);
+  color: white;
+  font-weight: 400;
+  transition: all 0.05s;
+}
+
+.next-button:hover {
+  background-color: rgb(128, 24, 226);
+}
+
+.next-button:active {
+  background-color: rgb(122, 10, 226);
+}
+
+#task-words {
+  font-size: 1.7rem;
+  padding: 1.4rem;
+  margin: 4rem auto;
+  border-radius: 0.8rem;
+}
+
+.rectangle-bathroom {
+  width: 11.5rem;
+  height: 10.6rem;
+  position: absolute;
+  bottom: 26.7%;
+  left: 14.5%;
+  cursor: pointer;
+  transition: all 0.02s;
+}
+
+.rectangle-bathroom-fullscreen {
+  width: 17.5rem;
+  height: 16.3rem;
+}
+
+.rectangle-clicked {
+  background-color: rgba(0, 128, 0, 0.589);
+}
