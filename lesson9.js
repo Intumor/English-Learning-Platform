@@ -1,3 +1,6 @@
+let lessonIsDone = localStorage.getItem('lesson8Status');
+let userName = localStorage.getItem('username');
+
 const fillInQuiz = [
   {id: 21, options: {option1: "there is", option2: "there are"}, answer: "there are", done: false, textContent: "cars", divider: 'remove', beforeInput: ""},
   {id: 22, options: {option1: "there is", option2: "there are"}, answer: "there are", done: false, textContent: "bears in the forest", beforeInput: ""},
@@ -522,25 +525,654 @@ const recordAnswer = (id) => {
 
 recordAnswer(1);
 
-const fullscreenButton = document.querySelector(".fullscreen-icon")
-const imageHolder = document.querySelector(".image-holder")
-const taskText = document.querySelector(".task-text")
-const rectangleBathroom = document.querySelector(".rectangle-bathroom")
+const vocabularyQuiz = [
+  {
+    index: 0,
+    rectangles: true,
+    taskText: "Find all the rooms",
+    newWordsText: "room - habitacion",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: true, 2: true, 3: true, 4: true, 5: true, 6: true, 7: true, 8: true},
+    correct: false
+  },
+  {
+    index: 1,
+    rectangles: true,
+    taskText: "Find the bathroom",
+    newWordsText: "bathroom - baño",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: false, 3: false, 4: false, 5: false, 6: true, 7: false, 8: false},
+    correct: false
+  },
+  {
+    index: 2,
+    rectangles: true,
+    taskText: "Find the kitchen",
+    newWordsText: "kitchen - cocina",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: false, 3: false, 4: false, 5: true, 6: false, 7: false, 8: false},
+    correct: false
+  },
+  {
+    index: 3,
+    rectangles: true,
+    taskText: "Find the bedroom",
+    newWordsText: "bedroom - dormitorio",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: true, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    correct: false
+  },
+  {
+    index: 4,
+    rectangles: true,
+    taskText: "Find the office",
+    newWordsText: "office - oficina",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: true, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    correct: false
+  },
+  {
+    index: 5,
+    rectangles: true,
+    taskText: "Find the basement",
+    newWordsText: "basement - sótano",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: true},
+    correct: false
+  },
+  {
+    index: 6,
+    rectangles: true,
+    taskText: "Find the balcony",
+    newWordsText: "balcony - balcón",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: false, 3: true, 4: false, 5: false, 6: false, 7: false, 8: false},
+    correct: false
+  },
+  {
+    index: 7,
+    rectangles: true,
+    taskText: "Find the living room",
+    newWordsText: "living room - sala de estar",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: false, 3: false, 4: true, 5: false, 6: false, 7: false, 8: false},
+    correct: false
+  },
+  {
+    index: 8,
+    rectangles: true,
+    taskText: "Find the hallway",
+    newWordsText: "hallway - pasillo",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: true, 8: false},
+    correct: false
+  },
+  {
+    index: 9,
+    rectangles: true,
+    taskText: "Find all the rooms with a ceiling",
+    newWordsText: "ceiling - techo",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: true, 2: true, 3: false, 4: true, 5: true, 6: true, 7: true, 8: true},
+    correct: false,
+  },
+  {
+    index: 10,
+    rectangles: true,
+    taskText: "Find all the rooms with only one door",
+    newWordsText: "door - puerta",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: true, 2: false, 3: true, 4: false, 5: false, 6: true, 7: false, 8: true},
+    correct: false,
+  },
+  {
+    index: 11,
+    rectangles: true,
+    taskText: "Find all the rooms with a chandelier",
+    newWordsText: "chandelier - araña",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: true, 3: false, 4: true, 5: true, 6: false, 7: true, 8: false},
+    correct: false,
+  },
+  {
+    index: 12,
+    rectangles: true,
+    taskText: "Find all the rooms with a closet",
+    newWordsText: "closet - armario",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: true, 3: false, 4: false, 5: false, 6: false, 7: true, 8: false},
+    correct: false,
+  },
+  {
+    index: 13,
+    rectangles: true,
+    taskText: "Find the room with a bird",
+    newWordsText: "bird - pajaro",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: false, 3: true, 4: false, 5: false, 6: false, 7: false, 8: false},
+    correct: false,
+  },
+  {
+    index: 14,
+    rectangles: true,
+    taskText: "Find the room with an umbrella",
+    newWordsText: "umbrella - paraguas",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: false, 3: true, 4: false, 5: false, 6: false, 7: false, 8: false},
+    correct: false,
+  },
+  {
+    index: 15,
+    rectangles: true,
+    taskText: "Find the room with a toilet",
+    newWordsText: "toilet - inodoro",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: false, 3: false, 4: false, 5: false, 6: true, 7: false, 8: false},
+    correct: false,
+  },
+  {
+    index: 16,
+    rectangles: true,
+    taskText: "Find all the rooms with a painting",
+    newWordsText: "painting - pintura",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: true, 3: false, 4: false, 5: false, 6: false, 7: true, 8: false},
+    correct: false,
+  },
+  {
+    index: 17,
+    rectangles: true,
+    taskText: "Find the room with a dog",
+    newWordsText: "dog - perro",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: false, 3: false, 4: true, 5: false, 6: false, 7: false, 8: false},
+    correct: false,
+  },
+  {
+    index: 18,
+    rectangles: true,
+    taskText: "Find the room with a computer",
+    newWordsText: "computer - computadora",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: true, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    correct: false,
+  },
+  {
+    index: 19,
+    rectangles: true,
+    taskText: "Find the room with a TV",
+    newWordsText: "TV - televisor",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: false, 3: false, 4: true, 5: false, 6: false, 7: false, 8: false},
+    correct: false,
+  },
+  {
+    index: 20,
+    rectangles: true,
+    taskText: "Find the room with a phone",
+    newWordsText: "phone - teléfono",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: true, 8: false},
+    correct: false,
+  },
+  {
+    index: 21,
+    rectangles: true,
+    taskText: "Find the room with a bed",
+    newWordsText: "bed - cama",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: true, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    correct: false,
+  },
+  {
+    index: 22,
+    rectangles: true,
+    taskText: "Find the room with a sink",
+    newWordsText: "sink - lavabo",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: false, 3: false, 4: false, 5: false, 6: true, 7: false, 8: false},
+    correct: false,
+  },
+  {
+    index: 23,
+    rectangles: true,
+    taskText: "Find the room with a fishtank",
+    newWordsText: "fishtank - acuario",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: true, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    correct: false,
+  },
+  {
+    index: 24,
+    rectangles: true,
+    taskText: "Find the room with an iron",
+    newWordsText: "iron - plancha",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: true, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    correct: false,
+  },
+  {
+    index: 25,
+    rectangles: true,
+    taskText: "Find the room with a fridge",
+    newWordsText: "fridge - refrigerador",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: false, 3: false, 4: false, 5: true, 6: false, 7: false, 8: false},
+    correct: false,
+  },
+  {
+    index: 26,
+    rectangles: true,
+    taskText: "Find the room with a washing machine",
+    newWordsText: "washing machine - lavadora",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: true},
+    correct: false,
+  },
+  {
+    index: 27,
+    rectangles: true,
+    taskText: "Find the room with a bathtub",
+    newWordsText: "bathtub - bañera",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: false, 3: false, 4: false, 5: false, 6: true, 7: false, 8: false},
+    correct: false,
+  },
+  {
+    index: 28,
+    rectangles: true,
+    taskText: "Find the room with a microwave",
+    newWordsText: "microwave - microondas",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: false, 3: false, 4: false, 5: true, 6: false, 7: false, 8: false},
+    correct: false,
+  },
+  {
+    index: 29,
+    rectangles: true,
+    taskText: "",
+    newWordsText: "",
+    buttonValue: "Play again",
+    selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
+    answer: {1: false, 2: false, 3: false, 4: false, 5: true, 6: false, 7: false, 8: false},
+    correct: false,
+  },
+]
 
-const toggleFullscreen = () => {
-  imageHolder.classList.toggle("widened")
-  taskText.classList.toggle("smaller-task-text")
-  fullscreenButton.classList.toggle("fullscreen-icon")
-  fullscreenButton.classList.toggle("exit-sull-screen")
-  rectangleBathroom.classList.toggle("rectangle-bathroom-fullscreen")
+let index = 0;
+
+const createVocabularyQuiz = (quizArray) => {
+  const vocabularyQuiz = document.querySelector(".find-objects-quiz");
+  const imageHolder = document.querySelector(".image-holder");
+
+  let fullscreenButton = document.querySelector(".fullscreen-icon")
+
+    if (quizArray[index].rectangles) {
+      const rectangleOffice = document.createElement("div");
+      rectangleOffice.className = "rectangle-office";
+
+      const rectangleBedroom = document.createElement("div");
+      rectangleBedroom.className = "rectangle-bedroom";
+
+      const rectangleBalcony = document.createElement("div");
+      rectangleBalcony.className = "rectangle-balcony";
+
+      const rectangleLivingRoom = document.createElement("div");
+      rectangleLivingRoom.className = "rectangle-living-room";
+
+      const rectanglekitchen = document.createElement("div");
+      rectanglekitchen.className = "rectangle-kitchen";
+
+      const rectangleBathroom = document.createElement("div");
+      rectangleBathroom.className = "rectangle-bathroom";
+
+      const rectangleHall = document.createElement("div");
+      rectangleHall.className = "rectangle-hall";
+
+      const rectangleBasement = document.createElement("div");
+      rectangleBasement.className = "rectangle-basement";
+
+      const taskAssigner = document.createElement("div");
+      taskAssigner.className = "task-assigner";
+
+      const taskText = document.createElement("p");
+      taskText.className = "task-text";
+      taskText.textContent = `${quizArray[index].taskText}`
+
+      const newWords = document.createElement("p");
+      newWords.className = "new-words";
+      newWords.id = "task-words"
+      newWords.textContent = `${quizArray[index].newWordsText}`
+
+      const submitButton = document.createElement("button")
+      submitButton.className = "next-button"
+      submitButton.textContent = "Submit"
+
+      if (quizArray[index].buttonValue) {
+        submitButton.textContent = `${quizArray[index].buttonValue}`
+      }
+
+      vocabularyQuiz.appendChild(taskAssigner)
+      imageHolder.appendChild(rectangleOffice)
+      imageHolder.appendChild(rectangleBedroom)
+      imageHolder.appendChild(rectangleBalcony)
+      imageHolder.appendChild(rectangleLivingRoom)
+      imageHolder.appendChild(rectanglekitchen)
+      imageHolder.appendChild(rectangleBathroom)
+      imageHolder.appendChild(rectangleHall)
+      imageHolder.appendChild(rectangleBasement)
+      taskAssigner.appendChild(taskText)
+      taskAssigner.appendChild(newWords)
+
+      if (quizArray[index].taskText === "") {
+        taskAssigner.removeChild(taskText)
+      }
+
+      if (quizArray[index].newWordsText === "") {
+        taskAssigner.removeChild(newWords)
+        const congratsLine = document.createElement("p")
+        congratsLine.className = "congrats-line"
+        congratsLine.textContent = "Awesome job!"
+        taskAssigner.appendChild(congratsLine)
+      }
+
+      taskAssigner.appendChild(submitButton)
+
+      const toggleFullscreen = () => {
+        imageHolder.classList.toggle("widened")
+        taskText.classList.toggle("smaller-task-text")
+        taskAssigner.classList.toggle("small-task-assigner")
+        fullscreenButton.classList.toggle("fullscreen-icon")
+        fullscreenButton.classList.toggle("exit-full-screen")
+        rectangleOffice.classList.toggle("rectangle-office-fullscreen")
+        rectangleBedroom.classList.toggle("rectangle-bedroom-fullscreen")
+        rectangleBalcony.classList.toggle("rectangle-balcony-fullscreen")
+        rectangleLivingRoom.classList.toggle("rectangle-living-room-fullscreen")
+        rectanglekitchen.classList.toggle("rectangle-kitchen-fullscreen")
+        rectangleBathroom.classList.toggle("rectangle-bathroom-fullscreen")
+        rectangleHall.classList.toggle("rectangle-hall-fullscreen")
+        rectangleBasement.classList.toggle("rectangle-basement-fullscreen")
+        submitButton.classList.toggle("next-button-fullscreen")
+      }
+
+      const changeObjectColor = (event) => {
+        const rectangle = event.target
+        rectangle.classList.toggle("rectangle-clicked")
+      }
+
+      if (!fullscreenButton) {
+        fullscreenButton = document.querySelector(".exit-full-screen")
+        taskText.classList.toggle("smaller-task-text")
+        taskAssigner.classList.toggle("small-task-assigner")
+        rectangleOffice.classList.toggle("rectangle-office-fullscreen")
+        rectangleBedroom.classList.toggle("rectangle-bedroom-fullscreen")
+        rectangleBalcony.classList.toggle("rectangle-balcony-fullscreen")
+        rectangleLivingRoom.classList.toggle("rectangle-living-room-fullscreen")
+        rectanglekitchen.classList.toggle("rectangle-kitchen-fullscreen")
+        rectangleBathroom.classList.toggle("rectangle-bathroom-fullscreen")
+        rectangleHall.classList.toggle("rectangle-hall-fullscreen")
+        rectangleBasement.classList.toggle("rectangle-basement-fullscreen")
+        submitButton.classList.toggle("next-button-fullscreen")
+      }
+
+      fullscreenButton.addEventListener("click", toggleFullscreen)
+
+      const checkResults = (userSelection, correctAnswer) => {
+        if (submitButton.textContent === "Next") {
+          index++
+          submitButton.textContent = "Submit"
+          vocabularyQuiz.removeChild(taskAssigner)
+          imageHolder.removeChild(rectangleOffice)
+          imageHolder.removeChild(rectangleBedroom)
+          imageHolder.removeChild(rectangleBalcony)
+          imageHolder.removeChild(rectangleLivingRoom)
+          imageHolder.removeChild(rectanglekitchen)
+          imageHolder.removeChild(rectangleBathroom)
+          imageHolder.removeChild(rectangleHall)
+          imageHolder.removeChild(rectangleBasement)
+          fullscreenButton.removeEventListener("click", toggleFullscreen)
+          createVocabularyQuiz(quizArray)
+          return
+        }
+
+        if (submitButton.textContent === "Try again") {
+          imageHolder.appendChild(rectangleOffice)
+          imageHolder.appendChild(rectangleBedroom)
+          imageHolder.appendChild(rectangleBalcony)
+          imageHolder.appendChild(rectangleLivingRoom)
+          imageHolder.appendChild(rectanglekitchen)
+          imageHolder.appendChild(rectangleBathroom)
+          imageHolder.appendChild(rectangleHall)
+          imageHolder.appendChild(rectangleBasement)
+          submitButton.textContent = "Submit"
+          vocabularyQuiz.removeChild(taskAssigner)
+          imageHolder.removeChild(rectangleOffice)
+          imageHolder.removeChild(rectangleBedroom)
+          imageHolder.removeChild(rectangleBalcony)
+          imageHolder.removeChild(rectangleLivingRoom)
+          imageHolder.removeChild(rectanglekitchen)
+          imageHolder.removeChild(rectangleBathroom)
+          imageHolder.removeChild(rectangleHall)
+          imageHolder.removeChild(rectangleBasement)
+          fullscreenButton.removeEventListener("click", toggleFullscreen)
+          quizArray[index].selected[1] = false
+          quizArray[index].selected[2] = false
+          quizArray[index].selected[3] = false
+          quizArray[index].selected[4] = false
+          quizArray[index].selected[5] = false
+          quizArray[index].selected[6] = false
+          quizArray[index].selected[7] = false
+          quizArray[index].selected[8] = false
+          createVocabularyQuiz(quizArray)
+          return;
+        }
+
+        if (submitButton.textContent === "Play again") {
+          submitButton.textContent = "Submit"
+          vocabularyQuiz.removeChild(taskAssigner)
+          imageHolder.removeChild(rectangleOffice)
+          imageHolder.removeChild(rectangleBedroom)
+          imageHolder.removeChild(rectangleBalcony)
+          imageHolder.removeChild(rectangleLivingRoom)
+          imageHolder.removeChild(rectanglekitchen)
+          imageHolder.removeChild(rectangleBathroom)
+          imageHolder.removeChild(rectangleHall)
+          imageHolder.removeChild(rectangleBasement)
+          for (let i = 0; i < quizArray.length; i++) {
+            quizArray[i].selected[1] = false
+            quizArray[i].selected[2] = false
+            quizArray[i].selected[3] = false
+            quizArray[i].selected[4] = false
+            quizArray[i].selected[5] = false
+            quizArray[i].selected[6] = false
+            quizArray[i].selected[7] = false
+            quizArray[i].selected[8] = false
+            quizArray[i].correct = false
+          }
+          index = 0
+          createVocabularyQuiz(quizArray)
+          return;
+        }
+
+        const userInput = []
+        const correctAnswerArr = []
+        for (const prop in userSelection) {
+          userInput.push(userSelection[prop])
+        }
+
+        for (const prop in correctAnswer) {
+          correctAnswerArr.push(correctAnswer[prop])
+        }
+
+        const userAnswer = userInput.join("")
+        const correctAnswer2 = correctAnswerArr.join("")
+
+        if (userAnswer === correctAnswer2) {
+          quizArray[index].correct = true
+          submitButton.textContent = "Next"
+
+          rectangleOffice.classList.remove("rectangle-clicked")
+          rectangleBedroom.classList.remove("rectangle-clicked")
+          rectangleBalcony.classList.remove("rectangle-clicked")
+          rectangleLivingRoom.classList.remove("rectangle-clicked")
+          rectanglekitchen.classList.remove("rectangle-clicked")
+          rectangleBathroom.classList.remove("rectangle-clicked")
+          rectangleHall.classList.remove("rectangle-clicked")
+          rectangleBasement.classList.remove("rectangle-clicked")
+
+          if (quizArray[index].answer[1]) {
+            rectangleOffice.classList.add("rectangle-correct")
+          } 
+          
+          if (quizArray[index].answer[2]) {
+            rectangleBedroom.classList.add("rectangle-correct")
+          }
+          
+          if (quizArray[index].answer[3]) {
+            rectangleBalcony.classList.add("rectangle-correct")
+          }
+          
+          if (quizArray[index].answer[4]) {
+            rectangleLivingRoom.classList.add("rectangle-correct")
+          }
+          
+          if (quizArray[index].answer[5]) {
+            rectanglekitchen.classList.add("rectangle-correct")
+          }
+          
+          if (quizArray[index].answer[6]) {
+            rectangleBathroom.classList.add("rectangle-correct")
+          }
+          
+          if (quizArray[index].answer[7]) {
+            rectangleHall.classList.add("rectangle-correct")
+          }
+          
+          if (quizArray[index].answer[8]) {
+            rectangleBasement.classList.add("rectangle-correct")
+          }
+
+          const correctLine = document.createElement("p");
+          correctLine.className = "correct-line";
+          correctLine.textContent = "Correct!";
+          taskAssigner.appendChild(correctLine);
+        } else {
+          const incorrectLine = document.createElement("p");
+          incorrectLine.className = "incorrect-line";
+          incorrectLine.textContent = "Wrong";
+          taskAssigner.appendChild(incorrectLine);
+          submitButton.textContent = "Try again"
+
+          rectangleOffice.classList.remove("rectangle-clicked")
+          rectangleBedroom.classList.remove("rectangle-clicked")
+          rectangleBalcony.classList.remove("rectangle-clicked")
+          rectangleLivingRoom.classList.remove("rectangle-clicked")
+          rectanglekitchen.classList.remove("rectangle-clicked")
+          rectangleBathroom.classList.remove("rectangle-clicked")
+          rectangleHall.classList.remove("rectangle-clicked")
+          rectangleBasement.classList.remove("rectangle-clicked")
+
+          imageHolder.removeChild(rectangleOffice)
+          imageHolder.removeChild(rectangleBedroom)
+          imageHolder.removeChild(rectangleBalcony)
+          imageHolder.removeChild(rectangleLivingRoom)
+          imageHolder.removeChild(rectanglekitchen)
+          imageHolder.removeChild(rectangleBathroom)
+          imageHolder.removeChild(rectangleHall)
+          imageHolder.removeChild(rectangleBasement)
+        }
+      }
+
+      submitButton.addEventListener("click", () => {
+        checkResults(quizArray[index].selected, quizArray[index].answer)
+      })
+
+      const toggleSelected = (selectedItem) => {
+        if (selectedItem) {
+          return false
+        } else {
+          return true
+        }
+      }
+
+      const changeReactangles = (event, number) => {
+        if (quizArray[index].correct) {
+          console.log("not added")
+          return;
+        } else {
+          console.log("added")
+          changeObjectColor(event)
+          quizArray[index].selected[number] = toggleSelected(quizArray[index].selected[number])
+        }
+      }
+
+      console.log("gotetms")
+      rectangleOffice.addEventListener("click", (event) => {
+        console.log("triggered")
+        changeReactangles(event, 1)
+      })
+
+      rectangleBedroom.addEventListener("click", (event) => {
+        changeReactangles(event, 2)
+      })
+
+      rectangleBalcony.addEventListener("click", (event) => {
+        changeReactangles(event, 3)
+      })
+
+      rectangleLivingRoom.addEventListener("click", (event) => {
+        changeReactangles(event, 4)
+      })
+
+      rectanglekitchen.addEventListener("click", (event) => {
+        changeReactangles(event, 5)
+      })
+
+      rectangleBathroom.addEventListener("click", (event) => {
+        changeReactangles(event, 6)
+      })
+
+      rectangleHall.addEventListener("click", (event) => {
+        changeReactangles(event, 7)
+      })
+
+      rectangleBasement.addEventListener("click", (event) => {
+        changeReactangles(event, 8)
+      })
+    } else {
+
+    }
+  }
+
+createVocabularyQuiz(vocabularyQuiz)
+
+const finishButton = document.querySelector('.finish-lesson-button-2');
+const congratsPopup = document.querySelector('.popup-congrats');
+const congratsBox = document.querySelector('.popup-box');
+const congratsText = document.querySelector('.congrats-text')
+const congratulate = () => {
+  for (let i = 1; i < questions.length; i++) {
+    if (questions[i].done === false) {
+      const errorMessage = document.querySelector('.error-message');
+      errorMessage.classList.add('error-shown');
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+      });
+      return;
+    }
+  }
+
+  congratsPopup.classList.add('popup-congrats-isclicked');
+  congratsText.textContent = `Congratualtions, ${userName}!`;
+  const nextLessonButton = document.querySelector('.next-lesson-button');
+  nextLessonButton.addEventListener('click', () => {
+    if (lessonIsDone) {
+      return;
+    } else {
+      lessonIsDone = true;
+      localStorage.setItem('lessons', JSON.stringify({1: 'complete', 2: 'complete', 3: 'complete', 4: 'complete', 5: "complete", 6: "complete", 7: "complete", 8: "complete", 9: "complete", 10: "unlocked"}));
+      localStorage.setItem('lesson9Status', lessonIsDone);
+    }
+  })
 }
-
-const changeObjectColor = (event) => {
-  const rectangle = event.target
-  rectangle.classList.toggle("rectangle-clicked")
-}
-
-fullscreenButton.addEventListener("click", toggleFullscreen)
-rectangleBathroom.addEventListener("click", (event) => {
-  changeObjectColor(event)
-})

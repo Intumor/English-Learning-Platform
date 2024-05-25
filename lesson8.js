@@ -685,8 +685,8 @@ const congratulate = () => {
       return;
     } else {
       lessonIsDone = true;
-      localStorage.setItem('lessons', JSON.stringify({1: 'complete', 2: 'complete', 3: 'complete', 4: 'complete', 5: "complete", 6: "complete", 7: "complete", 8: "unlocked" }));
-      localStorage.setItem('lesson7Status', lessonIsDone);
+      localStorage.setItem('lessons', JSON.stringify({1: 'complete', 2: 'complete', 3: 'complete', 4: 'complete', 5: "complete", 6: "complete", 7: "complete", 8: "complete", 9: "unlocked"}));
+      localStorage.setItem('lesson8Status', lessonIsDone);
     }
   })
 }

@@ -90,14 +90,23 @@ hr {
   background-color: var(--flash-quiz-color);
   padding: 4rem 2rem;
   border-radius: 1rem;
+  width: 30rem;
+}
+
+.small-task-assigner {
+  width: 22rem;
 }
 
 .task-text {
   font-size: 3rem;
+  max-width: 26.1rem;
+  line-height: 4rem;
 }
 
 .smaller-task-text {
   font-size: 2rem;
+  line-height: 3rem;
+  margin-bottom: -1.5rem;
 }
 
 .fullscreen-icon {
@@ -113,7 +122,7 @@ hr {
   transform: scale(1.08);
 }
 
-.exit-sull-screen {
+.exit-full-screen {
   position: absolute;
   top: 1%;
   right: 1%;
@@ -128,12 +137,20 @@ hr {
 
 
 .next-button {
-  width: 10rem;
+  max-width: 20rem;
   margin: 0 auto;
   background-color: rgb(128, 24, 226);
   color: white;
   font-weight: 400;
-  transition: all 0.05s;
+  transition: background-color 0.05s;
+  white-space: nowrap;
+}
+
+.next-button-fullscreen {
+  font-size: 1.6rem;
+  max-width: 20rem;
+  text-align: center;
+  margin-top: -0.5rem;
 }
 
 .next-button:hover {
@@ -147,8 +164,83 @@ hr {
 #task-words {
   font-size: 1.7rem;
   padding: 1.4rem;
-  margin: 4rem auto;
+  margin: 3.5rem auto;
   border-radius: 0.8rem;
+}
+
+.rectangle-office {
+  width: 21.5rem;
+  height: 10.6rem;
+  position: absolute;
+  top: 6.4%;
+  left: 6%;
+  cursor: pointer;
+  transition: all 0.02s;
+}
+
+.rectangle-office-fullscreen {
+  width: 33.1rem;
+  height: 16rem;
+}
+
+.rectangle-bedroom {
+  width: 26.45rem;
+  height: 10.6rem;
+  position: absolute;
+  top: 6.4%;
+  left: 39.25%;
+  cursor: pointer;
+  transition: all 0.02s;
+}
+
+.rectangle-bedroom-fullscreen {
+  width: 40.7rem;
+  height: 16.5rem;
+}
+
+.rectangle-balcony {
+  width: 13rem;
+  height: 10.6rem;
+  position: absolute;
+  top: 6.4%;
+  left: 80%;
+  cursor: pointer;
+  transition: all 0.02s;
+}
+
+.rectangle-balcony-fullscreen {
+  width: 20rem;
+  height: 16.7rem;
+}
+
+.rectangle-living-room {
+  width: 30.1rem;
+  height: 10.6rem;
+  position: absolute;
+  top: 29.7%;
+  left: 16.7%;
+  cursor: pointer;
+  transition: all 0.02s;
+}
+
+.rectangle-living-room-fullscreen {
+  width: 46.2rem;
+  height: 16rem;
+}
+
+.rectangle-kitchen {
+  width: 21.7rem;
+  height: 10.6rem;
+  position: absolute;
+  top: 29.7%;
+  left: 63.1%;
+  cursor: pointer;
+  transition: all 0.02s;
+}
+
+.rectangle-kitchen-fullscreen {
+  width: 33.3rem;
+  height: 16.3rem;
 }
 
 .rectangle-bathroom {
@@ -166,6 +258,71 @@ hr {
   height: 16.3rem;
 }
 
+.rectangle-hall {
+  width: 36.6rem;
+  height: 10.6rem;
+  position: absolute;
+  bottom: 26.7%;
+  left: 32%;
+  cursor: pointer;
+  transition: all 0.02s;
+}
+
+.rectangle-hall-fullscreen {
+  width: 56.2rem;
+  height: 16.2rem;
+}
+
+.rectangle-basement {
+  width: 29rem;
+  height: 10.4rem;
+  position: absolute;
+  bottom: 3.9%;
+  left: 29.3%;
+  cursor: pointer;
+  transition: all 0.02s;
+}
+
+.rectangle-basement-fullscreen {
+  width: 45rem;
+  height: 15.8rem;
+}
+
 .rectangle-clicked {
+  background-color: rgba(0, 20, 119, 0.589);
+}
+
+.rectangle-correct {
   background-color: rgba(0, 128, 0, 0.589);
+}
+
+
+.correct-line {
+  margin-top: 3rem;
+  margin-bottom: -1rem;
+  background-color: rgb(0, 128, 0);
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.incorrect-line {
+  margin-top: 3rem;
+  margin-bottom: -1rem;
+  background-color: rgb(199, 18, 18);
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.congrats-line {
+  margin-bottom: 2.3rem;
+  font-size: 2.5rem;
+  line-height: 4rem;
+}
+
+.last-par {
+  margin-bottom: 8rem;
 }
