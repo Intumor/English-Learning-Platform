@@ -1,4 +1,4 @@
-let lessonIsDone = localStorage.getItem('lesson8Status');
+let lessonIsDone = localStorage.getItem('lesson9Status');
 let userName = localStorage.getItem('username');
 
 const fillInQuiz = [
