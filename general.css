@@ -243,6 +243,10 @@ button:active {
   color: var(--website-theme);
 }
 
+.highlighted {
+  color: var(--red-letters);
+}
+
 /*table*/
 
 table {
