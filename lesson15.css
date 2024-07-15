@@ -1,0 +1,38 @@
+#narrowed-schoolboard {
+  width: 40rem;
+}
+
+#centered-text {
+  text-align: center;
+}
+
+.ordinary-cell:not(#full-table-1 .ordinary-cell, #full-table-2 .ordinary-cell) {
+  background-color: var(--table-color);
+  padding: 2rem 2rem 0 2rem;
+  vertical-align: text-top;
+  text-align: left;
+  height: fit-content;
+  width: 20.5rem;
+}
+
+.ordinary-cell p:not(#full-table-1 .ordinary-cell, #full-table-2 .ordinary-cell) {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 2rem;
+  line-height: 2rem;
+}
+
+.ordinary-cell.prep:not(#full-table-1 .ordinary-cell, #full-table-2 .ordinary-cell) {
+  text-align: center;
+  vertical-align: middle;
+  width: 8rem;
+}
+
+th:not(#full-table-1 .ordinary-cell, #full-table-2 .ordinary-cell) {
+  background-color: var(--schoolboard-color);
+  color: white;
+}
+
+#margined-top {
+  margin-top: 3.1rem;
+}

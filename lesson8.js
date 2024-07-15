@@ -593,6 +593,9 @@ const createQuiz = (questionsArr, num) => {
         } else if (word === "weren't") {
           word = "were not";
           return word;
+        } else if (word === "let's") {
+          word = "let us";
+          return word;
         } else {
           return word;
         }

@@ -251,10 +251,6 @@ const createQuiz = (questionsArr, num) => {
     incorrectIcon.src = "icons/icons8-wrong.svg"
     incorrectIcon.alt = "wrong";
 
-
-    const TryAgainText = document.createElement('div');
-    TryAgainText.textContent = "Try again!";
-
     let inputValue = "";
 
     section.appendChild(quiz);
@@ -352,6 +348,9 @@ const createQuiz = (questionsArr, num) => {
           return word;
         } else if (word === "weren't") {
           word = "were not";
+          return word;
+        } else if (word === "let's") {
+          word = "let us";
           return word;
         } else {
           return word;
