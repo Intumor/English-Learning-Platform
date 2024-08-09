@@ -87,12 +87,16 @@ const createFillInBlanksQuiz = (questionsArr, num) => {
     incorrectIcon.src = "icons/icons8-wrong.svg"
     incorrectIcon.alt = "wrong";
 
+    let bfrlabel = "";
+
     if (question.beforeInput) {
       const beforeLabel = document.createElement('label');
-      beforeLabel.className = "fill-in-blanks-label";
+      beforeLabel.className = "fill-in-blanks-label-2";
       beforeLabel.setAttribute("for", `drop-down-${question.id}`);
       beforeLabel.textContent = question.beforeInput;
       quizContainer.appendChild(beforeLabel);
+      console.log(beforeLabel) 
+      bfrlabel = beforeLabel;
     }
 
     section.appendChild(quiz);
@@ -112,6 +116,11 @@ const createFillInBlanksQuiz = (questionsArr, num) => {
     dropDown.appendChild(option2);
     dropDown.appendChild(option3);
     quizContainer.appendChild(label);
+    label.insertBefore(dropDown, label.firstChild);
+
+    if (question.beforeInput) {
+      label.insertBefore(bfrlabel, label.firstChild);
+    }
 
     if (!question.options.option3) {
       dropDown.removeChild(option3);

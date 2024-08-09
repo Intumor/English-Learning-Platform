@@ -161,14 +161,13 @@ section {
   box-shadow: 0 0 20px 10px rgba(255, 115, 0, 0.6);
 }
 
-@media only screen and (max-width: 840) {
+@media only screen and (max-width: 840px) {
   .map {
     border: 1px solid black;
     position: relative;
     background-color: rgb(255, 255, 255);
     height: 800px;
     background-image: url(./images/map.png);
-    background-size: 790px 800px;
     width: 100%;
     margin: 1rem 1rem;
   }  

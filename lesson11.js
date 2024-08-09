@@ -196,6 +196,19 @@ const createFillInQuiz = (questionsArr, num) => {
       }
     });
 
+    quizTextBar.addEventListener('input', () => {
+      const tempSpan = document.createElement('span');
+      tempSpan.style.visibility = 'hidden';
+      tempSpan.style.position = 'absolute';
+      tempSpan.style.whiteSpace = 'pre';
+      tempSpan.style.fontSize = window.getComputedStyle(quizTextBar).fontSize;
+      tempSpan.textContent = quizTextBar.value || quizTextBar.placeholder;
+      document.body.appendChild(tempSpan);
+      const newWidth = tempSpan.offsetWidth + 50;
+      quizTextBar.style.width = `${Math.min(newWidth, 250)}px`
+      document.body.removeChild(tempSpan);
+    });
+
     const handleKeyDown = (event) => {
       if (event.key === 'ArrowDown') {
         event.preventDefault();
@@ -273,6 +286,13 @@ const createQuiz = (questionsArr, num) => {
   const section = document.querySelector(`#section-${num}`);
   const quiz = document.createElement('div');
   quiz.className = 'quiz';
+
+  if (num === "four") {
+    const header = document.createElement('h2')
+    header.className = "quiz-header intro-header"
+    header.textContent = 'Rewrite the following sentences with the words "nothing" and "anything" using the opposite word from the one that is being used in the sentence'
+    quiz.appendChild(header);
+  }
 
   questionsArr.forEach((question, index) => {
     if (question.type === 'new-word') {

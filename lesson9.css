@@ -1,48 +1,5 @@
-h2 {
-  margin: 2rem 1rem 2rem 1rem;
-  font-size: 3.3rem;
-  text-align: center;
-}
-
-
-.schoolboard {
-  border: 4px solid rgb(114, 53, 13);
-  border-radius: 0.5rem;
-  max-width: 60rem;
-  background-color: var(--schoolboard-color);
-  margin: 5rem auto;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-.explanation {
-  font-size: 2.3rem;
-  margin: 0 0 0 0;
-}
-
-.example {
-  margin: 0rem 0 0 2rem;
-  display: block;
-}
-
-.for-example {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin: 1rem 0;
-}
-
-.schoolboard p:last-child {
-  margin-top: 0;
-}
-
 hr {
   margin: 2rem 0;
-}
-
-#margin-top-5 {
-  margin-top: 5rem;
 }
 
 #section-two {
@@ -54,14 +11,19 @@ hr {
   margin: 0;
 }
 
+main section#last-section-9 {
+  padding-bottom: 1.9rem;
+}
+
 .find-objects-quiz {
   width: 100%;
   height: 90%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   position: relative;
   margin: 5rem auto;
   align-items: center;
+  gap: 5%;
 }
 
 .image-holder {
@@ -131,10 +93,9 @@ hr {
   transition: all 0.25s;
 }
 
-.exit-sull-screen:hover {
+.exit-full-screen:hover {
   transform: scale(0.92);
 }
-
 
 .next-button {
   max-width: 20rem;
@@ -296,7 +257,6 @@ hr {
   background-color: rgba(0, 128, 0, 0.589);
 }
 
-
 .correct-line {
   margin-top: 3rem;
   margin-bottom: -1rem;
@@ -324,5 +284,113 @@ hr {
 }
 
 .last-par {
-  margin-bottom: 8rem;
+  margin-bottom: 7.8rem;
+}
+
+@media only screen and (max-width: 1330px) {
+  .fullscreen-icon {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+  .task-assigner {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: var(--flash-quiz-color);
+    padding: 3.5rem 1rem;
+    border-radius: 1rem;
+    width: 23rem;
+  }
+
+  .task-text {
+    font-size: 2rem;
+    max-width: 26.1rem;
+    line-height: 4rem;
+  }
+
+  #task-words {
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    margin: 1.6rem auto 2.5rem;
+    border-radius: 0.8rem;
+  }
+
+  .next-button {
+    max-width: 15rem;
+    margin: 0 auto;
+    background-color: rgb(128, 24, 226);
+    color: white;
+    font-weight: 400;
+    transition: background-color 0.05s;
+    white-space: nowrap;
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .find-objects-quiz {
+    gap: 3%;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  
+  .apartment-img {
+    width: 65rem;;
+    margin-bottom: 4rem;
+  }
+
+  .rectangle-living-room {
+    width: 30.1rem;
+    height: 10.6rem;
+    top: 27.5%;
+    left: 16.7%;
+  }
+  
+  .rectangle-kitchen {
+    width: 21.7rem;
+    height: 10.6rem;
+    top: 27.5%;
+    left: 63.1%;
+  }
+
+  .rectangle-bathroom {
+    width: 11.5rem;
+    height: 10.6rem;
+    bottom: 32.1%;
+    left: 14.5%;
+  }
+  
+  .rectangle-hall {
+    width: 36.6rem;
+    height: 10.6rem;
+    bottom: 32.1%;
+    left: 32%;
+  }
+  
+  .rectangle-basement {
+    width: 29rem;
+    height: 10.4rem;
+    bottom: 10.8%;
+    left: 29.3%;
+  }
+}
+
+@media only screen and (max-width: 690px) { 
+  #section-four {
+    min-width: 100%;
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .margin-top-5#margin-top-5 {
+    margin-top: 4.5rem;
+  }
+
+  main section#last-section-9 {
+    padding-bottom: 0.1rem;
+  }
 }

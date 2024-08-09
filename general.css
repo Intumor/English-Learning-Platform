@@ -27,19 +27,28 @@ body {
   color: white;
 }
 
-h1:not(.intro-header) {
+h1:not(.intro-header, #index-h1, #map-h1) {
   text-align: center;
   margin: 2rem auto;
   font-size: 3.6rem;
 }
 
-h2:not(.intro-header) {
+h2:not(.intro-header, #index-h2) {
   margin: 2rem 1rem 2rem 1rem;
   font-size: 3.3rem;
   text-align: center;
 }
 
-section {
+h2.quiz-header.intro-header {
+  margin: 0;
+  font-size: 3.3rem;
+}
+
+.margin-top-5#margin-top-5 {
+  margin-top: 6rem;
+}
+
+section:not(#index-section, #map-section) {
   max-width: 850px;
   margin: -1.8rem auto 1rem;
   padding: 2rem;
@@ -306,7 +315,7 @@ th {
   font-style: italic;
 }
 
-h3 {
+h3:not(#index-h3) {
   font-size: 2.8rem;
   font-style: italic;
   text-decoration: underline;
@@ -499,10 +508,12 @@ li {
   font-weight: 700;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border: none;
+  margin-right: 1.3rem;
 }
 
 .fill-in-blanks-label {
   margin: 1rem 0;
+  line-height: 5rem;
 }
 
 .submit-fill-in {
@@ -514,4 +525,341 @@ li {
 
 .submit-fill-in {
   background-color: rgb(228, 228, 228);
+}
+
+.download-table-button {
+  font-size: 1.7rem;
+  border: 1px solid white;
+  width: fit-content;
+  margin: 2.5rem auto;
+  padding: 1rem 2rem;
+  border-radius: 5rem;
+  background-color: rgb(132, 0, 255);
+  cursor: pointer;
+  transition: all 0.15s;
+  display: none;
+}
+
+.download-table-button:hover {
+  background-color: rgb(120, 0, 233);
+}
+
+#download-table-button-expanded {
+  margin: 4rem auto;
+}
+
+#download-table-button-margin-down-cut {
+  margin-bottom: 1rem;
+}
+
+#download-table-button-shortened {
+  margin: 1rem auto;
+}
+
+#download-table-button-margin-top {
+  margin-top: 3rem;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flashcard-quiz {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px dashed white;
+}
+
+#after-recording-button {
+  margin-top: 6rem;
+}
+
+.fill-in-blanks-label-2 {
+  display: inline;
+  margin-right: 1.3rem;
+}
+
+.exercise-text {
+  font-size: 3rem;
+  margin: 1rem 0;
+  line-height: 3.7rem;
+}
+
+.inline-textbar {
+  width: 10rem;
+  min-width: 10rem;
+  margin: 1rem 1rem 0.8rem 1rem;
+}
+
+#margined-button {
+  margin-top: 2.9rem;
+}
+
+#margined-top {
+  margin-top: -2rem;
+}
+
+.bigger {
+  font-size: 2.4rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .example-no-board {
+    margin: 3rem 0 3rem 1.5rem;
+    font-size: 2rem;
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.8rem;
+    line-height: 3rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  input {
+    padding: 0.5rem;
+    width: 90%;
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .example-no-board {
+    margin: 3rem 0 3rem 0rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  p {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+  }
+
+  .bigger {
+    font-size: 1.8rem;
+  }
+
+  .exercise-text {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+
+  .inline-textbar {
+    width: 8rem;
+    min-width: 8rem;
+    margin: 0.4rem 0.7rem 0.4rem 0.7rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  h1:not(.intro-header, #index-h1, #map-h1) {
+    font-size: 2.5rem;
+    margin: 1rem auto;
+  }
+
+  h2:not(.intro-header, #index-h2) {
+    margin: 1rem 1rem 2rem 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  h2.quiz-header.intro-header {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+
+  .intro-header {
+    margin: 1rem 1rem 2rem 1rem;
+    font-size: 2.5rem;
+  }
+
+  ul li {
+    font-size: 1.8rem;
+  }
+
+  label {
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+  }
+
+  input {
+    padding: 0.7rem;
+    width: 100%;
+    font-size: 1.4rem;
+  }
+  
+  button {
+    display: block;
+    padding: 0.6rem 1.3rem;
+    margin: 1.5rem 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--website-theme);
+    font-weight: 700;
+    font-family: 'Roboto Mono', sans-serif;
+  }
+
+  .new-words {
+    margin: 2.5rem 1rem;
+    background-color: rgb(197, 197, 197);
+    color: black;
+    width: fit-content;
+    padding: 1.5rem 4rem 1.5rem 1.5rem;
+    border-radius: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  .quiz-textbar {
+    height: 3.5rem;
+  }
+
+  .divider {
+    border-bottom: 1.8px dashed white;
+    margin-top: 2rem;
+  }
+
+  .quiz {
+    margin: 4rem auto 4rem;
+    border: 0.5px solid rgb(255, 255, 255);
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
+
+  table:not(.number-table) {
+    display: none;
+  }
+
+  table.number-table td#letters-cell p {
+    font-size: 1.8rem;
+  }
+
+  table.number-table td#num-cell p {
+    font-size: 1.8rem;
+  }
+
+  .download-table-button {
+    display: block;
+  }
+
+  .for-example {
+    font-size: 1.9rem;
+  }
+
+  .example {
+    font-size: 1.5rem;
+  }
+
+  section#section-one.sec-one-2{
+    margin-bottom: 0rem;
+    padding-bottom: 0.2rem;
+  }
+
+  #after-quiz-button {
+    margin-top: -2.7rem;
+  }
+
+  p.centered {
+    font-size: 1.9rem;
+    margin: 1rem auto;
+  }
+
+  ol li {
+    font-size: 1.6rem;
+  }
+
+  ol {
+    margin-bottom: 3rem;
+  }
+
+  .dialogue-window {
+    margin: 2.5rem 0rem 2rem 0rem;
+  }
+
+  #record-tip {
+    font-size: 1.5rem;
+  }
+
+  .timer {
+    font-size: 3rem;
+    margin: 1.4rem auto 1.6rem;
+  }
+
+  .header-p {
+    font-size: 2rem;
+    text-align: center;
+    margin: 4rem auto 5rem;
+    line-height: 3rem;
+  }
+
+  .buttons-container .option {
+    font-size: 1.5rem;
+    padding: 0.8rem 1rem;
+  }
+
+  #after-flashqiz-button {
+    margin-top: 1.4rem;
+  }
+
+  .example-no-board {
+    margin: 2.5rem 0 2.5rem 0;
+    font-size: 1.6rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 0.8rem;
+    line-height: 3rem;
+  }
+
+  .drop-down {
+    padding: 0.3rem 0.5rem;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    margin-right: 1.3rem;
+  }
+
+  .fill-in-blanks-label {
+    margin: 0rem 0;
+    line-height: 3rem;
+  }
+  
+  .p-sub-header {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+
+  .margin-pusher {
+    margin-top: 4rem;
+  }
+
+  #after-recording-button {
+    margin-top: 4rem;
+  }
+
+  .schoolboard {
+    border: 4px solid rgb(114, 53, 13);
+    border-radius: 0.5rem;
+    max-width: 60rem;
+    background-color: var(--schoolboard-color);
+    margin: 3.5rem auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .video {
+    margin: 3.5rem auto;
+  }
+
+  p.adj {
+    font-size: 1.8rem;
+  }
 }

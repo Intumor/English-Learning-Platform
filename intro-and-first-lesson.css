@@ -209,8 +209,13 @@ th {
 .aligned-left {
   text-align: left;
   max-width: 81rem;
-  margin: 0 auto;
+  margin: 4rem auto;
 }
+
+#margin-removed {
+  margin-left: 0;
+}
+
 .margin-up {
   margin-top: -4rem;
 }
@@ -334,10 +339,6 @@ h3 {
 .full-table {
   max-width: 1250px;
   text-align: center;
-}
-
-.bigger {
-  font-size: 2.4rem;
 }
 
 .margined {
@@ -595,6 +596,14 @@ h3 {
   audio {
     margin: 1.8rem 0 1.8rem 0;
     width: 100%;
+  }
+
+  .finish-lesson-button {
+    margin: 3rem auto 0;
+  }
+
+  .margin-up {
+    margin-top: -2rem;
   }
 
 }

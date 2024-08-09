@@ -43,7 +43,7 @@
             <li>When will you do next Monday?</li>
           </ol>
           <div class="recording-box">
-            <p>Press "Start Recording" button when you're ready</p>
+            <p id="record-tip">Press "Start Recording" button when you're ready</p>
             <div class="timer" id="timer-1"></div>
             <audio controls class="self-recording" id="self-recording-1"></audio>
             <div class="recorder-buttons">
@@ -55,9 +55,11 @@
       <section id="section-two">
         <h2>Expressing desires, intentions, or requests</h2>
         <div class="schoolboard">
-          <p class="explanation">
-            Let's spend some time on how to properly express desires, intentions and requests. When we want someone to do something for us we put it thus way in English: "i want you to learn" which translates to "quiero que aprendas". So the second proonoun the one that we talk about should always answer to the qestion "whom" - (me, you, us, them, him, her)
-          </p>
+          <div class="example-box">
+            <p class="for-example">
+              Let's spend some time on how to properly express desires, intentions and requests. When we want someone to do something for us we put it thus way in English: "i want you to learn" which translates to "quiero que aprendas". So the second proonoun the one that we talk about should always answer to the qestion "whom" - (me, you, us, them, him, her)
+            </p>
+          </div>
           <p class="for-example">For example:</p>
           <div class="example-box">
             <p class="example">
@@ -81,14 +83,28 @@
         <h2>"How many" vs "How much"</h2>
         <div class="schoolboard">
           <div class="example-box">
-            <p class="for-example">We use how "much" with something we can't count:</p>
+            <p class="for-example">
+              We use how "much" with something we can't count:
+            </p>
+          </div>
+          <div>
             <p class="example">
               time, money, love, water
             </p>
           </div>
-          <p class="explanation">Before you say "Oh, wait but i can count money!" i will say you can't. You can count dollars, pesos, euros, rupees, but we can't coun't money, it's something abstract</p>
           <div class="example-box">
-            <p class="for-example">We use how "many" with something we can count:</p>
+            <p class="for-example">
+              Before you say "Oh, wait but i can count money!" i will say you can't. You can count dollars, pesos, euros, rupees, but we can't coun't money, it's something abstract
+            </p>
+          </div>
+
+          <div class="example-box">
+            <p class="for-example">
+              We use how "many" with something we can count:
+            </p>
+          </div>
+
+          <div>
             <p class="example">
               days, hours, dollars, people
             </p>
@@ -117,29 +133,28 @@
         <div class="schoolboard" id="schoolboard">
           <div class="example-box">
             <p class="for-example">When it comes to "little" vs "few", we use little with uncountables:</p>
-            <p class="example">
-              time, compassion, patience
-            </p>
           </div>
+          <p class="example">
+            time, compassion, patience
+          </p>
           <div class="example-box">
             <p class="for-example">And we use how "few" with countables:</p>
-            <p class="example">
-              people, cats, cars, animals
-            </p>
           </div>
-
+          <p class="example">
+            people, cats, cars, animals
+          </p>
           <div class="example-box">
             <p class="for-example">When it comes to "little" vs "small". We can also use little when we talk about someone's age, meaning they are young:</p>
-            <p class="example">
-              i saw two little girls playing outside
-            </p>
           </div>
+          <p class="example">
+            i saw two little girls playing outside
+          </p>
           <div class="example-box">
             <p class="for-example">And we use how "small" when we refer to size:</p>
-            <p class="example">
-              These shoes are small
-            </p>
           </div>
+          <p class="example">
+            These shoes are small
+          </p>
         </div>
       </section>
       <section id="section-six">
@@ -152,16 +167,16 @@
         <p>
           Great job! This one was difficult, so don't worry if you couldn't everything right. There were somethings that we haven't covered yet, but we will in the near future, for now just give your self some props for getting all the way here, you're making a lot of progress, and you should be proud of yourself. As you can see we are starting to build complex sentences, but everything is being built on the basic structures. So i will encourage you to keep finding a little bit of time, everyday, to go over them, as you can see their understanding is essential. Before you wrap up this lesson, i will have you take this last pop-quiz for today, to make sure you remember the infinitive from the previous lesson. Good luck and see you in the next one!
         </p>
-        <br><br>
+        <br><br class="removable-br">
         <p class="new-words">
           drink - beber <br>
           sleep - dormir <br>
           think - pensar <br>
-          eat -comer
+          eat - comer
         </p>
       </section>
       <section>
-        <button class="finish-lesson-button-2 margin-fixed-5">Complete lesson</button>
+        <button class="finish-lesson-button-2 margin-fixed-5" id="after-quiz-button">Complete lesson</button>
         <p class="error-message">Make sure to complete all the exercises!</p>
 
         <div class="popup-congrats">
