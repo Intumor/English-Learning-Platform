@@ -1,6 +1,6 @@
 let lessonIsDone = localStorage.getItem('lesson12Status');
 let userName = localStorage.getItem('username');
-
+/*
 const recordAnswer = (id) => {
   const startButton = document.querySelector(`#start-recording-${id}`);
   const deleteButton = document.querySelector(`#delete-recording-${id}`);
@@ -104,10 +104,10 @@ const recordAnswer = (id) => {
   startButton.addEventListener('click', startRecording);
 }
 
-recordAnswer(1);
+recordAnswer(1);*/
 
 const questions = [
-  {type: "header", headerText: "Rewrite the following numbers using letters:"},
+  {type: "header", headerText: "Reescribe los siguientes números usando letras:"},
   {id: 1, answer: 'twenty eight', done: false, textContent: '28', divider: 'remove'},
   {id: 2, answer: 'sixty four', done: false, textContent: '64'},
   {id: 3, answer: 'thirty seven', done: false, textContent: '37'},
@@ -121,7 +121,7 @@ const questions = [
 ]
 
 const questions2 = [
-  {type: "header", headerText: "Write down the following dates using only letters:"},
+  {type: "header", headerText: "Escribe las siguientes fechas usando solo letras:"},
   {id: 11, answer: 'january the first', answer2: "january first", answer3: 'first of january', answer4: "the first of january", done: false, textContent: '1 de enero', divider: 'remove'},
   {id: 12, answer: 'february the fifteenth', answer2: "february fifteenth", answer3: 'fifteenth of february', answer4: "the fifteenth of february", done: false, textContent: '15 de febrero'},
   {id: 13, answer: 'march the twenty second', answer2: "march twenty second", answer3: 'twenty second of march', answer4: "the twenty second of march", done: false, textContent: '22 de marzo'},
@@ -135,7 +135,7 @@ const questions2 = [
 ]
 
 const questions3 = [
-  {type: "header", headerText: "Write down the following dates using only letters:"},
+  {type: "header", headerText: "Escribe las siguientes fechas usando solo letras:"},
   {id: 21, answer: 'february the twelfth fourteen sixty one', answer2: "february twelfth fourteen sixty one", answer3: 'twelfth of february fourteen sixty one', answer4: "the twelfth of february fourteen sixty one", done: false, textContent: '12 de febrero de 1461', divider: 'remove'},
 
   {id: 22, answer: 'september the thirtieth nineteen ninety eight', answer2: "september thirtieth nineteen ninety eight", answer3: 'thirtieth of september nineteen ninety eight', answer4: "the thirtieth of september nineteen ninety eight", done: false, textContent: '30 de septiembre de 1998'},
@@ -155,7 +155,7 @@ const questions3 = [
   {id: 29, answer: 'december the fourteenth nineteen thirty four', answer2: "december fourteenth nineteen thirty four", answer3: 'fourteenth of december nineteen thirty four', answer4: "the fourteenth of december nineteen thirty four", done: false, textContent: '14 de diciembre de 1934'},
 
   {id: 30, answer: 'august the twentieth nineteen eighty seven', answer2: "august twentieth nineteen eighty seven", answer3: 'twentieth of august nineteen eighty seven', answer4: "the twentieth of august nineteen eighty seven", done: false, textContent: '20 de agosto de 1987'},
-  {type: "explanation", text: "Congratulations on your progress so far! You've done an amazing job and you're almost at the end of this course. We only have a handful of things left to learn that we will cover in the next four classes. A frendly reminder: don't forget to take some time going over the basic verb sctructures, the table from the first lessons. If you haven't been doing this, you absolutely should. This will make it easier to speak and understand English."}
+  {type: "explanation", text: "¡Felicidades por tu progreso hasta ahora! Has hecho un trabajo increíble y estás casi al final de este curso. Solo nos quedan un puñado de cosas por aprender que cubriremos en las próximas cuatro clases. Un recordatorio amistoso: no olvides dedicar tiempo a repasar las estructuras básicas del verbo, la tabla de las primeras lecciones. Si no lo has estado haciendo, deberías hacerlo. Esto facilitará hablar y entender el inglés."}
 ]
 
 
@@ -224,7 +224,7 @@ const createQuiz = (questionsArr, num) => {
     quizTextBar.className = 'quiz-textbar';
     quizTextBar.id = `quiz-textbar-${question.id}`;
     quizTextBar.type = 'text';
-    quizTextBar.placeholder = 'Your answer...';
+    quizTextBar.placeholder = 'Tu respuesta...';
     quizTextBar.autocomplete = 'off';
 
     const checkBox = document.createElement('div');
@@ -234,7 +234,7 @@ const createQuiz = (questionsArr, num) => {
     submitButton.className = 'submit';
     submitButton.id = `submit-${question.id}`;
     submitButton.type = 'submit';
-    submitButton.value = 'Check';
+    submitButton.value = 'Checar';
 
     const correct = document.createElement('div');
     correct.className = 'correct';
@@ -242,20 +242,18 @@ const createQuiz = (questionsArr, num) => {
 
     const correctIcon = document.createElement('img');
     correctIcon.src = "icons/icons8-correct.svg"
-    correctIcon.alt = "correct";
+    correctIcon.alt = "Correcto";
 
     const incorrect = document.createElement('div');
     incorrect.className = 'incorrect';
     incorrect.id = `incorrect-${question.id}`;
 
     const tryAgainText = document.createElement('p');
-    tryAgainText.textContent = "Try again!";
-
-
+    tryAgainText.textContent = "Inténtalo de nuevo";
 
     const incorrectIcon = document.createElement('img');
     incorrectIcon.src = "icons/icons8-wrong.svg"
-    incorrectIcon.alt = "wrong";
+    incorrectIcon.alt = "Incorrecto";
 
     let inputValue = "";
 
@@ -451,7 +449,7 @@ const congratulate = () => {
   }
 
   congratsPopup.classList.add('popup-congrats-isclicked');
-  congratsText.textContent = `Congratualtions, ${userName}!`;
+  congratsText.textContent = `¡Felicidades, ${userName}!`;
   const nextLessonButton = document.querySelector('.next-lesson-button');
   nextLessonButton.addEventListener('click', () => {
     if (lessonIsDone) {

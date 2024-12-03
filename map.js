@@ -3,7 +3,7 @@ let userName = localStorage.getItem('username');
 if (userName) {
   const header = document.querySelector('h1');
   header.textContent = "";
-  header.textContent = `Welcome back, ${userName}!`;
+  header.textContent = `¡Bienvenido de nuevo, ${userName}!`;
 }
 
 const completedLessons = {

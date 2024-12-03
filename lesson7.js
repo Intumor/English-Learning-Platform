@@ -28,8 +28,8 @@ const questions = [
 ]
 
 const explanation = 
-"These verb below are all regular but there is one thing that you should know about. Some verbs change in funny way when you spell them. It will still follow th rules from before: \"When a verb is regular we add \"ed\" to the end of it\". So it will still be the case with a verb like \"try\", when you hear it will sound exactly how you expect it to sound with a \"d\" at the end, but spelling will change slightly. It will look like this \"tried\". Mostly it only affects verbs that end with \"y\", but not all of them, for example the verb \"play\" wil be \"played\".<br><br>" +
-"Don't worry too much about it for now, we will gradualy go over them, and you will keep coming across them later on as well, so you'll memorize them with time. I just didn't want you to wrack your brain trying to figure out where it came from";
+"Estos verbos a continuación son todos regulares, pero hay una cosa que debes saber. Algunos verbos cambian de manera peculiar cuando los deletreas. Aún así, seguirán las reglas anteriores: \"Cuando un verbo es regular, añadimos \"ed\" al final\". Así que esto seguirá siendo el caso con un verbo como \"try\", cuando lo escuches sonará exactamente como esperas con una \"d\" al final, pero la ortografía cambiará ligeramente. Se verá así: \"tried\". Principalmente, solo afecta a los verbos que terminan en \"y\",  pero no todos ellos; por ejemplo, el verbo \"play\" será \"played\".<br><br>" +
+"No te preocupes demasiado por ello por ahora; lo repasaremos gradualmente y seguirás encontrándolos más adelante, así que los memorizarás con el tiempo. Solo quería que no te rompas la cabeza tratando de averiguar de dónde vino";
 
 const newWordsContent2 = 
 "pay - pagar <br>" +
@@ -42,9 +42,9 @@ const newWordsContent2 =
 const questions2 = [
   {type: "explanation", text: explanation},
   {type: 'new-word', content: newWordsContent2},
-  {id: 16, answer: 'i paid for it', done: false, textContent: 'Como se dice "Me gusta beber"', divider: 'remove'},
-  {id: 17, answer: 'she did not pay me', done: false, textContent: 'Como se dice "Me gusta ver"'},
-  {id: 18, answer: 'we will pay him', done: false, textContent: 'Como se dice "Quiero ir"'},
+  {id: 16, answer: 'i paid for it', done: false, textContent: 'Como se dice "Yo pagué por ello"', divider: 'remove'},
+  {id: 17, answer: 'she did not pay me', done: false, textContent: 'Como se dice "Ella no me pagó"'},
+  {id: 18, answer: 'we will pay him', done: false, textContent: 'Como se dice "Le pagaremos"'},
   {id: 19, answer: 'i will try it', done: false, textContent: 'Como se dice "Voy a intentarlo"'},
   {id: 20, answer: 'i tried it yesterday', done: false, textContent: 'Como se dice "Lo intenté ayer"'},
   {id: 21, answer: 'he will try it tomorrow', done: false, textContent: 'Como se dice "Él lo intentará mañana"'},
@@ -105,7 +105,7 @@ const newWordsContent5 =
 
 const questions5 = [
   {type: 'new-word', content: newWordsContent5},
-  {id: 50, answer: 'go', done: false, textContent: 'Como se dice "Ve"?', divider: 'remove'},
+  {id: 50, answer: 'go', done: false, textContent: 'Como se dice "Ve"', divider: 'remove'},
   {id: 51, answer: 'do not go', done: false, textContent: 'Como se dice "No te vayas"'},
   {id: 52, answer: 'let us go', done: false, textContent: 'Como se dice "Vamos"'},
   {id: 53, answer: 'do not talk to me', done: false, textContent: 'Como se dice "No me hables"'},
@@ -174,7 +174,7 @@ const createQuiz = (questionsArr, num) => {
     quizTextBar.className = 'quiz-textbar';
     quizTextBar.id = `quiz-textbar-${question.id}`;
     quizTextBar.type = 'text';
-    quizTextBar.placeholder = 'Your answer...';
+    quizTextBar.placeholder = 'Tu respuesta...';
     quizTextBar.autocomplete = 'off';
 
     const checkBox = document.createElement('div');
@@ -184,7 +184,7 @@ const createQuiz = (questionsArr, num) => {
     submitButton.className = 'submit';
     submitButton.id = `submit-${question.id}`;
     submitButton.type = 'submit';
-    submitButton.value = 'Check';
+    submitButton.value = 'Checar';
 
     const correct = document.createElement('div');
     correct.className = 'correct';
@@ -192,24 +192,20 @@ const createQuiz = (questionsArr, num) => {
 
     const correctIcon = document.createElement('img');
     correctIcon.src = "icons/icons8-correct.svg"
-    correctIcon.alt = "correct";
+    correctIcon.alt = "Correcto";
 
     const incorrect = document.createElement('div');
     incorrect.className = 'incorrect';
     incorrect.id = `incorrect-${question.id}`;
 
     const tryAgainText = document.createElement('p');
-    tryAgainText.textContent = "Try again!";
+    tryAgainText.textContent = "Inténtalo de nuevo";
 
 
 
     const incorrectIcon = document.createElement('img');
     incorrectIcon.src = "icons/icons8-wrong.svg"
-    incorrectIcon.alt = "wrong";
-
-
-    const TryAgainText = document.createElement('div');
-    TryAgainText.textContent = "Try again!";
+    incorrectIcon.alt = "incorrecto";
 
     let inputValue = "";
     
@@ -376,7 +372,7 @@ const createQuiz = (questionsArr, num) => {
   });
 }
 
-const title = 'Write three forms of adjectives like so: <br> <span class="exampleAdj example-no-board">big - bigger - the biggest</span>'
+const title = 'Escribe las tres formas de adjetivos así: <br> <span class="exampleAdj example-no-board">big - bigger - the biggest</span>'
 
 const adjquestions = [
   {type: "subheader", title: title},
@@ -445,7 +441,7 @@ const createAdjectivesQuiz = (questionsArr, num) => {
     submitButton.className = 'submit';
     submitButton.id = `submit-${question.id}`;
     submitButton.type = 'submit';
-    submitButton.value = 'Check';
+    submitButton.value = 'Checar';
 
     const correct = document.createElement('div');
     correct.className = 'correct';
@@ -453,18 +449,18 @@ const createAdjectivesQuiz = (questionsArr, num) => {
 
     const correctIcon = document.createElement('img');
     correctIcon.src = "icons/icons8-correct.svg"
-    correctIcon.alt = "correct";
+    correctIcon.alt = "Correcto";
 
     const incorrect = document.createElement('div');
     incorrect.className = 'incorrect';
     incorrect.id = `incorrect-${question.id}`;
 
     const tryAgainText = document.createElement('p');
-    tryAgainText.textContent = "Try again!";
+    tryAgainText.textContent = "Inténtalo de nuevo";
 
     const incorrectIcon = document.createElement('img');
     incorrectIcon.src = "icons/icons8-wrong.svg"
-    incorrectIcon.alt = "wrong";
+    incorrectIcon.alt = "Incorrecto";
 
     let input1Value = "";
     let input2Value = "";
@@ -638,7 +634,7 @@ createQuiz(questions2, "one")
 createQuiz(questions3, "one")
 createAdjectivesQuiz(adjquestions, "one")
 
-
+/*
 const recordAnswer = (id) => {
   const startButton = document.querySelector(`#start-recording-${id}`);
   const deleteButton = document.querySelector(`#delete-recording-${id}`);
@@ -743,11 +739,11 @@ const recordAnswer = (id) => {
 }
 
 recordAnswer(1);
+recordAnswer(2)
+*/
 
 createQuiz(questions4, "three");
 createQuiz(questions5, "four");
-
-recordAnswer(2)
 
 
 const finishButton = document.querySelector('.finish-lesson-button-2');
@@ -768,7 +764,7 @@ const congratulate = () => {
   }
 
   congratsPopup.classList.add('popup-congrats-isclicked');
-  congratsText.textContent = `Congratualtions, ${userName}!`;
+  congratsText.textContent = `¡Felicidades, ${userName}!`;
   const nextLessonButton = document.querySelector('.next-lesson-button');
   nextLessonButton.addEventListener('click', () => {
     if (lessonIsDone) {

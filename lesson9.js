@@ -66,7 +66,7 @@ const createFillInBlanksQuiz = (questionsArr, num) => {
     submitButton.className = 'submit-fill-in';
     submitButton.id = `submit-${question.id}`;
     submitButton.type = 'submit';
-    submitButton.value = 'Check';
+    submitButton.value = 'Checar';
 
     const correct = document.createElement('div');
     correct.className = 'correct';
@@ -74,18 +74,18 @@ const createFillInBlanksQuiz = (questionsArr, num) => {
 
     const correctIcon = document.createElement('img');
     correctIcon.src = "icons/icons8-correct.svg"
-    correctIcon.alt = "correct";
+    correctIcon.alt = "Correcto";
 
     const incorrect = document.createElement('div');
     incorrect.className = 'incorrect';
     incorrect.id = `incorrect-${question.id}`;
 
     const tryAgainText = document.createElement('p');
-    tryAgainText.textContent = "Try again!";
+    tryAgainText.textContent = "Inténtalo de nuevo";
 
     const incorrectIcon = document.createElement('img');
     incorrectIcon.src = "icons/icons8-wrong.svg"
-    incorrectIcon.alt = "wrong";
+    incorrectIcon.alt = "incorrecto";
 
     let bfrlabel = "";
 
@@ -178,7 +178,7 @@ const createQuiz = (questionsArr, num) => {
 
   const header = document.createElement('h2')
   header.className = "quiz-header intro-header"
-  header.textContent = "Rewrite the following sentences using reflexive pronouns:"
+  header.textContent = "Claro, proporciona las oraciones que quieres que reescriba usando pronombres reflexivos"
   quiz.appendChild(header);
 
 
@@ -227,7 +227,7 @@ const createQuiz = (questionsArr, num) => {
     quizTextBar.className = 'quiz-textbar';
     quizTextBar.id = `quiz-textbar-${question.id}`;
     quizTextBar.type = 'text';
-    quizTextBar.placeholder = 'Your answer...';
+    quizTextBar.placeholder = 'Tu respuesta...';
     quizTextBar.autocomplete = 'off';
 
     const checkBox = document.createElement('div');
@@ -237,7 +237,7 @@ const createQuiz = (questionsArr, num) => {
     submitButton.className = 'submit';
     submitButton.id = `submit-${question.id}`;
     submitButton.type = 'submit';
-    submitButton.value = 'Check';
+    submitButton.value = 'Checar';
 
     const correct = document.createElement('div');
     correct.className = 'correct';
@@ -245,20 +245,20 @@ const createQuiz = (questionsArr, num) => {
 
     const correctIcon = document.createElement('img');
     correctIcon.src = "icons/icons8-correct.svg"
-    correctIcon.alt = "correct";
+    correctIcon.alt = "Correcto";
 
     const incorrect = document.createElement('div');
     incorrect.className = 'incorrect';
     incorrect.id = `incorrect-${question.id}`;
 
     const tryAgainText = document.createElement('p');
-    tryAgainText.textContent = "Try again!";
+    tryAgainText.textContent = "Inténtalo de nuevo";
 
 
 
     const incorrectIcon = document.createElement('img');
     incorrectIcon.src = "icons/icons8-wrong.svg"
-    incorrectIcon.alt = "wrong";
+    incorrectIcon.alt = "Incorrecto";
 
     let inputValue = "";
 
@@ -427,7 +427,7 @@ const createQuiz = (questionsArr, num) => {
 
 createQuiz(questions, "two")
 
-
+/*
 const recordAnswer = (id) => {
   const startButton = document.querySelector(`#start-recording-${id}`);
   const deleteButton = document.querySelector(`#delete-recording-${id}`);
@@ -531,7 +531,7 @@ const recordAnswer = (id) => {
   startButton.addEventListener('click', startRecording);
 }
 
-recordAnswer(1);
+recordAnswer(1);*/
 
 const vocabularyQuiz = [
   {
@@ -800,7 +800,7 @@ const vocabularyQuiz = [
     rectangles: true,
     taskText: "",
     newWordsText: "",
-    buttonValue: "Play again",
+    buttonValue: "Jugar de nuevo",
     selected: {1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false},
     answer: {1: false, 2: false, 3: false, 4: false, 5: true, 6: false, 7: false, 8: false},
     correct: false,
@@ -854,7 +854,7 @@ const createVocabularyQuiz = (quizArray) => {
 
       const submitButton = document.createElement("button")
       submitButton.className = "next-button"
-      submitButton.textContent = "Submit"
+      submitButton.textContent = "Enviar"
 
       if (quizArray[index].buttonValue) {
         submitButton.textContent = `${quizArray[index].buttonValue}`
@@ -880,7 +880,7 @@ const createVocabularyQuiz = (quizArray) => {
         taskAssigner.removeChild(newWords)
         const congratsLine = document.createElement("p")
         congratsLine.className = "congrats-line"
-        congratsLine.textContent = "Awesome job!"
+        congratsLine.textContent = "¡Excelente trabajo!"
         taskAssigner.appendChild(congratsLine)
       }
 
@@ -926,9 +926,9 @@ const createVocabularyQuiz = (quizArray) => {
       fullscreenButton.addEventListener("click", toggleFullscreen)
 
       const checkResults = (userSelection, correctAnswer) => {
-        if (submitButton.textContent === "Next") {
+        if (submitButton.textContent === "Siguiente") {
           index++
-          submitButton.textContent = "Submit"
+          submitButton.textContent = "Enviar"
           vocabularyQuiz.removeChild(taskAssigner)
           imageHolder.removeChild(rectangleOffice)
           imageHolder.removeChild(rectangleBedroom)
@@ -943,7 +943,7 @@ const createVocabularyQuiz = (quizArray) => {
           return
         }
 
-        if (submitButton.textContent === "Try again") {
+        if (submitButton.textContent === "Inténtalo de nuevo") {
           imageHolder.appendChild(rectangleOffice)
           imageHolder.appendChild(rectangleBedroom)
           imageHolder.appendChild(rectangleBalcony)
@@ -952,7 +952,7 @@ const createVocabularyQuiz = (quizArray) => {
           imageHolder.appendChild(rectangleBathroom)
           imageHolder.appendChild(rectangleHall)
           imageHolder.appendChild(rectangleBasement)
-          submitButton.textContent = "Submit"
+          submitButton.textContent = "Enviar"
           vocabularyQuiz.removeChild(taskAssigner)
           imageHolder.removeChild(rectangleOffice)
           imageHolder.removeChild(rectangleBedroom)
@@ -975,8 +975,8 @@ const createVocabularyQuiz = (quizArray) => {
           return;
         }
 
-        if (submitButton.textContent === "Play again") {
-          submitButton.textContent = "Submit"
+        if (submitButton.textContent === "Jugar de nuevo") {
+          submitButton.textContent = "Enviar"
           vocabularyQuiz.removeChild(taskAssigner)
           imageHolder.removeChild(rectangleOffice)
           imageHolder.removeChild(rectangleBedroom)
@@ -1017,7 +1017,7 @@ const createVocabularyQuiz = (quizArray) => {
 
         if (userAnswer === correctAnswer2) {
           quizArray[index].correct = true
-          submitButton.textContent = "Next"
+          submitButton.textContent = "Siguiente"
 
           rectangleOffice.classList.remove("rectangle-clicked")
           rectangleBedroom.classList.remove("rectangle-clicked")
@@ -1062,14 +1062,14 @@ const createVocabularyQuiz = (quizArray) => {
 
           const correctLine = document.createElement("p");
           correctLine.className = "correct-line";
-          correctLine.textContent = "Correct!";
+          correctLine.textContent = "¡Correcto!";
           taskAssigner.appendChild(correctLine);
         } else {
           const incorrectLine = document.createElement("p");
           incorrectLine.className = "incorrect-line";
-          incorrectLine.textContent = "Wrong";
+          incorrectLine.textContent = "incorrecto";
           taskAssigner.appendChild(incorrectLine);
-          submitButton.textContent = "Try again"
+          submitButton.textContent = "Inténtalo de nuevo"
 
           rectangleOffice.classList.remove("rectangle-clicked")
           rectangleBedroom.classList.remove("rectangle-clicked")
@@ -1105,16 +1105,13 @@ const createVocabularyQuiz = (quizArray) => {
 
       const changeReactangles = (event, number) => {
         if (quizArray[index].correct) {
-          console.log("not added")
           return;
         } else {
-          console.log("added")
           changeObjectColor(event)
           quizArray[index].selected[number] = toggleSelected(quizArray[index].selected[number])
         }
       }
 
-      console.log("gotetms")
       rectangleOffice.addEventListener("click", (event) => {
         console.log("triggered")
         changeReactangles(event, 1)
@@ -1172,7 +1169,7 @@ const congratulate = () => {
   }
 
   congratsPopup.classList.add('popup-congrats-isclicked');
-  congratsText.textContent = `Congratualtions, ${userName}!`;
+  congratsText.textContent = `¡Felicidades, ${userName}!`;
   const nextLessonButton = document.querySelector('.next-lesson-button');
   nextLessonButton.addEventListener('click', () => {
     if (lessonIsDone) {

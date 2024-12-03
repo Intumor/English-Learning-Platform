@@ -13,12 +13,12 @@ if (userName) {
   console.log(userName)
 }
 
-/*window.addEventListener('beforeunload', (event) => {
+window.addEventListener('beforeunload', (event) => {
   event.preventDefault();
   event.returnValue = '';
 
   return "";
-})*/
+})
 
 const hideMessage = () => {
   popupMessage.classList.remove('popup-clicked');
@@ -34,19 +34,19 @@ const showMessage = () => {
   const messageHeader = document.createElement('h2');
   messageHeader.classList.add('popup-header');
   if (textBar.value === "") {
-    userName = "Anonymous";
+    userName = "Anónimo";
     localStorage.setItem('username', userName);
   }
 
-  messageHeader.innerText = `Welcome aboard, ${userName}!`;
+  messageHeader.innerText = `¡Bienvenido a bordo, ${userName}!`;
   messageBox.appendChild(messageHeader);
   const messageText = document.createElement('p');
   messageText.classList.add('popup-text');
-  messageText.innerText = 'Thank you for introducing yourself! I hope you have a great time learning English with us. Even though it might seem like a daunting and intimidating task you have nothing to worry about! We will be assisting you every step of the way. We are here to make this journey fun and exciting and show you that ANYONE can speak English. You do not have to think about organizing your learning process, we will tell you exactly what to do. So just sit back, relax and let us take you on this exciting ride! Just promise me you will do your homework :)';
+  messageText.innerText = '¡Gracias por presentarte! Espero que disfrutes mucho aprendiendo inglés con nosotros. Aunque pueda parecer una tarea abrumadora e intimidante, ¡no tienes de qué preocuparte! Te asistiremos en cada paso del camino. Estamos aquí para hacer de este viaje algo divertido y emocionante, y mostrarte que CUALQUIERA puede hablar inglés. No tienes que pensar en cómo organizar tu proceso de aprendizaje; te diremos exactamente qué hacer. Así que simplemente siéntate, relájate y déjanos llevarte en esta emocionante aventura. Solo prométeme que harás tu tarea. :)';
   messageBox.appendChild(messageText);
   const swearButton = document.createElement('button');
   swearButton.classList.add('swear-button');
-  swearButton.innerText = 'Pinky swear';
+  swearButton.innerText = 'Lo juro';
   swearButton.onclick = hideMessage;
   messageBox.appendChild(swearButton);
 }
@@ -384,12 +384,12 @@ const congratulate = () => {
   }
 
   if (!userName) {
-    userName = 'Anonymous';
+    userName = 'Anónimo';
     localStorage.setItem('username', userName);
   }
 
   congratsPopup.classList.add('popup-congrats-isclicked');
-  congratsText.textContent = `Congratualtions, ${userName}!`;
+  congratsText.textContent = `¡Felicidades, ${userName}!`;
   const nextLessonButton = document.querySelector('.next-lesson-button');
   nextLessonButton.addEventListener('click', () => {
     if (lessonIsDone) {

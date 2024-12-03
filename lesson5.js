@@ -74,7 +74,7 @@ const createQuiz = (questionsArr, num) => {
     quizTextBar.className = 'quiz-textbar';
     quizTextBar.id = `quiz-textbar-${question.id}`;
     quizTextBar.type = 'text';
-    quizTextBar.placeholder = 'Your answer...';
+    quizTextBar.placeholder = 'Tu respuesta...';
     quizTextBar.autocomplete = 'off';
 
     const checkBox = document.createElement('div');
@@ -84,7 +84,7 @@ const createQuiz = (questionsArr, num) => {
     submitButton.className = 'submit';
     submitButton.id = `submit-${question.id}`;
     submitButton.type = 'submit';
-    submitButton.value = 'Check';
+    submitButton.value = 'Checar';
 
     const correct = document.createElement('div');
     correct.className = 'correct';
@@ -92,24 +92,20 @@ const createQuiz = (questionsArr, num) => {
 
     const correctIcon = document.createElement('img');
     correctIcon.src = "icons/icons8-correct.svg"
-    correctIcon.alt = "correct";
+    correctIcon.alt = "Correcto";
 
     const incorrect = document.createElement('div');
     incorrect.className = 'incorrect';
     incorrect.id = `incorrect-${question.id}`;
 
     const tryAgainText = document.createElement('p');
-    tryAgainText.textContent = "Try again!";
+    tryAgainText.textContent = "Inténtalo de nuevo";
 
 
 
     const incorrectIcon = document.createElement('img');
     incorrectIcon.src = "icons/icons8-wrong.svg"
-    incorrectIcon.alt = "wrong";
-
-
-    const TryAgainText = document.createElement('div');
-    TryAgainText.textContent = "Try again!";
+    incorrectIcon.alt = "Incorrecto";
 
     let inputValue = "";
 
@@ -295,7 +291,7 @@ const congratulate = () => {
   }
 
   congratsPopup.classList.add('popup-congrats-isclicked');
-  congratsText.textContent = `Congratualtions, ${userName}!`;
+  congratsText.textContent = `¡Felicidades, ${userName}!`;
   const nextLessonButton = document.querySelector('.next-lesson-button');
   nextLessonButton.addEventListener('click', () => {
     if (lessonIsDone) {

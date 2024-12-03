@@ -1,6 +1,6 @@
 let lessonIsDone = localStorage.getItem('lesson10Status');
 let userName = localStorage.getItem('username');
-
+/*
 const recordAnswer = (id) => {
   const startButton = document.querySelector(`#start-recording-${id}`);
   const deleteButton = document.querySelector(`#delete-recording-${id}`);
@@ -105,7 +105,7 @@ const recordAnswer = (id) => {
 }
 
 recordAnswer(1);
-recordAnswer(2);
+recordAnswer(2);*/
 
 
 const finishButton = document.querySelector('.finish-lesson-button-2');
@@ -126,7 +126,7 @@ const congratulate = () => {
   }
 
   congratsPopup.classList.add('popup-congrats-isclicked');
-  congratsText.textContent = `Congratualtions, ${userName}!`;
+  congratsText.textContent = `¡Felicidades, ${userName}!`;
   const nextLessonButton = document.querySelector('.next-lesson-button');
   nextLessonButton.addEventListener('click', () => {
     if (lessonIsDone) {

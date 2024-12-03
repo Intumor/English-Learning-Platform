@@ -1,6 +1,6 @@
 let lessonIsDone = localStorage.getItem('lesson6Status');
 let userName = localStorage.getItem('username');
-
+/*
 const recordAnswer = (id) => {
   const startButton = document.querySelector(`#start-recording-${id}`);
   const deleteButton = document.querySelector(`#delete-recording-${id}`);
@@ -104,7 +104,7 @@ const recordAnswer = (id) => {
   startButton.addEventListener('click', startRecording);
 }
 
-recordAnswer(1)
+recordAnswer(1)*/
 
 
 const questions = [
@@ -122,19 +122,19 @@ const questions = [
 
 const questions2 = [
   {type: 'subheader', title: 'Everybody'},
-  {type: 'explanation', text: '"everybody" means "todos" or "todo el mundo", as simple as that'},
+  {type: 'explanation', text: '"everybody" significa "todos" o "todo el mundo", así de simple.'},
   {id: 29, answer: 'he knows everybody', done: false, textContent: 'Como se dice "Él conoce a todo el mundo"', divider: 'remove'}
 ]
 
 const questions3 = [
   {type: 'subheader', title: 'Somebody'},
-  {type: 'explanation', text: '"somebody" means "alguien"'},
+  {type: 'explanation', text: '"somebody" significa "alguien"'},
   {id: 30, answer: 'somebody sees me', done: false, textContent: 'Como se dice "Alguien me ve"', divider: 'remove'}
 ]
 
 const questions4 = [
   {type: 'subheader', title: 'Nobody'},
-  {type: 'explanation', text: '"nobody" means "nadie"'},
+  {type: 'explanation', text: '"nobody" significa "nadie"'},
   {id: 31, answer: 'nobody will help you', done: false, textContent: 'Como se dice "Nadie te ayudará"', divider: 'remove'},
   {id: 32, answer: 'nobody does it', done: false, textContent: 'Como se dice "Nadie lo hace"'},
   {id: 33, answer: 'nobody helped him', done: false, textContent: 'Como se dice "Nadie lo ayudó"'},
@@ -143,19 +143,19 @@ const questions4 = [
 
 const questions5 = [
   {type: 'subheader', title: 'Anybody'},
-  {type: 'explanation', text: '"anybody" means "cualquiera"'},
+  {type: 'explanation', text: '"anybody" significa "cualquiera"'},
   {id: 35, answer: 'will anybody help me', done: false, textContent: 'Como se dice "¿Cualquiera me ayudará?"', divider: 'remove'},
 ]
 
 const questions6 = [
   {type: 'subheader', title: 'Everything'},
-  {type: 'explanation', text: '"everything" means "todo"'},
+  {type: 'explanation', text: '"everything" significa "todo"'},
   {id: 36, answer: 'i know everything about you', done: false, textContent: 'Como se dice "Sé todo sobre ti"', divider: 'remove'},
 ]
 
 const questions7 = [
   {type: 'subheader', title: 'Something'},
-  {type: 'explanation', text: '"something" means "algo"'},
+  {type: 'explanation', text: '"something" significa "algo"'},
   {id: 37, answer: 'i will tell you something', done: false, textContent: 'Como se dice "Te diré algo"', divider: 'remove'},
   {id: 38, answer: 'give me something to eat', done: false, textContent: 'Como se dice "Dame algo de comer"'},
   {id: 39, answer: 'give me something to drink', done: false, textContent: 'Como se dice "Dame algo de beber"'},
@@ -164,7 +164,7 @@ const questions7 = [
 
 const questions8 = [
   {type: 'subheader', title: 'Nothing'},
-  {type: 'explanation', text: '"nothing" means "nada". Ok, here we have one really imprtant thing to cover. When we use the word "nada" in Spanish we use double negative "i do not know anything", but in English we cannot do that, so when we say "i do not know anything" we will only use a single negative. Like this "i know nothing" which literally translates to "(spanish)". It might seem strange at first but you will get more used to it as you will inevitably encounter this structure all the time, but for now you will just have to commit that to memory'},
+  {type: 'explanation', text: '"nothing" significa "nada". Aquí tenemos algo realmente importante que cubrir. Cuando usamos la palabra "nada" en español, usamos una doble negación, como en "no sé nada", pero en inglés no podemos hacer eso. Así que cuando decimos "I do not know anything", solo usaremos una negación. Así, "I know nothing" se traduce literalmente a "no sé nada". Puede parecer extraño al principio, pero te acostumbrarás a esta estructura con el tiempo, ya que la encontrarás constantemente. Por ahora, solo tendrás que memorizarlo'},
   {id: 41, answer: 'i know nothing about it', done: false, textContent: 'Como se dice "No sé nada al respecto"', divider: 'remove'},
   {id: 42, answer: 'i have nothing to hide', done: false, textContent: 'Como se dice "No tengo nada que ocultar"'},
   {id: 43, answer: 'i see nothing', done: false, textContent: 'Como se dice "No veo nada"'}
@@ -172,62 +172,62 @@ const questions8 = [
 
 const questions9 = [
   {type: 'subheader', title: 'Anything'},
-  {type: 'explanation', text: '"anything" means "cualquier cosa"'},
+  {type: 'explanation', text: '"anything" significa "cualquier cosa"'},
   {id: 44, answer: 'i will eat anything', done: false, textContent: 'Como se dice "Comeré cualquier cosa"', divider: 'remove'},
   {id: 45, answer: 'he will do anything', done: false, textContent: 'Como se dice "Él hará cualquier cosa"'}
 ]
 
 const questions10 = [
   {type: 'subheader', title: 'Everywhere'},
-  {type: 'explanation', text: '"everywhere" means "en todas partes"'},
+  {type: 'explanation', text: '"everywhere" significa "en todas partes"'},
   {id: 46, answer: 'they are everywhere', done: false, textContent: 'Como se dice "Ellos están en todas partes"', divider: 'remove'},
   {id: 47, answer: 'i see him everywhere', done: false, textContent: 'Como se dice "Lo veo en todas partes"'}
 ]
 
 const questions11 = [
   {type: 'subheader', title: 'Somewhere'},
-  {type: 'explanation', text: '"somewhere" means "en algún lugar"'},
+  {type: 'explanation', text: '"somewhere" significa "en algún lugar"'},
   {id: 48, answer: 'he went somewhere', done: false, textContent: 'Como se dice "Ellos están en todas partes"', divider: 'remove'},
 ]
 
 const questions12 = [
   {type: 'subheader', title: 'Nowhere'},
-  {type: 'explanation', text: '"nowhere" means "ningún lugar"'},
+  {type: 'explanation', text: '"nowhere" significa "ningún lugar"'},
   {id: 49, answer: 'i have no where to go', done: false, textContent: 'Como se dice "No tengo adónde ir"', divider: 'remove'},
   {id: 50, answer: 'it goes nowhere', done: false, textContent: 'Como se dice "No lleva a ningún lado"'}
 ]
 
 const questions13 = [
   {type: 'subheader', title: 'Anywhere'},
-  {type: 'explanation', text: '"anywhere" means "en cualquier lugar"'},
+  {type: 'explanation', text: '"anywhere" significa "en cualquier lugar"'},
   {id: 51, answer: 'it can be anywhere', done: false, textContent: 'Como se dice "Puede ser en cualquier lugar"', divider: 'remove'},
   {id: 52, answer: 'i will go anywhere you want', done: false, textContent: 'Como se dice "Iría a cualquier lugar que quieras"'}
 ]
 
 const questions14 = [
   {type: 'subheader', title: 'Always'},
-  {type: 'explanation', text: '"always" means "siempre"'},
+  {type: 'explanation', text: '"always" significa "siempre"'},
   {id: 53, answer: 'he always does it', done: false, textContent: 'Como se dice "Él siempre lo hace"', divider: 'remove'},
   {id: 54, answer: 'we always go there', done: false, textContent: 'Como se dice "Siempre vamos allí"'}
 ]
 
 const questions15 = [
   {type: 'subheader', title: 'Sometimes'},
-  {type: 'explanation', text: '"sometimes" means "a veces"'},
+  {type: 'explanation', text: '"sometimes" significa "a veces"'},
   {id: 55, answer: 'sometimes i do it', done: false, textContent: 'Como se dice "A veces lo hago"', divider: 'remove'},
   {id: 56, answer: 'sometimes we drink', done: false, textContent: 'Como se dice "A veces bebemos"'}
 ]
 
 const questions16 = [
   {type: 'subheader', title: 'Never'},
-  {type: 'explanation', text: '"never" means "nunca"'},
+  {type: 'explanation', text: '"never" significa "nunca"'},
   {id: 57, answer: 'i never do it', done: false, textContent: 'Como se dice "Nunca lo hago"', divider: 'remove'},
   {id: 58, answer: 'i will never see you', done: false, textContent: 'Como se dice "Nunca te veré"'}
 ]
 
 const questions17 = [
   {type: 'subheader', title: 'Anytime'},
-  {type: 'explanation', text: '"anytime" means "en cualquier momento"'},
+  {type: 'explanation', text: '"anytime" significa "en cualquier momento"'},
   {id: 59, answer: 'come here anytime', done: false, textContent: 'Como se dice "Ven aquí en cualquier momento"', divider: 'remove'},
   {id: 60, answer: 'i can see you anytime', done: false, textContent: 'Como se dice "Puedo verte en cualquier momento"'},
   {id: 61, answer: 'we can do it anytime', done: false, textContent: 'Como se dice "Podemos hacerlo en cualquier momento"'}
@@ -295,7 +295,7 @@ const createQuiz = (questionsArr, num) => {
     quizTextBar.className = 'quiz-textbar';
     quizTextBar.id = `quiz-textbar-${question.id}`;
     quizTextBar.type = 'text';
-    quizTextBar.placeholder = 'Your answer...';
+    quizTextBar.placeholder = 'Tu respuesta...';
     quizTextBar.autocomplete = 'off';
 
     const checkBox = document.createElement('div');
@@ -305,7 +305,7 @@ const createQuiz = (questionsArr, num) => {
     submitButton.className = 'submit';
     submitButton.id = `submit-${question.id}`;
     submitButton.type = 'submit';
-    submitButton.value = 'Check';
+    submitButton.value = 'Checar';
 
     const correct = document.createElement('div');
     correct.className = 'correct';
@@ -313,24 +313,20 @@ const createQuiz = (questionsArr, num) => {
 
     const correctIcon = document.createElement('img');
     correctIcon.src = "icons/icons8-correct.svg"
-    correctIcon.alt = "correct";
+    correctIcon.alt = "Correcto";
 
     const incorrect = document.createElement('div');
     incorrect.className = 'incorrect';
     incorrect.id = `incorrect-${question.id}`;
 
     const tryAgainText = document.createElement('p');
-    tryAgainText.textContent = "Try again!";
+    tryAgainText.textContent = "Inténtalo de nuevo";
 
 
 
     const incorrectIcon = document.createElement('img');
     incorrectIcon.src = "icons/icons8-wrong.svg"
-    incorrectIcon.alt = "wrong";
-
-
-    const TryAgainText = document.createElement('div');
-    TryAgainText.textContent = "Try again!";
+    incorrectIcon.alt = "Incorrecto";
 
     let inputValue = "";
 
@@ -573,7 +569,7 @@ const createFillInBlanksQuiz = (questionsArr, num) => {
     submitButton.className = 'submit-fill-in';
     submitButton.id = `submit-${question.id}`;
     submitButton.type = 'submit';
-    submitButton.value = 'Check';
+    submitButton.value = 'Checar';
 
     const correct = document.createElement('div');
     correct.className = 'correct';
@@ -581,18 +577,18 @@ const createFillInBlanksQuiz = (questionsArr, num) => {
 
     const correctIcon = document.createElement('img');
     correctIcon.src = "icons/icons8-correct.svg"
-    correctIcon.alt = "correct";
+    correctIcon.alt = "Correcto";
 
     const incorrect = document.createElement('div');
     incorrect.className = 'incorrect';
     incorrect.id = `incorrect-${question.id}`;
 
     const tryAgainText = document.createElement('p');
-    tryAgainText.textContent = "Try again!";
+    tryAgainText.textContent = "Inténtalo de nuevo";
 
     const incorrectIcon = document.createElement('img');
     incorrectIcon.src = "icons/icons8-wrong.svg"
-    incorrectIcon.alt = "wrong";
+    incorrectIcon.alt = "Incorrecto";
 
     let bfrlabel = "";
 
@@ -697,7 +693,7 @@ const congratulate = () => {
   }
 
   congratsPopup.classList.add('popup-congrats-isclicked');
-  congratsText.textContent = `Congratualtions, ${userName}!`;
+  congratsText.textContent = `¡Felicidades, ${userName}!`;
   const nextLessonButton = document.querySelector('.next-lesson-button');
   nextLessonButton.addEventListener('click', () => {
     if (lessonIsDone) {

@@ -8,6 +8,7 @@
 let lessonIsDone = localStorage.getItem('lesson4Status');
 let userName = localStorage.getItem('username');
 
+/*
 const recordAnswer = (id) => {
   const startButton = document.querySelector(`#start-recording-${id}`);
   const deleteButton = document.querySelector(`#delete-recording-${id}`);
@@ -111,7 +112,7 @@ const recordAnswer = (id) => {
   startButton.addEventListener('click', startRecording);
 }
 
-recordAnswer(1)
+recordAnswer(1)*/
 
 const flashQuiz = [
   {index: 0, imgUrl: "./images/hello.jpg", option1: "Hello", option2: "Excuse me", option3: "Goodbye", option4: "Good night", answer: "Hello"},
@@ -141,7 +142,7 @@ let index = 0;
 const createFlashQuiz = (flashQuestions) => {
   const quizHeader = document.createElement('h2');
   quizHeader.className = 'quiz-header';
-  quizHeader.textContent = 'Choose the correct option';
+  quizHeader.textContent = 'Elige la opción correcta';
   const FlashCard = document.createElement('img');
   FlashCard.setAttribute('src', `${flashQuestions[index].imgUrl}`);
   FlashCard.className = "flashcard";
@@ -208,9 +209,9 @@ const createFlashQuiz = (flashQuestions) => {
   const flashQuizCongratulate = () => {
     const congrats = document.createElement('h2');
     congrats.className = "flash-congrats-message";
-    congrats.textContent = "Great job!";
+    congrats.textContent = "¡Buen trabajo!";
     const tryAgain = document.createElement('button')
-    tryAgain.textContent = "take the quiz again"
+    tryAgain.textContent = "Haz la prueba nuevamente"
     tryAgain.addEventListener('click', () => {
       FlashCardQuizBox.innerHTML = "";
       index = 0;
@@ -229,7 +230,7 @@ const congratsBox = document.querySelector('.popup-box');
 const congratsText = document.querySelector('.congrats-text')
 const congratulate = () => {
   congratsPopup.classList.add('popup-congrats-isclicked');
-  congratsText.textContent = `Congratualtions, ${userName}!`;
+  congratsText.textContent = `¡Felicidades, ${userName}!`;
   const nextLessonButton = document.querySelector('.next-lesson-button');
   nextLessonButton.addEventListener('click', () => {
     if (lessonIsDone) {

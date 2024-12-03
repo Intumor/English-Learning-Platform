@@ -10,17 +10,17 @@ let lessonIsDone = localStorage.getItem('lesson2Status');
 let userName = localStorage.getItem('username');
 
 const questions = [
-  {id: 1, answer: 'revolution', done: false, textContent: 'Como se dice "revolution"'},
-  {id: 2, answer: 'information', done: false, textContent: 'Como se dice "information"'},
-  {id: 3, answer: 'nation', done: false, textContent: 'Como se dice "nation"'},
-  {id: 4, answer: 'innovation', done: false, textContent: 'Como se dice "innovation"'},
-  {id: 5, answer: 'modernization', done: false, textContent: 'Como se dice "modernization"'},
-  {id: 6, answer: 'stragnation', done: false, textContent: 'Como se dice "stragnation"'},
-  {id: 7, answer: 'provocation', done: false, textContent: 'Como se dice "provocation"'},
-  {id: 8, answer: 'meditation', done: false, textContent: 'Como se dice "meditation"'},
-  {id: 9, answer: 'computerization', done: false, textContent: 'Como se dice "computerization"'},
-  {id: 10, answer: 'profession', done: false, textContent: 'Como se dice "profession"'},
-  {id: 11, answer: 'demonstration', done: false, textContent: 'Como se dice "demonstration"'},
+  {id: 1, answer: 'revolution', done: false, textContent: 'Como se dice "revolución"'},
+  {id: 2, answer: 'information', done: false, textContent: 'Como se dice "información"'},
+  {id: 3, answer: 'nation', done: false, textContent: 'Como se dice "nación"'},
+  {id: 4, answer: 'innovation', done: false, textContent: 'Como se dice "innovación"'},
+  {id: 5, answer: 'modernization', done: false, textContent: 'Como se dice "modernización"'},
+  {id: 6, answer: 'inflation', done: false, textContent: 'Como se dice "inflación"'},
+  {id: 7, answer: 'provocation', done: false, textContent: 'Como se dice "provocación"'},
+  {id: 8, answer: 'meditation', done: false, textContent: 'Como se dice "meditación"'},
+  {id: 9, answer: 'computerization', done: false, textContent: 'Como se dice "computarización"'},
+  {id: 10, answer: 'profession', done: false, textContent: 'Como se dice "profesión"'},
+  {id: 11, answer: 'demonstration', done: false, textContent: 'Como se dice "demostración"'},
 ]
 
 const wordsAndQuestions = [
@@ -72,7 +72,7 @@ const wordsAndQuestions7 = [
   {id: 32, answer: 'we will speak', asnwer2: "we'll speak", done: false, textContent: 'Como se dice "hablaremos"', divider: 'remove'},
   {id: 33, answer: "will you speak", asnwer2: "will you speak?", done: false, textContent: 'Como se dice "¿Hablarás?"'},
   {id: 34, answer: "we spoke", done: false, textContent: 'Como se dice "hablamos"'},
-  {id: 35, answer: "They didn't speak", answer2: "They did not speak", done: false, textContent: 'Como se dice "No esperaba, pero esperaré"'}
+  {id: 35, answer: "they didn't speak", answer2: "they did not speak", done: false, textContent: 'Como se dice "Ellos no hablaron"'}
 ]
 
 const wordsAndQuestions8 = [
@@ -134,7 +134,7 @@ const createQuiz = (questionsArr, num) => {
     quizTextBar.className = 'quiz-textbar';
     quizTextBar.id = `quiz-textbar-${question.id}`;
     quizTextBar.type = 'text';
-    quizTextBar.placeholder = 'Your answer...';
+    quizTextBar.placeholder = 'Tu respuesta...';
     quizTextBar.autocomplete = 'off';
 
     const checkBox = document.createElement('div');
@@ -144,7 +144,7 @@ const createQuiz = (questionsArr, num) => {
     submitButton.className = 'submit';
     submitButton.id = `submit-${question.id}`;
     submitButton.type = 'submit';
-    submitButton.value = 'Check';
+    submitButton.value = 'Checar';
 
     const correct = document.createElement('div');
     correct.className = 'correct';
@@ -152,24 +152,20 @@ const createQuiz = (questionsArr, num) => {
 
     const correctIcon = document.createElement('img');
     correctIcon.src = "icons/icons8-correct.svg"
-    correctIcon.alt = "correct";
+    correctIcon.alt = "Correcto";
 
     const incorrect = document.createElement('div');
     incorrect.className = 'incorrect';
     incorrect.id = `incorrect-${question.id}`;
 
     const tryAgainText = document.createElement('p');
-    tryAgainText.textContent = "Try again!";
+    tryAgainText.textContent = "Inténtalo de nuevo";
 
 
 
     const incorrectIcon = document.createElement('img');
     incorrectIcon.src = "icons/icons8-wrong.svg"
-    incorrectIcon.alt = "wrong";
-
-
-    const TryAgainText = document.createElement('div');
-    TryAgainText.textContent = "Try again!";
+    incorrectIcon.alt = "Incorrecto";
 
     let inputValue = "";
 
@@ -250,6 +246,7 @@ const createQuiz = (questionsArr, num) => {
       } else if (answer === question.answer2) {
         correct.classList.add('correct-shown');
       } else {
+        console.log(answer)
         incorrect.classList.add('incorrect-shown');
       }
   
@@ -329,7 +326,7 @@ const congratulate = () => {
   }
 
   congratsPopup.classList.add('popup-congrats-isclicked');
-  congratsText.textContent = `Congratualtions, ${userName}!`;
+  congratsText.textContent = `¡Felicidades, ${userName}!`;
   const nextLessonButton = document.querySelector('.next-lesson-button');
   nextLessonButton.addEventListener('click', () => {
     if (lessonIsDone) {

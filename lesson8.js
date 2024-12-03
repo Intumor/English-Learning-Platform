@@ -35,7 +35,7 @@ const createFlashQuiz = (flashQuestions) => {
 
   const quizHeader = document.createElement('h2');
   quizHeader.className = 'quiz-header';
-  quizHeader.textContent = 'Choose the correct option';
+  quizHeader.textContent = 'Elige la opción correcta';
 
   const sentence = document.createElement('p')
   sentence.className = "sentence-header"
@@ -109,9 +109,9 @@ const createFlashQuiz = (flashQuestions) => {
   const flashQuizCongratulate = () => {
     const congrats = document.createElement('h2');
     congrats.className = "flash-congrats-message";
-    congrats.textContent = "Great job!";
+    congrats.textContent = "¡Buen trabajo!";
     const tryAgain = document.createElement('button')
-    tryAgain.textContent = "take the quiz again"
+    tryAgain.textContent = "Haz la prueba nuevamente"
     tryAgain.addEventListener('click', () => {
       FlashCardQuizBox.innerHTML = "";
       index = 0;
@@ -202,7 +202,7 @@ const createFillInBlanksQuiz = (questionsArr, num) => {
     submitButton.className = 'submit-fill-in';
     submitButton.id = `submit-${question.id}`;
     submitButton.type = 'submit';
-    submitButton.value = 'Check';
+    submitButton.value = 'Checar';
 
     const correct = document.createElement('div');
     correct.className = 'correct';
@@ -210,18 +210,18 @@ const createFillInBlanksQuiz = (questionsArr, num) => {
 
     const correctIcon = document.createElement('img');
     correctIcon.src = "icons/icons8-correct.svg"
-    correctIcon.alt = "correct";
+    correctIcon.alt = "Correcto";
 
     const incorrect = document.createElement('div');
     incorrect.className = 'incorrect';
     incorrect.id = `incorrect-${question.id}`;
 
     const tryAgainText = document.createElement('p');
-    tryAgainText.textContent = "Try again!";
+    tryAgainText.textContent = "Inténtalo de nuevo";
 
     const incorrectIcon = document.createElement('img');
     incorrectIcon.src = "icons/icons8-wrong.svg"
-    incorrectIcon.alt = "wrong";
+    incorrectIcon.alt = "Incorrecto";
 
     let bfrlabel = "";
 
@@ -294,7 +294,7 @@ const createFillInBlanksQuiz = (questionsArr, num) => {
 createFillInBlanksQuiz(fillInQuiz, "three")
 createFillInBlanksQuiz(fillInQuiz2, "four")
 
-
+/*
 const recordAnswer = (id) => {
   const startButton = document.querySelector(`#start-recording-${id}`);
   const deleteButton = document.querySelector(`#delete-recording-${id}`);
@@ -399,7 +399,7 @@ const recordAnswer = (id) => {
 }
 
 recordAnswer(1);
-recordAnswer(2);
+recordAnswer(2);*/
 
 
 const questions = [
@@ -467,7 +467,7 @@ const createQuiz = (questionsArr, num) => {
     quizTextBar.className = 'quiz-textbar';
     quizTextBar.id = `quiz-textbar-${question.id}`;
     quizTextBar.type = 'text';
-    quizTextBar.placeholder = 'Your answer...';
+    quizTextBar.placeholder = 'Tu respuesta...';
     quizTextBar.autocomplete = 'off';
 
     const checkBox = document.createElement('div');
@@ -477,7 +477,7 @@ const createQuiz = (questionsArr, num) => {
     submitButton.className = 'submit';
     submitButton.id = `submit-${question.id}`;
     submitButton.type = 'submit';
-    submitButton.value = 'Check';
+    submitButton.value = 'Checar';
 
     const correct = document.createElement('div');
     correct.className = 'correct';
@@ -485,24 +485,19 @@ const createQuiz = (questionsArr, num) => {
 
     const correctIcon = document.createElement('img');
     correctIcon.src = "icons/icons8-correct.svg"
-    correctIcon.alt = "correct";
+    correctIcon.alt = "Correcto";
 
     const incorrect = document.createElement('div');
     incorrect.className = 'incorrect';
     incorrect.id = `incorrect-${question.id}`;
 
     const tryAgainText = document.createElement('p');
-    tryAgainText.textContent = "Try again!";
-
+    tryAgainText.textContent = "Inténtalo de nuevo";
 
 
     const incorrectIcon = document.createElement('img');
     incorrectIcon.src = "icons/icons8-wrong.svg"
-    incorrectIcon.alt = "wrong";
-
-
-    const TryAgainText = document.createElement('div');
-    TryAgainText.textContent = "Try again!";
+    incorrectIcon.alt = "Incorrecto";
 
     let inputValue = "";
 
@@ -690,7 +685,7 @@ const congratulate = () => {
   }
 
   congratsPopup.classList.add('popup-congrats-isclicked');
-  congratsText.textContent = `Congratualtions, ${userName}!`;
+  congratsText.textContent = `¡Felicidades, ${userName}!`;
   const nextLessonButton = document.querySelector('.next-lesson-button');
   nextLessonButton.addEventListener('click', () => {
     if (lessonIsDone) {
